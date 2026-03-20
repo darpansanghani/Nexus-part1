@@ -1,0 +1,167 @@
+============================= test session starts =============================
+platform win32 -- Python 3.11.3, pytest-8.2.0, pluggy-1.6.0 -- C:\Users\darpa\OneDrive\Desktop\PromptWar\Part1\nexus\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\darpa\OneDrive\Desktop\PromptWar\Part1\nexus
+configfile: pytest.ini
+testpaths: tests
+plugins: cov-5.0.0, flask-1.3.0
+collecting ... collected 61 items
+
+tests/test_api.py::TestHealthEndpoint::test_health_returns_200 PASSED    [  1%]
+tests/test_api.py::TestHealthEndpoint::test_health_response_has_required_fields PASSED [  3%]
+tests/test_api.py::TestHealthEndpoint::test_health_returns_503_when_gemini_unavailable PASSED [  4%]
+tests/test_api.py::TestAnalyzeEndpoint::test_analyze_valid_text_returns_200 PASSED [  6%]
+tests/test_api.py::TestAnalyzeEndpoint::test_analyze_valid_image_returns_200 PASSED [  8%]
+tests/test_api.py::TestAnalyzeEndpoint::test_analyze_empty_body_returns_400 PASSED [  9%]
+tests/test_api.py::TestAnalyzeEndpoint::test_analyze_text_too_long_returns_400 PASSED [ 11%]
+tests/test_api.py::TestAnalyzeEndpoint::test_analyze_image_too_large_returns_413 PASSED [ 13%]
+tests/test_api.py::TestAnalyzeEndpoint::test_analyze_invalid_image_mime_returns_400 PASSED [ 14%]
+tests/test_api.py::TestAnalyzeEndpoint::test_analyze_response_contains_session_id_header PASSED [ 16%]
+tests/test_api.py::TestAnalyzeEndpoint::test_analyze_response_contains_processing_time_header PASSED [ 18%]
+tests/test_api.py::TestAnalyzeEndpoint::test_analyze_critical_severity_has_at_least_three_actions PASSED [ 19%]
+tests/test_api.py::TestAnalyzeEndpoint::test_analyze_actions_are_sorted_by_priority_ascending PASSED [ 21%]
+tests/test_api.py::TestAnalyzeEndpoint::test_analyze_sql_injection_input_returns_400 PASSED [ 22%]
+tests/test_api.py::TestAnalyzeEndpoint::test_analyze_script_tag_input_returns_400 PASSED [ 24%]
+tests/test_api.py::TestAnalyzeEndpoint::test_analyze_null_byte_input_returns_400 PASSED [ 26%]
+tests/test_api.py::TestRateLimiterEndpoint::test_requests_under_limit_are_allowed PASSED [ 27%]
+tests/test_api.py::TestRateLimiterEndpoint::test_request_at_limit_is_blocked_with_429 PASSED [ 29%]
+tests/test_api.py::TestRateLimiterEndpoint::test_429_response_includes_retry_after_header PASSED [ 31%]
+tests/test_api.py::TestRateLimiterEndpoint::test_counter_resets_after_window_expires PASSED [ 32%]
+tests/test_api.py::TestLogEndpoint::test_log_returns_list_of_incidents PASSED [ 34%]
+tests/test_api.py::TestLogEndpoint::test_log_respects_limit_query_param PASSED [ 36%]
+tests/test_api.py::TestLogEndpoint::test_log_filters_by_severity_param PASSED [ 37%]
+tests/test_api.py::TestLogEndpoint::test_delete_returns_204_for_existing_entry PASSED [ 39%]
+tests/test_api.py::TestLogEndpoint::test_delete_returns_404_for_missing_entry PASSED [ 40%]
+tests/test_gemini_service.py::TestGeminiService::test_analyze_returns_valid_action_plan_dataclass PASSED [ 42%]
+tests/test_gemini_service.py::TestGeminiService::test_analyze_retries_on_transient_api_error PASSED [ 44%]
+tests/test_gemini_service.py::TestGeminiService::test_analyze_returns_fallback_after_exhausting_retries PASSED [ 45%]
+tests/test_gemini_service.py::TestGeminiService::test_analyze_times_out_after_30_seconds PASSED [ 47%]
+tests/test_gemini_service.py::TestGeminiService::test_system_prompt_is_present_in_every_gemini_call PASSED [ 49%]
+tests/test_gemini_service.py::TestGeminiService::test_image_bytes_are_included_when_image_provided PASSED [ 50%]
+tests/test_gemini_service.py::TestGeminiService::test_malformed_json_response_returns_fallback PASSED [ 52%]
+tests/test_gemini_service.py::TestGeminiService::test_missing_required_field_in_response_returns_fallback PASSED [ 54%]
+tests/test_models.py::TestModels::test_action_plan_constructs_with_valid_data PASSED [ 55%]
+tests/test_models.py::TestModels::test_action_plan_rejects_invalid_severity PASSED [ 57%]
+tests/test_models.py::TestModels::test_action_plan_rejects_confidence_above_1 PASSED [ 59%]
+tests/test_models.py::TestModels::test_action_plan_rejects_confidence_below_0 PASSED [ 60%]
+tests/test_models.py::TestModels::test_immediate_action_rejects_priority_above_10 PASSED [ 62%]
+tests/test_models.py::TestModels::test_action_plan_to_dict_excludes_null_fields PASSED [ 63%]
+tests/test_models.py::TestModels::test_actions_sorted_by_priority_on_construction PASSED [ 65%]
+tests/test_rate_limiter.py::TestRateLimiter::test_requests_under_limit_are_allowed PASSED [ 67%]
+tests/test_rate_limiter.py::TestRateLimiter::test_request_at_limit_is_blocked_with_429 PASSED [ 68%]
+tests/test_rate_limiter.py::TestRateLimiter::test_429_response_includes_retry_after_header FAILED [ 70%]
+tests/test_rate_limiter.py::TestRateLimiter::test_counter_resets_after_window_expires PASSED [ 72%]
+tests/test_rate_limiter.py::TestRateLimiter::test_sliding_window_allows_requests_under_limit PASSED [ 73%]
+tests/test_rate_limiter.py::TestRateLimiter::test_sliding_window_blocks_at_limit PASSED [ 75%]
+tests/test_rate_limiter.py::TestRateLimiter::test_sliding_window_is_not_fixed_window PASSED [ 77%]
+tests/test_rate_limiter.py::TestRateLimiter::test_ip_hash_is_used_not_raw_ip PASSED [ 78%]
+tests/test_rate_limiter.py::TestRateLimiter::test_different_ips_have_independent_counters PASSED [ 80%]
+tests/test_rate_limiter.py::TestRateLimiter::test_retry_after_value_is_correct PASSED [ 81%]
+tests/test_validator.py::TestInputValidator::test_valid_text_input_passes PASSED [ 83%]
+tests/test_validator.py::TestInputValidator::test_empty_text_raises_validation_error PASSED [ 85%]
+tests/test_validator.py::TestInputValidator::test_text_over_10000_chars_raises_validation_error PASSED [ 86%]
+tests/test_validator.py::TestInputValidator::test_sql_injection_string_raises_validation_error PASSED [ 88%]
+tests/test_validator.py::TestInputValidator::test_script_tag_string_raises_validation_error PASSED [ 90%]
+tests/test_validator.py::TestInputValidator::test_null_byte_string_raises_validation_error PASSED [ 91%]
+tests/test_validator.py::TestInputValidator::test_javascript_uri_raises_validation_error PASSED [ 93%]
+tests/test_validator.py::TestInputValidator::test_valid_jpeg_base64_passes PASSED [ 95%]
+tests/test_validator.py::TestInputValidator::test_invalid_mime_type_raises_validation_error PASSED [ 96%]
+tests/test_validator.py::TestInputValidator::test_image_over_5mb_raises_validation_error PASSED [ 98%]
+tests/test_validator.py::TestInputValidator::test_malformed_base64_raises_validation_error PASSED [100%]
+
+================================== FAILURES ===================================
+________ TestRateLimiter.test_429_response_includes_retry_after_header ________
+
+self = <tests.test_rate_limiter.TestRateLimiter object at 0x00000217E8308810>
+app = <Flask 'app'>
+
+    def test_429_response_includes_retry_after_header(self, app: Flask) -> None:
+        """Ensure retry after respects limits."""
+        with app.test_client() as client:
+            headers = {"X-Forwarded-For": "3.3.3.3"}
+            for _ in range(10):
+                client.post("/api/analyze", json={"text": "test"}, headers=headers)
+    
+            res = client.post("/api/analyze", json={"text": "test"}, headers=headers)
+            assert res.status_code == 429
+>           assert "Retry-After" in res.headers
+E           assert 'Retry-After' in Headers([('Content-Type', 'application/json'), ('Content-Length', '52'), ('Content-Security-Policy', "default-src 'self'; script-src 'self' 'unsafe-inline' https://maps.googleapis.com https://www.gstatic.com https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; connect-src 'self' https://maps.googleapis.com; font-src 'self' https://fonts.gstatic.com"), ('X-Content-Type-Options', 'nosniff'), ('X-Frame-Options', 'DENY'), ('X-XSS-Protection', '1; mode=block'), ('Referrer-Policy', 'strict-origin-when-cross-origin'), ('Permissions-Policy', 'geolocation=(self), microphone=(self), camera=(self)')])
+E            +  where Headers([('Content-Type', 'application/json'), ('Content-Length', '52'), ('Content-Security-Policy', "default-src 'self'; script-src 'self' 'unsafe-inline' https://maps.googleapis.com https://www.gstatic.com https://fonts.googleapis.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; connect-src 'self' https://maps.googleapis.com; font-src 'self' https://fonts.gstatic.com"), ('X-Content-Type-Options', 'nosniff'), ('X-Frame-Options', 'DENY'), ('X-XSS-Protection', '1; mode=block'), ('Referrer-Policy', 'strict-origin-when-cross-origin'), ('Permissions-Policy', 'geolocation=(self), microphone=(self), camera=(self)')]) = <WrapperTestResponse streamed [429 TOO MANY REQUESTS]>.headers
+
+tests\test_rate_limiter.py:43: AssertionError
+---------------------------- Captured stdout setup ----------------------------
+{"level": "INFO", "logger": "services.secret_service", "message": "Using local environment variables for secrets.", "timestamp": "2026-03-20 15:44:25,361", "file": "secret_service.py", "line": 41}
+{"level": "INFO", "logger": "services.gemini_service", "message": "Using mock Gemini for testing.", "timestamp": "2026-03-20 15:44:25,362", "file": "gemini_service.py", "line": 111}
+{"level": "INFO", "logger": "services.firestore_service", "message": "Using mock Firestore for testing.", "timestamp": "2026-03-20 15:44:25,362", "file": "firestore_service.py", "line": 41}
+{"level": "INFO", "logger": "services.storage_service", "message": "Using mock Storage for testing.", "timestamp": "2026-03-20 15:44:25,362", "file": "storage_service.py", "line": 45}
+---------------------------- Captured stdout call -----------------------------
+{"level": "INFO", "logger": "services.gemini_service", "message": "Gemini call successful", "timestamp": "2026-03-20 15:44:25,368", "file": "gemini_service.py", "line": 198}
+{"level": "ERROR", "logger": "services.gemini_service", "message": "Failed to parse Gemini JSON response: ActionPlan.__init__() missing 12 required positional arguments: 'intent', 'severity', 'location', 'affected_people', 'immediate_actions', 'medical_summary', 'risk_factors', 'resources_needed', 'followup_actions', 'search_grounding', 'language_detected', and 'data_quality'\nRaw output: {\"confidence\": 0.9}", "timestamp": "2026-03-20 15:44:25,369", "file": "gemini_service.py", "line": 215}
+{"level": "INFO", "logger": "app", "message": "Request completed", "timestamp": "2026-03-20 15:44:25,370", "file": "app.py", "line": 93}
+{"level": "INFO", "logger": "services.gemini_service", "message": "Gemini call successful", "timestamp": "2026-03-20 15:44:25,371", "file": "gemini_service.py", "line": 198}
+{"level": "ERROR", "logger": "services.gemini_service", "message": "Failed to parse Gemini JSON response: ActionPlan.__init__() missing 12 required positional arguments: 'intent', 'severity', 'location', 'affected_people', 'immediate_actions', 'medical_summary', 'risk_factors', 'resources_needed', 'followup_actions', 'search_grounding', 'language_detected', and 'data_quality'\nRaw output: {\"confidence\": 0.9}", "timestamp": "2026-03-20 15:44:25,371", "file": "gemini_service.py", "line": 215}
+{"level": "INFO", "logger": "app", "message": "Request completed", "timestamp": "2026-03-20 15:44:25,371", "file": "app.py", "line": 93}
+{"level": "INFO", "logger": "services.gemini_service", "message": "Gemini call successful", "timestamp": "2026-03-20 15:44:25,374", "file": "gemini_service.py", "line": 198}
+{"level": "ERROR", "logger": "services.gemini_service", "message": "Failed to parse Gemini JSON response: ActionPlan.__init__() missing 12 required positional arguments: 'intent', 'severity', 'location', 'affected_people', 'immediate_actions', 'medical_summary', 'risk_factors', 'resources_needed', 'followup_actions', 'search_grounding', 'language_detected', and 'data_quality'\nRaw output: {\"confidence\": 0.9}", "timestamp": "2026-03-20 15:44:25,374", "file": "gemini_service.py", "line": 215}
+{"level": "INFO", "logger": "app", "message": "Request completed", "timestamp": "2026-03-20 15:44:25,374", "file": "app.py", "line": 93}
+{"level": "INFO", "logger": "services.gemini_service", "message": "Gemini call successful", "timestamp": "2026-03-20 15:44:25,375", "file": "gemini_service.py", "line": 198}
+{"level": "ERROR", "logger": "services.gemini_service", "message": "Failed to parse Gemini JSON response: ActionPlan.__init__() missing 12 required positional arguments: 'intent', 'severity', 'location', 'affected_people', 'immediate_actions', 'medical_summary', 'risk_factors', 'resources_needed', 'followup_actions', 'search_grounding', 'language_detected', and 'data_quality'\nRaw output: {\"confidence\": 0.9}", "timestamp": "2026-03-20 15:44:25,375", "file": "gemini_service.py", "line": 215}
+{"level": "INFO", "logger": "app", "message": "Request completed", "timestamp": "2026-03-20 15:44:25,376", "file": "app.py", "line": 93}
+{"level": "INFO", "logger": "services.gemini_service", "message": "Gemini call successful", "timestamp": "2026-03-20 15:44:25,378", "file": "gemini_service.py", "line": 198}
+{"level": "ERROR", "logger": "services.gemini_service", "message": "Failed to parse Gemini JSON response: ActionPlan.__init__() missing 12 required positional arguments: 'intent', 'severity', 'location', 'affected_people', 'immediate_actions', 'medical_summary', 'risk_factors', 'resources_needed', 'followup_actions', 'search_grounding', 'language_detected', and 'data_quality'\nRaw output: {\"confidence\": 0.9}", "timestamp": "2026-03-20 15:44:25,378", "file": "gemini_service.py", "line": 215}
+{"level": "INFO", "logger": "app", "message": "Request completed", "timestamp": "2026-03-20 15:44:25,379", "file": "app.py", "line": 93}
+{"level": "INFO", "logger": "services.gemini_service", "message": "Gemini call successful", "timestamp": "2026-03-20 15:44:25,380", "file": "gemini_service.py", "line": 198}
+{"level": "ERROR", "logger": "services.gemini_service", "message": "Failed to parse Gemini JSON response: ActionPlan.__init__() missing 12 required positional arguments: 'intent', 'severity', 'location', 'affected_people', 'immediate_actions', 'medical_summary', 'risk_factors', 'resources_needed', 'followup_actions', 'search_grounding', 'language_detected', and 'data_quality'\nRaw output: {\"confidence\": 0.9}", "timestamp": "2026-03-20 15:44:25,380", "file": "gemini_service.py", "line": 215}
+{"level": "INFO", "logger": "app", "message": "Request completed", "timestamp": "2026-03-20 15:44:25,382", "file": "app.py", "line": 93}
+{"level": "INFO", "logger": "services.gemini_service", "message": "Gemini call successful", "timestamp": "2026-03-20 15:44:25,384", "file": "gemini_service.py", "line": 198}
+{"level": "ERROR", "logger": "services.gemini_service", "message": "Failed to parse Gemini JSON response: ActionPlan.__init__() missing 12 required positional arguments: 'intent', 'severity', 'location', 'affected_people', 'immediate_actions', 'medical_summary', 'risk_factors', 'resources_needed', 'followup_actions', 'search_grounding', 'language_detected', and 'data_quality'\nRaw output: {\"confidence\": 0.9}", "timestamp": "2026-03-20 15:44:25,384", "file": "gemini_service.py", "line": 215}
+{"level": "INFO", "logger": "app", "message": "Request completed", "timestamp": "2026-03-20 15:44:25,384", "file": "app.py", "line": 93}
+{"level": "INFO", "logger": "services.gemini_service", "message": "Gemini call successful", "timestamp": "2026-03-20 15:44:25,386", "file": "gemini_service.py", "line": 198}
+{"level": "ERROR", "logger": "services.gemini_service", "message": "Failed to parse Gemini JSON response: ActionPlan.__init__() missing 12 required positional arguments: 'intent', 'severity', 'location', 'affected_people', 'immediate_actions', 'medical_summary', 'risk_factors', 'resources_needed', 'followup_actions', 'search_grounding', 'language_detected', and 'data_quality'\nRaw output: {\"confidence\": 0.9}", "timestamp": "2026-03-20 15:44:25,386", "file": "gemini_service.py", "line": 215}
+{"level": "INFO", "logger": "app", "message": "Request completed", "timestamp": "2026-03-20 15:44:25,387", "file": "app.py", "line": 93}
+{"level": "INFO", "logger": "services.gemini_service", "message": "Gemini call successful", "timestamp": "2026-03-20 15:44:25,389", "file": "gemini_service.py", "line": 198}
+{"level": "ERROR", "logger": "services.gemini_service", "message": "Failed to parse Gemini JSON response: ActionPlan.__init__() missing 12 required positional arguments: 'intent', 'severity', 'location', 'affected_people', 'immediate_actions', 'medical_summary', 'risk_factors', 'resources_needed', 'followup_actions', 'search_grounding', 'language_detected', and 'data_quality'\nRaw output: {\"confidence\": 0.9}", "timestamp": "2026-03-20 15:44:25,389", "file": "gemini_service.py", "line": 215}
+{"level": "INFO", "logger": "app", "message": "Request completed", "timestamp": "2026-03-20 15:44:25,389", "file": "app.py", "line": 93}
+{"level": "INFO", "logger": "services.gemini_service", "message": "Gemini call successful", "timestamp": "2026-03-20 15:44:25,391", "file": "gemini_service.py", "line": 198}
+{"level": "ERROR", "logger": "services.gemini_service", "message": "Failed to parse Gemini JSON response: ActionPlan.__init__() missing 12 required positional arguments: 'intent', 'severity', 'location', 'affected_people', 'immediate_actions', 'medical_summary', 'risk_factors', 'resources_needed', 'followup_actions', 'search_grounding', 'language_detected', and 'data_quality'\nRaw output: {\"confidence\": 0.9}", "timestamp": "2026-03-20 15:44:25,391", "file": "gemini_service.py", "line": 215}
+{"level": "INFO", "logger": "app", "message": "Request completed", "timestamp": "2026-03-20 15:44:25,391", "file": "app.py", "line": 93}
+{"level": "WARNING", "logger": "middleware.rate_limiter", "message": "Endpoint rate limit exceeded", "timestamp": "2026-03-20 15:44:25,392", "file": "rate_limiter.py", "line": 128}
+{"level": "INFO", "logger": "app", "message": "Request completed", "timestamp": "2026-03-20 15:44:25,392", "file": "app.py", "line": 93}
+
+---------- coverage: platform win32, python 3.11.3-final-0 -----------
+Name                             Stmts   Miss  Cover   Missing
+--------------------------------------------------------------
+app.py                              82     19    77%   69-71, 129-132, 144-149, 161, 175, 213-223, 231-235
+config.py                           23      0   100%
+constants.py                        20      0   100%
+exceptions.py                       14      0   100%
+logger.py                           19      0   100%
+middleware\__init__.py               0      0   100%
+middleware\input_validator.py       46      1    98%   72
+middleware\rate_limiter.py          58      4    93%   67, 88, 119-120
+middleware\security_headers.py      10      0   100%
+models\__init__.py                   0      0   100%
+models\action_plan.py               48      0   100%
+routes\__init__.py                   0      0   100%
+routes\api.py                       76      6    92%   145-147, 179, 225-226
+routes\views.py                      5      1    80%   10
+services\__init__.py                 0      0   100%
+services\firestore_service.py       80     52    35%   33-39, 88-113, 125-150, 161-179
+services\gemini_service.py          76     17    78%   87-109, 166-168, 175, 180, 207-208
+services\secret_service.py          48     19    60%   34-39, 54, 66, 70-78, 82-83
+services\storage_service.py         62     37    40%   38-43, 61-108
+tests\__init__.py                    0      0   100%
+tests\conftest.py                   42      0   100%
+tests\test_api.py                  114      0   100%
+tests\test_gemini_service.py        64      0   100%
+tests\test_models.py                31      0   100%
+tests\test_rate_limiter.py          64      0   100%
+tests\test_validator.py             42      0   100%
+wsgi.py                              4      4     0%   1-6
+--------------------------------------------------------------
+TOTAL                             1028    160    84%
+
+FAIL Required test coverage of 85% not reached. Total coverage: 84.44%
+=========================== short test summary info ===========================
+FAILED tests/test_rate_limiter.py::TestRateLimiter::test_429_response_includes_retry_after_header
+======================== 1 failed, 60 passed in 1.19s =========================

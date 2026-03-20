@@ -1,0 +1,50 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.11.3, pytest-8.2.0, pluggy-1.6.0
+rootdir: C:\Users\darpa\OneDrive\Desktop\PromptWar\Part1\nexus
+configfile: pytest.ini
+testpaths: tests
+plugins: cov-5.0.0, flask-1.3.0
+collected 61 items
+
+tests\test_api.py .........................                              [ 40%]
+tests\test_gemini_service.py ........                                    [ 54%]
+tests\test_models.py .......                                             [ 65%]
+tests\test_rate_limiter.py ..........                                    [ 81%]
+tests\test_validator.py ...........                                      [100%]
+
+---------- coverage: platform win32, python 3.11.3-final-0 -----------
+Name                             Stmts   Miss  Cover   Missing
+--------------------------------------------------------------
+app.py                              89     19    79%   69-71, 129-132, 144-149, 161, 175, 222-232, 240-244
+config.py                           23      0   100%
+constants.py                        20      0   100%
+exceptions.py                       14      0   100%
+logger.py                           19      0   100%
+middleware\__init__.py               0      0   100%
+middleware\input_validator.py       46      1    98%   72
+middleware\rate_limiter.py          58      4    93%   67, 88, 119-120
+middleware\security_headers.py      10      0   100%
+models\__init__.py                   0      0   100%
+models\action_plan.py               48      0   100%
+routes\__init__.py                   0      0   100%
+routes\api.py                       76      6    92%   145-147, 179, 225-226
+routes\views.py                      5      1    80%   10
+services\__init__.py                 0      0   100%
+services\firestore_service.py       80     58    28%   33-39, 68-113, 125-150, 161-179
+services\gemini_service.py          76     17    78%   87-109, 166-168, 175, 180, 207-208
+services\secret_service.py          48     19    60%   34-39, 54, 66, 70-78, 82-83
+services\storage_service.py         62     37    40%   38-43, 61-108
+tests\__init__.py                    0      0   100%
+tests\conftest.py                   42      0   100%
+tests\test_api.py                  114      0   100%
+tests\test_gemini_service.py        64      0   100%
+tests\test_models.py                31      0   100%
+tests\test_rate_limiter.py          68      0   100%
+tests\test_validator.py             42      0   100%
+wsgi.py                              4      4     0%   1-6
+--------------------------------------------------------------
+TOTAL                             1039    166    84%
+
+FAIL Required test coverage of 85% not reached. Total coverage: 84.02%
+
+============================= 61 passed in 0.79s ==============================

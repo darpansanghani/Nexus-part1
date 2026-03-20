@@ -1,0 +1,1529 @@
+Working... ---------------------------------------- 100% 0:02:11
+Run started:2026-03-20 09:58:12.185424
+
+Test results:
+>> Issue: [B104:hardcoded_bind_all_interfaces] Possible binding to all interfaces.
+   Severity: Medium   Confidence: Medium
+   CWE: CWE-605 (https://cwe.mitre.org/data/definitions/605.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b104_hardcoded_bind_all_interfaces.html
+   Location: .\app.py:120:26
+119	    port = int(os.environ.get("PORT", 8080))
+120	    app_instance.run(host="0.0.0.0", port=port, debug=app_instance.config.get("DEBUG", False))
+
+--------------------------------------------------
+>> Issue: [B104:hardcoded_bind_all_interfaces] Possible binding to all interfaces.
+   Severity: Medium   Confidence: Medium
+   CWE: CWE-605 (https://cwe.mitre.org/data/definitions/605.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b104_hardcoded_bind_all_interfaces.html
+   Location: .\middleware\rate_limiter.py:62:86
+61	        def wrapped(*args: Any, **kwargs: Any) -> Any:
+62	            client_ip = request.remote_addr or request.headers.get("X-Forwarded-For", "0.0.0.0")
+63	            
+
+--------------------------------------------------
+>> Issue: [B104:hardcoded_bind_all_interfaces] Possible binding to all interfaces.
+   Severity: Medium   Confidence: Medium
+   CWE: CWE-605 (https://cwe.mitre.org/data/definitions/605.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b104_hardcoded_bind_all_interfaces.html
+   Location: .\routes\api.py:167:78
+166	    duration_ms = int((time.time() - getattr(g, "start_time", time.time())) * 1000)
+167	    client_ip = request.remote_addr or request.headers.get("X-Forwarded-For", "0.0.0.0")
+168	    ip_hash = get_ip_hash(client_ip)
+
+--------------------------------------------------
+>> Issue: [B608:hardcoded_sql_expressions] Possible SQL injection vector through string-based query construction.
+   Severity: Medium   Confidence: Low
+   CWE: CWE-89 (https://cwe.mitre.org/data/definitions/89.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b608_hardcoded_sql_expressions.html
+   Location: .\services\firestore_service.py:132:25
+131	        except GoogleAPIError as e:
+132	            logger.error(f"Failed to delete from Firestore: {e}", exc_info=True)
+133	            return False
+
+--------------------------------------------------
+>> Issue: [B307:blacklist] Use of possibly insecure function - consider using safer ast.literal_eval.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b307-eval
+   Location: .\venv\Lib\site-packages\_pytest\_code\code.py:171:15
+170	        f_locals.update(vars)
+171	        return eval(code, self.f_globals, f_locals)
+172	
+
+--------------------------------------------------
+>> Issue: [B102:exec_used] Use of exec detected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b102_exec_used.html
+   Location: .\venv\Lib\site-packages\_pytest\_py\path.py:1155:24
+1154	                    with open(str(self), "rb") as f:
+1155	                        exec(f.read(), mod.__dict__)
+1156	                except BaseException:
+
+--------------------------------------------------
+>> Issue: [B102:exec_used] Use of exec detected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b102_exec_used.html
+   Location: .\venv\Lib\site-packages\_pytest\assertion\rewrite.py:178:8
+177	            state.trace(f"found cached rewritten pyc for {fn}")
+178	        exec(co, module.__dict__)
+179	
+
+--------------------------------------------------
+>> Issue: [B302:blacklist] Deserialization with the marshal module is possibly dangerous.
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b302-marshal
+   Location: .\venv\Lib\site-packages\_pytest\assertion\rewrite.py:394:17
+393	        try:
+394	            co = marshal.load(fp)
+395	        except Exception as e:
+
+--------------------------------------------------
+>> Issue: [B307:blacklist] Use of possibly insecure function - consider using safer ast.literal_eval.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b307-eval
+   Location: .\venv\Lib\site-packages\_pytest\mark\expression.py:222:20
+221	        """
+222	        ret: bool = eval(self.code, {"__builtins__": {}}, MatcherAdapter(matcher))
+223	        return ret
+
+--------------------------------------------------
+>> Issue: [B310:blacklist] Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-22 (https://cwe.mitre.org/data/definitions/22.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b310-urllib-urlopen
+   Location: .\venv\Lib\site-packages\_pytest\pastebin.py:85:12
+84	        response: str = (
+85	            urlopen(url, data=urlencode(params).encode("ascii")).read().decode("utf-8")
+86	        )
+
+--------------------------------------------------
+>> Issue: [B307:blacklist] Use of possibly insecure function - consider using safer ast.literal_eval.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b307-eval
+   Location: .\venv\Lib\site-packages\_pytest\pytester.py:298:23
+297	                    print("NAMEMATCH", name, call)
+298	                    if eval(check, backlocals, call.__dict__):
+299	                        print("CHECKERMATCH", repr(check), "->", call)
+
+--------------------------------------------------
+>> Issue: [B307:blacklist] Use of possibly insecure function - consider using safer ast.literal_eval.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b307-eval
+   Location: .\venv\Lib\site-packages\_pytest\skipping.py:117:21
+116	            condition_code = compile(condition, filename, "eval")
+117	            result = eval(condition_code, globals_)
+118	        except SyntaxError as exc:
+
+--------------------------------------------------
+>> Issue: [B307:blacklist] Use of possibly insecure function - consider using safer ast.literal_eval.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b307-eval
+   Location: .\venv\Lib\site-packages\bleach\_vendor\html5lib\_inputstream.py:32:36
+31	    invalid_unicode_re = re.compile(invalid_unicode_no_surrogate[:-1] +
+32	                                    eval('"\\uD800-\\uDFFF"') +  # pylint:disable=eval-used
+33	                                    "]")
+
+--------------------------------------------------
+>> Issue: [B307:blacklist] Use of possibly insecure function - consider using safer ast.literal_eval.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b307-eval
+   Location: .\venv\Lib\site-packages\bleach\_vendor\html5lib\_utils.py:33:9
+32	try:
+33	    _x = eval('"\\uD800"')  # pylint:disable=eval-used
+34	    if not isinstance(_x, text_type):
+
+--------------------------------------------------
+>> Issue: [B307:blacklist] Use of possibly insecure function - consider using safer ast.literal_eval.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b307-eval
+   Location: .\venv\Lib\site-packages\bleach\_vendor\html5lib\_utils.py:36:13
+35	        # We need this with u"" because of http://bugs.jython.org/issue2039
+36	        _x = eval('u"\\uD800"')  # pylint:disable=eval-used
+37	        assert isinstance(_x, text_type)
+
+--------------------------------------------------
+>> Issue: [B320:blacklist] Using lxml.etree.fromstring to parse untrusted XML data is known to be vulnerable to XML attacks. Replace lxml.etree.fromstring with its defusedxml equivalent function.
+   Severity: Medium   Confidence: High
+   CWE: CWE-20 (https://cwe.mitre.org/data/definitions/20.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b313-b320-xml-bad-etree
+   Location: .\venv\Lib\site-packages\bleach\_vendor\html5lib\treebuilders\etree_lxml.py:365:15
+364	        docStr += "<THIS_SHOULD_NEVER_APPEAR_PUBLICLY/>"
+365	        root = etree.fromstring(docStr)
+366	
+
+--------------------------------------------------
+>> Issue: [B307:blacklist] Use of possibly insecure function - consider using safer ast.literal_eval.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b307-eval
+   Location: .\venv\Lib\site-packages\cffi\recompiler.py:78:16
+77	    def as_python_expr(self):
+78	        flags = eval(self.flags, G_FLAGS)
+79	        fields_expr = [c_field.as_field_python_expr()
+
+--------------------------------------------------
+>> Issue: [B102:exec_used] Use of exec detected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b102_exec_used.html
+   Location: .\venv\Lib\site-packages\cffi\setuptools_ext.py:26:4
+25	    code = compile(src, filename, 'exec')
+26	    exec(code, glob, glob)
+27	
+
+--------------------------------------------------
+>> Issue: [B102:exec_used] Use of exec detected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b102_exec_used.html
+   Location: .\venv\Lib\site-packages\coverage\execfile.py:213:12
+212	        try:
+213	            exec(code, main_mod.__dict__)
+214	        except SystemExit:  # pylint: disable=try-except-raise
+
+--------------------------------------------------
+>> Issue: [B302:blacklist] Deserialization with the marshal module is possibly dangerous.
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b302-marshal
+   Location: .\venv\Lib\site-packages\coverage\execfile.py:326:15
+325	        # The rest of the file is the code object we want.
+326	        code = marshal.load(fpyc)
+327	        assert isinstance(code, CodeType)
+
+--------------------------------------------------
+>> Issue: [B307:blacklist] Use of possibly insecure function - consider using safer ast.literal_eval.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b307-eval
+   Location: .\venv\Lib\site-packages\coverage\parser.py:589:29
+588	            if node.id in ["True", "False", "None", "__debug__"]:
+589	                return True, eval(node.id)  # pylint: disable=eval-used
+590	        case ast.UnaryOp():
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   CWE: CWE-377 (https://cwe.mitre.org/data/definitions/377.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b108_hardcoded_tmp_directory.html
+   Location: .\venv\Lib\site-packages\coverage\pytracer.py:129:18
+128	        """For hard-core logging of what this tracer is doing."""
+129	        with open("/tmp/debug_trace.txt", "a", encoding="utf-8") as f:
+130	            f.write(f"{marker} {self.id}[{len(self.data_stack)}]")
+
+--------------------------------------------------
+>> Issue: [B608:hardcoded_sql_expressions] Possible SQL injection vector through string-based query construction.
+   Severity: Medium   Confidence: Medium
+   CWE: CWE-89 (https://cwe.mitre.org/data/definitions/89.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b608_hardcoded_sql_expressions.html
+   Location: .\venv\Lib\site-packages\coverage\sqldata.py:993:33
+992	                context_clause = " or ".join(["context REGEXP ?"] * len(contexts))
+993	                with con.execute("SELECT id FROM context WHERE " + context_clause, contexts) as cur:
+994	                    self._query_context_ids = [row[0] for row in cur.fetchall()]
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   CWE: CWE-377 (https://cwe.mitre.org/data/definitions/377.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b108_hardcoded_tmp_directory.html
+   Location: .\venv\Lib\site-packages\coverage\sysmon.py:102:12
+101	        for filename in [
+102	            "/tmp/foo.out",
+103	            # f"{root}.out",
+104	            # f"{root}-{pid}.out",
+105	            # f"{root}-{pid}-{tslug}.out",
+106	        ]:
+107	            with open(filename, "a", encoding="utf-8") as f:
+108	                try:
+
+--------------------------------------------------
+>> Issue: [B102:exec_used] Use of exec detected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b102_exec_used.html
+   Location: .\venv\Lib\site-packages\coverage\templite.py:74:8
+73	        global_namespace: dict[str, Any] = {}
+74	        exec(python_source, global_namespace)
+75	        return global_namespace
+
+--------------------------------------------------
+>> Issue: [B303:blacklist] Use of insecure MD2, MD4, MD5, or SHA1 hash function.
+   Severity: Medium   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b303-md5
+   Location: .\venv\Lib\site-packages\cryptography\hazmat\_oid.py:128:40
+127	_SIG_OIDS_TO_HASH: dict[ObjectIdentifier, hashes.HashAlgorithm | None] = {
+128	    SignatureAlgorithmOID.RSA_WITH_MD5: hashes.MD5(),
+129	    SignatureAlgorithmOID.RSA_WITH_SHA1: hashes.SHA1(),
+
+--------------------------------------------------
+>> Issue: [B303:blacklist] Use of insecure MD2, MD4, MD5, or SHA1 hash function.
+   Severity: Medium   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b303-md5
+   Location: .\venv\Lib\site-packages\cryptography\hazmat\_oid.py:129:41
+128	    SignatureAlgorithmOID.RSA_WITH_MD5: hashes.MD5(),
+129	    SignatureAlgorithmOID.RSA_WITH_SHA1: hashes.SHA1(),
+130	    SignatureAlgorithmOID._RSA_WITH_SHA1: hashes.SHA1(),
+
+--------------------------------------------------
+>> Issue: [B303:blacklist] Use of insecure MD2, MD4, MD5, or SHA1 hash function.
+   Severity: Medium   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b303-md5
+   Location: .\venv\Lib\site-packages\cryptography\hazmat\_oid.py:130:42
+129	    SignatureAlgorithmOID.RSA_WITH_SHA1: hashes.SHA1(),
+130	    SignatureAlgorithmOID._RSA_WITH_SHA1: hashes.SHA1(),
+131	    SignatureAlgorithmOID.RSA_WITH_SHA224: hashes.SHA224(),
+
+--------------------------------------------------
+>> Issue: [B303:blacklist] Use of insecure MD2, MD4, MD5, or SHA1 hash function.
+   Severity: Medium   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b303-md5
+   Location: .\venv\Lib\site-packages\cryptography\hazmat\_oid.py:139:43
+138	    SignatureAlgorithmOID.RSA_WITH_SHA3_512: hashes.SHA3_512(),
+139	    SignatureAlgorithmOID.ECDSA_WITH_SHA1: hashes.SHA1(),
+140	    SignatureAlgorithmOID.ECDSA_WITH_SHA224: hashes.SHA224(),
+
+--------------------------------------------------
+>> Issue: [B303:blacklist] Use of insecure MD2, MD4, MD5, or SHA1 hash function.
+   Severity: Medium   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b303-md5
+   Location: .\venv\Lib\site-packages\cryptography\hazmat\_oid.py:148:41
+147	    SignatureAlgorithmOID.ECDSA_WITH_SHA3_512: hashes.SHA3_512(),
+148	    SignatureAlgorithmOID.DSA_WITH_SHA1: hashes.SHA1(),
+149	    SignatureAlgorithmOID.DSA_WITH_SHA224: hashes.SHA224(),
+
+--------------------------------------------------
+>> Issue: [B305:blacklist] Use of insecure cipher mode cryptography.hazmat.primitives.ciphers.modes.ECB.
+   Severity: Medium   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b304-b305-ciphers-and-modes
+   Location: .\venv\Lib\site-packages\cryptography\hazmat\primitives\keywrap.py:21:42
+20	    # RFC 3394 Key Wrap - 2.2.1 (index method)
+21	    encryptor = Cipher(AES(wrapping_key), ECB()).encryptor()
+22	    n = len(r)
+
+--------------------------------------------------
+>> Issue: [B305:blacklist] Use of insecure cipher mode cryptography.hazmat.primitives.ciphers.modes.ECB.
+   Severity: Medium   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b304-b305-ciphers-and-modes
+   Location: .\venv\Lib\site-packages\cryptography\hazmat\primitives\keywrap.py:64:42
+63	    # Implement RFC 3394 Key Unwrap - 2.2.2 (index method)
+64	    decryptor = Cipher(AES(wrapping_key), ECB()).decryptor()
+65	    n = len(r)
+
+--------------------------------------------------
+>> Issue: [B305:blacklist] Use of insecure cipher mode cryptography.hazmat.primitives.ciphers.modes.ECB.
+   Severity: Medium   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b304-b305-ciphers-and-modes
+   Location: .\venv\Lib\site-packages\cryptography\hazmat\primitives\keywrap.py:97:46
+96	        # RFC 5649 - 4.1 - exactly 8 octets after padding
+97	        encryptor = Cipher(AES(wrapping_key), ECB()).encryptor()
+98	        b = encryptor.update(aiv + key_to_wrap)
+
+--------------------------------------------------
+>> Issue: [B305:blacklist] Use of insecure cipher mode cryptography.hazmat.primitives.ciphers.modes.ECB.
+   Severity: Medium   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b304-b305-ciphers-and-modes
+   Location: .\venv\Lib\site-packages\cryptography\hazmat\primitives\keywrap.py:119:46
+118	        # RFC 5649 - 4.2 - exactly two 64-bit blocks
+119	        decryptor = Cipher(AES(wrapping_key), ECB()).decryptor()
+120	        out = decryptor.update(wrapped_key)
+
+--------------------------------------------------
+>> Issue: [B303:blacklist] Use of insecure MD2, MD4, MD5, or SHA1 hash function.
+   Severity: Medium   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b303-md5
+   Location: .\venv\Lib\site-packages\cryptography\hazmat\primitives\serialization\ssh.py:1007:27
+1006	            if self._inner_sig_type == _SSH_RSA:
+1007	                hash_alg = hashes.SHA1()
+1008	            elif self._inner_sig_type == _SSH_RSA_SHA256:
+
+--------------------------------------------------
+>> Issue: [B324:hashlib] Use of weak SHA1 hash for security. Consider usedforsecurity=False
+   Severity: High   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b324_hashlib.html
+   Location: .\venv\Lib\site-packages\cryptography\x509\extensions.py:72:11
+71	
+72	    return hashlib.sha1(data).digest()
+73	
+
+--------------------------------------------------
+>> Issue: [B307:blacklist] Use of possibly insecure function - consider using safer ast.literal_eval.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b307-eval
+   Location: .\venv\Lib\site-packages\flask\cli.py:1005:12
+1004	        with open(startup) as f:
+1005	            eval(compile(f.read(), startup, "exec"), ctx)
+1006	
+
+--------------------------------------------------
+>> Issue: [B102:exec_used] Use of exec detected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b102_exec_used.html
+   Location: .\venv\Lib\site-packages\flask\config.py:212:16
+211	            with open(filename, mode="rb") as config_file:
+212	                exec(compile(config_file.read(), filename, "exec"), d.__dict__)
+213	        except OSError as e:
+
+--------------------------------------------------
+>> Issue: [B324:hashlib] Use of weak SHA1 hash for security. Consider usedforsecurity=False
+   Severity: High   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b324_hashlib.html
+   Location: .\venv\Lib\site-packages\flask\sessions.py:285:11
+284	    """
+285	    return hashlib.sha1(string)
+286	
+
+--------------------------------------------------
+>> Issue: [B324:hashlib] Use of weak MD5 hash for security. Consider usedforsecurity=False
+   Severity: High   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b324_hashlib.html
+   Location: .\venv\Lib\site-packages\google\cloud\storage\_helpers.py:543:15
+542	    """
+543	    hash_obj = md5()
+544	    _write_buffer_to_hash(buffer_object, hash_obj)
+
+--------------------------------------------------
+>> Issue: [B301:blacklist] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b301-pickle
+   Location: .\venv\Lib\site-packages\google\cloud\storage\transfer_manager.py:1178:17
+1177	    else:
+1178	        client = pickle.loads(maybe_pickled_client)
+1179	    part = XMLMPUPart(
+
+--------------------------------------------------
+>> Issue: [B301:blacklist] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b301-pickle
+   Location: .\venv\Lib\site-packages\google\cloud\storage\transfer_manager.py:1224:15
+1223	    else:
+1224	        blob = pickle.loads(maybe_pickled_blob)
+1225	
+
+--------------------------------------------------
+>> Issue: [B301:blacklist] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b301-pickle
+   Location: .\venv\Lib\site-packages\google\cloud\storage\transfer_manager.py:1276:15
+1275	    else:
+1276	        blob = pickle.loads(maybe_pickled_blob)
+1277	    return getattr(blob, method_name)(*args, **kwargs)
+
+--------------------------------------------------
+>> Issue: [B310:blacklist] Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-22 (https://cwe.mitre.org/data/definitions/22.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b310-urllib-urlopen
+   Location: .\venv\Lib\site-packages\google\generativeai\types\model_types.py:246:16
+245	        if isinstance(data, str):
+246	            f = urllib.request.urlopen(data)
+247	            # csv needs strings, json does not.
+
+--------------------------------------------------
+>> Issue: [B324:hashlib] Use of weak SHA1 hash for security. Consider usedforsecurity=False
+   Severity: High   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b324_hashlib.html
+   Location: .\venv\Lib\site-packages\google\protobuf\proto_builder.py:68:16
+67	  # proto files.
+68	  fields_hash = hashlib.sha1()
+69	  for f_name, f_type in field_items:
+
+--------------------------------------------------
+>> Issue: [B324:hashlib] Use of weak MD5 hash for security. Consider usedforsecurity=False
+   Severity: High   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b324_hashlib.html
+   Location: .\venv\Lib\site-packages\google\resumable_media\_helpers.py:236:34
+235	            if checksum_type == "md5":
+236	                checksum_object = hashlib.md5()
+237	            else:
+
+--------------------------------------------------
+>> Issue: [B324:hashlib] Use of weak MD5 hash for security. Consider usedforsecurity=False
+   Severity: High   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b324_hashlib.html
+   Location: .\venv\Lib\site-packages\google\resumable_media\_helpers.py:333:15
+332	    if checksum_type == "md5":
+333	        return hashlib.md5()
+334	    elif checksum_type == "crc32c":
+
+--------------------------------------------------
+>> Issue: [B314:blacklist] Using xml.etree.ElementTree.fromstring to parse untrusted XML data is known to be vulnerable to XML attacks. Replace xml.etree.ElementTree.fromstring with its defusedxml equivalent function or make sure defusedxml.defuse_stdlib() is called
+   Severity: Medium   Confidence: High
+   CWE: CWE-20 (https://cwe.mitre.org/data/definitions/20.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b313-b320-xml-bad-elementtree
+   Location: .\venv\Lib\site-packages\google\resumable_media\_upload.py:989:15
+988	        _helpers.require_status_code(response, (http.client.OK,), self._get_status_code)
+989	        root = ElementTree.fromstring(response.text)
+990	        self._upload_id = root.find(_S3_COMPAT_XML_NAMESPACE + _UPLOAD_ID_NODE).text
+
+--------------------------------------------------
+>> Issue: [B104:hardcoded_bind_all_interfaces] Possible binding to all interfaces.
+   Severity: Medium   Confidence: Medium
+   CWE: CWE-605 (https://cwe.mitre.org/data/definitions/605.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b104_hardcoded_bind_all_interfaces.html
+   Location: .\venv\Lib\site-packages\gunicorn\util.py:248:21
+247	    elif netloc == "":
+248	        host, port = "0.0.0.0", default_port
+249	
+
+--------------------------------------------------
+>> Issue: [B324:hashlib] Use of weak MD5 hash for security. Consider usedforsecurity=False
+   Severity: High   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b324_hashlib.html
+   Location: .\venv\Lib\site-packages\httplib2\__init__.py:262:14
+261	        filename_bytes = filename.encode("utf-8")
+262	    filemd5 = _md5(filename_bytes).hexdigest()
+263	    filename = re_url_scheme.sub("", filename)
+
+--------------------------------------------------
+>> Issue: [B324:hashlib] Use of weak MD5 hash for security. Consider usedforsecurity=False
+   Severity: High   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b324_hashlib.html
+   Location: .\venv\Lib\site-packages\httplib2\__init__.py:474:10
+473	def _cnonce():
+474	    dig = _md5(
+475	        ("%s:%s" % (time.ctime(), ["0123456789"[random.randrange(0, 9)] for i in range(20)])).encode("utf-8")
+476	    ).hexdigest()
+477	    return dig[:16]
+
+--------------------------------------------------
+>> Issue: [B324:hashlib] Use of weak SHA1 hash for security. Consider usedforsecurity=False
+   Severity: High   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b324_hashlib.html
+   Location: .\venv\Lib\site-packages\httplib2\__init__.py:482:25
+481	    return (
+482	        base64.b64encode(_sha(("%s%s%s" % (cnonce, iso_now, password)).encode("utf-8")).digest()).strip().decode("utf-8")
+483	    )
+
+--------------------------------------------------
+>> Issue: [B324:hashlib] Use of weak MD5 hash for security. Consider usedforsecurity=False
+   Severity: High   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b324_hashlib.html
+   Location: .\venv\Lib\site-packages\httplib2\__init__.py:582:22
+581	        """Modify the request headers"""
+582	        H = lambda x: _md5(x.encode("utf-8")).hexdigest()
+583	        KD = lambda s, d: H("%s:%s" % (s, d))
+
+--------------------------------------------------
+>> Issue: [B324:hashlib] Use of weak SHA1 hash for security. Consider usedforsecurity=False
+   Severity: High   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b324_hashlib.html
+   Location: .\venv\Lib\site-packages\itsdangerous\signer.py:45:11
+44	    """
+45	    return hashlib.sha1(string)
+46	
+
+--------------------------------------------------
+>> Issue: [B301:blacklist] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b301-pickle
+   Location: .\venv\Lib\site-packages\jinja2\bccache.py:73:19
+72	        # the source code of the file changed, we need to reload
+73	        checksum = pickle.load(f)
+74	        if self.checksum != checksum:
+
+--------------------------------------------------
+>> Issue: [B302:blacklist] Deserialization with the marshal module is possibly dangerous.
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b302-marshal
+   Location: .\venv\Lib\site-packages\jinja2\bccache.py:79:24
+78	        try:
+79	            self.code = marshal.load(f)
+80	        except (EOFError, ValueError, TypeError):
+
+--------------------------------------------------
+>> Issue: [B324:hashlib] Use of weak SHA1 hash for security. Consider usedforsecurity=False
+   Severity: High   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b324_hashlib.html
+   Location: .\venv\Lib\site-packages\jinja2\bccache.py:156:15
+155	        """Returns the unique hash key for this template name."""
+156	        hash = sha1(name.encode("utf-8"))
+157	
+
+--------------------------------------------------
+>> Issue: [B324:hashlib] Use of weak SHA1 hash for security. Consider usedforsecurity=False
+   Severity: High   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b324_hashlib.html
+   Location: .\venv\Lib\site-packages\jinja2\bccache.py:165:15
+164	        """Returns a checksum for the source."""
+165	        return sha1(source.encode("utf-8")).hexdigest()
+166	
+
+--------------------------------------------------
+>> Issue: [B102:exec_used] Use of exec detected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b102_exec_used.html
+   Location: .\venv\Lib\site-packages\jinja2\debug.py:145:8
+144	    try:
+145	        exec(code, globals, locals)
+146	    except BaseException:
+
+--------------------------------------------------
+>> Issue: [B102:exec_used] Use of exec detected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b102_exec_used.html
+   Location: .\venv\Lib\site-packages\jinja2\environment.py:1228:8
+1227	        namespace = {"environment": environment, "__file__": code.co_filename}
+1228	        exec(code, namespace)
+1229	        rv = cls._from_namespace(environment, namespace, globals)
+
+--------------------------------------------------
+>> Issue: [B324:hashlib] Use of weak SHA1 hash for security. Consider usedforsecurity=False
+   Severity: High   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b324_hashlib.html
+   Location: .\venv\Lib\site-packages\jinja2\loaders.py:661:25
+660	    def get_template_key(name: str) -> str:
+661	        return "tmpl_" + sha1(name.encode("utf-8")).hexdigest()
+662	
+
+--------------------------------------------------
+>> Issue: [B301:blacklist] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b301-pickle
+   Location: .\venv\Lib\site-packages\mypy\dmypy\client.py:623:23
+622	
+623	        options_dict = pickle.loads(base64.b64decode(args.options_data))
+624	        options_obj = Options()
+
+--------------------------------------------------
+>> Issue: [B608:hardcoded_sql_expressions] Possible SQL injection vector through string-based query construction.
+   Severity: Medium   Confidence: Medium
+   CWE: CWE-89 (https://cwe.mitre.org/data/definitions/89.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b608_hardcoded_sql_expressions.html
+   Location: .\venv\Lib\site-packages\mypy\metastore.py:179:30
+178	
+179	        cur = self.db.execute(f"SELECT {field} FROM files WHERE path = ?", (name,))
+180	        results = cur.fetchall()
+
+--------------------------------------------------
+>> Issue: [B320:blacklist] Using lxml.etree.parse to parse untrusted XML data is known to be vulnerable to XML attacks. Replace lxml.etree.parse with its defusedxml equivalent function.
+   Severity: Medium   Confidence: High
+   CWE: CWE-20 (https://cwe.mitre.org/data/definitions/20.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b313-b320-xml-bad-etree
+   Location: .\venv\Lib\site-packages\mypy\report.py:473:38
+472	        xsd_path = os.path.join(reports.data_dir, "xml", "mypy.xsd")
+473	        self.schema = etree.XMLSchema(etree.parse(xsd_path))
+474	        self.last_xml: Any | None = None
+
+--------------------------------------------------
+>> Issue: [B320:blacklist] Using lxml.etree.parse to parse untrusted XML data is known to be vulnerable to XML attacks. Replace lxml.etree.parse with its defusedxml equivalent function.
+   Severity: Medium   Confidence: High
+   CWE: CWE-20 (https://cwe.mitre.org/data/definitions/20.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b313-b320-xml-bad-etree
+   Location: .\venv\Lib\site-packages\mypy\report.py:768:36
+767	
+768	        self.xslt_html = etree.XSLT(etree.parse(self.memory_xml.xslt_html_path))
+769	        self.param_html = etree.XSLT.strparam("html")
+
+--------------------------------------------------
+>> Issue: [B320:blacklist] Using lxml.etree.parse to parse untrusted XML data is known to be vulnerable to XML attacks. Replace lxml.etree.parse with its defusedxml equivalent function.
+   Severity: Medium   Confidence: High
+   CWE: CWE-20 (https://cwe.mitre.org/data/definitions/20.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b313-b320-xml-bad-etree
+   Location: .\venv\Lib\site-packages\mypy\report.py:814:35
+813	
+814	        self.xslt_txt = etree.XSLT(etree.parse(self.memory_xml.xslt_txt_path))
+815	
+
+--------------------------------------------------
+>> Issue: [B602:subprocess_popen_with_shell_equals_true] subprocess call with shell=True identified, security issue.
+   Severity: High   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b602_subprocess_popen_with_shell_equals_true.html
+   Location: .\venv\Lib\site-packages\mypy\test\testdaemon.py:90:17
+89	        output = subprocess.check_output(
+90	            input, shell=True, stderr=subprocess.STDOUT, text=True, cwd=test_temp_dir, env=env
+91	        )
+92	        return 0, output
+93	    except subprocess.CalledProcessError as err:
+
+--------------------------------------------------
+>> Issue: [B324:hashlib] Use of weak SHA1 hash for security. Consider usedforsecurity=False
+   Severity: High   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b324_hashlib.html
+   Location: .\venv\Lib\site-packages\mypyc\build.py:199:8
+198	
+199	    h = hashlib.sha1()
+200	    h.update(",".join(modules).encode())
+
+--------------------------------------------------
+>> Issue: [B102:exec_used] Use of exec detected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b102_exec_used.html
+   Location: .\venv\Lib\site-packages\mypyc\test\test_run.py:108:16
+107	            with open(script_name, "rb") as f:
+108	                exec(f.read(), g)
+109	        finally:
+
+--------------------------------------------------
+>> Issue: [B604:any_other_function_with_shell_equals_true] Function call with shell=True parameter identified, possible security issue.
+   Severity: Medium   Confidence: Low
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b604_any_other_function_with_shell_equals_true.html
+   Location: .\venv\Lib\site-packages\pip\_internal\commands\completion.py:120:18
+119	            )
+120	            print(BASE_COMPLETION.format(script=script, shell=options.shell))
+121	            return SUCCESS
+
+--------------------------------------------------
+>> Issue: [B602:subprocess_popen_with_shell_equals_true] subprocess call with shell=True identified, security issue.
+   Severity: High   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b602_subprocess_popen_with_shell_equals_true.html
+   Location: .\venv\Lib\site-packages\pip\_internal\commands\configuration.py:239:12
+238	        try:
+239	            subprocess.check_call(f'{editor} "{fname}"', shell=True)
+240	        except FileNotFoundError as e:
+
+--------------------------------------------------
+>> Issue: [B411:blacklist] Using xmlrpc.client to parse untrusted XML data is known to be vulnerable to XML attacks. Use defusedxml.xmlrpc.monkey_patch() function to monkey-patch xmlrpclib and mitigate XML vulnerabilities.
+   Severity: High   Confidence: High
+   CWE: CWE-20 (https://cwe.mitre.org/data/definitions/20.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_imports.html#b411-import-xmlrpclib
+   Location: .\venv\Lib\site-packages\pip\_internal\commands\search.py:5:0
+4	import textwrap
+5	import xmlrpc.client
+6	from collections import OrderedDict
+
+--------------------------------------------------
+>> Issue: [B411:blacklist] Using xmlrpc.client to parse untrusted XML data is known to be vulnerable to XML attacks. Use defusedxml.xmlrpc.monkey_patch() function to monkey-patch xmlrpclib and mitigate XML vulnerabilities.
+   Severity: High   Confidence: High
+   CWE: CWE-20 (https://cwe.mitre.org/data/definitions/20.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_imports.html#b411-import-xmlrpclib
+   Location: .\venv\Lib\site-packages\pip\_internal\network\xmlrpc.py:6:0
+5	import urllib.parse
+6	import xmlrpc.client
+7	from typing import TYPE_CHECKING, Tuple
+
+--------------------------------------------------
+>> Issue: [B411:blacklist] Using _HostType to parse untrusted XML data is known to be vulnerable to XML attacks. Use defusedxml.xmlrpc.monkey_patch() function to monkey-patch xmlrpclib and mitigate XML vulnerabilities.
+   Severity: High   Confidence: High
+   CWE: CWE-20 (https://cwe.mitre.org/data/definitions/20.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_imports.html#b411-import-xmlrpclib
+   Location: .\venv\Lib\site-packages\pip\_internal\network\xmlrpc.py:14:4
+13	if TYPE_CHECKING:
+14	    from xmlrpc.client import _HostType, _Marshallable
+15	
+
+--------------------------------------------------
+>> Issue: [B411:blacklist] Using xmlrpclib to parse untrusted XML data is known to be vulnerable to XML attacks. Use defusedxml.xmlrpc.monkey_patch() function to monkey-patch xmlrpclib and mitigate XML vulnerabilities.
+   Severity: High   Confidence: High
+   CWE: CWE-20 (https://cwe.mitre.org/data/definitions/20.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_imports.html#b411-import-xmlrpclib
+   Location: .\venv\Lib\site-packages\pip\_vendor\distlib\compat.py:42:4
+41	    import httplib
+42	    import xmlrpclib
+43	    import Queue as queue
+
+--------------------------------------------------
+>> Issue: [B411:blacklist] Using xmlrpc.client to parse untrusted XML data is known to be vulnerable to XML attacks. Use defusedxml.xmlrpc.monkey_patch() function to monkey-patch xmlrpclib and mitigate XML vulnerabilities.
+   Severity: High   Confidence: High
+   CWE: CWE-20 (https://cwe.mitre.org/data/definitions/20.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_imports.html#b411-import-xmlrpclib
+   Location: .\venv\Lib\site-packages\pip\_vendor\distlib\compat.py:83:4
+82	    import urllib.request as urllib2
+83	    import xmlrpc.client as xmlrpclib
+84	    import queue
+
+--------------------------------------------------
+>> Issue: [B324:hashlib] Use of weak MD5 hash for security. Consider usedforsecurity=False
+   Severity: High   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b324_hashlib.html
+   Location: .\venv\Lib\site-packages\pip\_vendor\distlib\database.py:1024:19
+1023	                f.close()
+1024	            return hashlib.md5(content).hexdigest()
+1025	
+
+--------------------------------------------------
+>> Issue: [B324:hashlib] Use of weak MD5 hash for security. Consider usedforsecurity=False
+   Severity: High   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b324_hashlib.html
+   Location: .\venv\Lib\site-packages\pip\_vendor\distlib\index.py:268:21
+267	            file_data = f.read()
+268	        md5_digest = hashlib.md5(file_data).hexdigest()
+269	        sha256_digest = hashlib.sha256(file_data).hexdigest()
+
+--------------------------------------------------
+>> Issue: [B202:tarfile_unsafe_members] tarfile.extractall used without any validation. Please check and discard dangerous members.
+   Severity: High   Confidence: High
+   CWE: CWE-22 (https://cwe.mitre.org/data/definitions/22.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b202_tarfile_unsafe_members.html
+   Location: .\venv\Lib\site-packages\pip\_vendor\distlib\util.py:1252:8
+1251	                    tarinfo.name = tarinfo.name.decode('utf-8')
+1252	        archive.extractall(dest_dir)
+1253	
+
+--------------------------------------------------
+>> Issue: [B102:exec_used] Use of exec detected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b102_exec_used.html
+   Location: .\venv\Lib\site-packages\pip\_vendor\pkg_resources\__init__.py:1462:12
+1461	            code = compile(source, script_filename, 'exec')
+1462	            exec(code, namespace, namespace)
+1463	        else:
+
+--------------------------------------------------
+>> Issue: [B102:exec_used] Use of exec detected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b102_exec_used.html
+   Location: .\venv\Lib\site-packages\pip\_vendor\pkg_resources\__init__.py:1469:12
+1468	            script_code = compile(script_text, script_filename, 'exec')
+1469	            exec(script_code, namespace, namespace)
+1470	
+
+--------------------------------------------------
+>> Issue: [B102:exec_used] Use of exec detected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b102_exec_used.html
+   Location: .\venv\Lib\site-packages\pip\_vendor\pygments\formatters\__init__.py:91:12
+90	        with open(filename, 'rb') as f:
+91	            exec(f.read(), custom_namespace)
+92	        # Retrieve the class `formattername` from that namespace
+
+--------------------------------------------------
+>> Issue: [B102:exec_used] Use of exec detected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b102_exec_used.html
+   Location: .\venv\Lib\site-packages\pip\_vendor\pygments\lexers\__init__.py:134:12
+133	        with open(filename, 'rb') as f:
+134	            exec(f.read(), custom_namespace)
+135	        # Retrieve the class `lexername` from that namespace
+
+--------------------------------------------------
+>> Issue: [B324:hashlib] Use of weak MD5 hash for security. Consider usedforsecurity=False
+   Severity: High   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b324_hashlib.html
+   Location: .\venv\Lib\site-packages\pip\_vendor\requests\auth.py:148:23
+147	                    x = x.encode("utf-8")
+148	                return hashlib.md5(x).hexdigest()
+149	
+
+--------------------------------------------------
+>> Issue: [B324:hashlib] Use of weak SHA1 hash for security. Consider usedforsecurity=False
+   Severity: High   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b324_hashlib.html
+   Location: .\venv\Lib\site-packages\pip\_vendor\requests\auth.py:156:23
+155	                    x = x.encode("utf-8")
+156	                return hashlib.sha1(x).hexdigest()
+157	
+
+--------------------------------------------------
+>> Issue: [B324:hashlib] Use of weak SHA1 hash for security. Consider usedforsecurity=False
+   Severity: High   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b324_hashlib.html
+   Location: .\venv\Lib\site-packages\pip\_vendor\requests\auth.py:205:17
+204	
+205	        cnonce = hashlib.sha1(s).hexdigest()[:16]
+206	        if _algorithm == "MD5-SESS":
+
+--------------------------------------------------
+>> Issue: [B302:blacklist] Deserialization with the marshal module is possibly dangerous.
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b302-marshal
+   Location: .\venv\Lib\site-packages\pip\_vendor\rich\style.py:473:66
+472	        """Get meta information (can not be changed after construction)."""
+473	        return {} if self._meta is None else cast(Dict[str, Any], loads(self._meta))
+474	
+
+--------------------------------------------------
+>> Issue: [B102:exec_used] Use of exec detected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b102_exec_used.html
+   Location: .\venv\Lib\site-packages\pip\_vendor\six.py:735:8
+734	            _locs_ = _globs_
+735	        exec("""exec _code_ in _globs_, _locs_""")
+736	
+
+--------------------------------------------------
+>> Issue: [B102:exec_used] Use of exec detected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b102_exec_used.html
+   Location: .\venv\Lib\site-packages\pip\_vendor\urllib3\packages\six.py:787:8
+786	            _locs_ = _globs_
+787	        exec ("""exec _code_ in _globs_, _locs_""")
+788	
+
+--------------------------------------------------
+>> Issue: [B310:blacklist] Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-22 (https://cwe.mitre.org/data/definitions/22.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b310-urllib-urlopen
+   Location: .\venv\Lib\site-packages\pip\_vendor\webencodings\mklabels.py:47:35
+46	         repr(encoding['name']).lstrip('u'))
+47	        for category in json.loads(urlopen(url).read().decode('ascii'))
+48	        for encoding in category['encodings']
+
+--------------------------------------------------
+>> Issue: [B102:exec_used] Use of exec detected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b102_exec_used.html
+   Location: .\venv\Lib\site-packages\pkg_resources\__init__.py:1472:12
+1471	            code = compile(source, script_filename, 'exec')
+1472	            exec(code, namespace, namespace)
+1473	        else:
+
+--------------------------------------------------
+>> Issue: [B102:exec_used] Use of exec detected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b102_exec_used.html
+   Location: .\venv\Lib\site-packages\pkg_resources\__init__.py:1479:12
+1478	            script_code = compile(script_text, script_filename, 'exec')
+1479	            exec(script_code, namespace, namespace)
+1480	
+
+--------------------------------------------------
+>> Issue: [B604:any_other_function_with_shell_equals_true] Function call with shell=True parameter identified, possible security issue.
+   Severity: Medium   Confidence: Low
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b604_any_other_function_with_shell_equals_true.html
+   Location: .\venv\Lib\site-packages\pkg_resources\_vendor\jaraco\context.py:31:17
+30	    if runner is None:
+31	        runner = functools.partial(subprocess.check_call, shell=True)
+32	    # In the tar command, use --strip-components=1 to strip the first path and
+
+--------------------------------------------------
+>> Issue: [B307:blacklist] Use of possibly insecure function - consider using safer ast.literal_eval.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b307-eval
+   Location: .\venv\Lib\site-packages\pkg_resources\_vendor\jaraco\functools.py:519:27
+518	                try:
+519	                    return eval(use)
+520	                except TypeError:
+
+--------------------------------------------------
+>> Issue: [B301:blacklist] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b301-pickle
+   Location: .\venv\Lib\site-packages\pydantic\deprecated\parse.py:54:15
+53	        bb = b if isinstance(b, bytes) else b.encode()  # type: ignore
+54	        return pickle.loads(bb)
+55	    else:
+
+--------------------------------------------------
+>> Issue: [B301:blacklist] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b301-pickle
+   Location: .\venv\Lib\site-packages\pydantic\v1\parse.py:42:15
+41	        bb = b if isinstance(b, bytes) else b.encode()
+42	        return pickle.loads(bb)
+43	    else:
+
+--------------------------------------------------
+>> Issue: [B307:blacklist] Use of possibly insecure function - consider using safer ast.literal_eval.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b307-eval
+   Location: .\venv\Lib\site-packages\pydantic\v1\utils.py:195:8
+194	    try:
+195	        eval('__IPYTHON__')
+196	    except NameError:
+
+--------------------------------------------------
+>> Issue: [B102:exec_used] Use of exec detected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b102_exec_used.html
+   Location: .\venv\Lib\site-packages\pygments\formatters\__init__.py:103:12
+102	        with open(filename, 'rb') as f:
+103	            exec(f.read(), custom_namespace)
+104	        # Retrieve the class `formattername` from that namespace
+
+--------------------------------------------------
+>> Issue: [B102:exec_used] Use of exec detected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b102_exec_used.html
+   Location: .\venv\Lib\site-packages\pygments\lexers\__init__.py:154:12
+153	        with open(filename, 'rb') as f:
+154	            exec(f.read(), custom_namespace)
+155	        # Retrieve the class `lexername` from that namespace
+
+--------------------------------------------------
+>> Issue: [B310:blacklist] Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-22 (https://cwe.mitre.org/data/definitions/22.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b310-urllib-urlopen
+   Location: .\venv\Lib\site-packages\pygments\lexers\_lua_builtins.py:225:12
+224	    def get_newest_version():
+225	        f = urlopen('http://www.lua.org/manual/')
+226	        r = re.compile(r'^<A HREF="(\d\.\d)/">(Lua )?\1</A>')
+
+--------------------------------------------------
+>> Issue: [B310:blacklist] Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-22 (https://cwe.mitre.org/data/definitions/22.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b310-urllib-urlopen
+   Location: .\venv\Lib\site-packages\pygments\lexers\_lua_builtins.py:233:12
+232	    def get_lua_functions(version):
+233	        f = urlopen(f'http://www.lua.org/manual/{version}/')
+234	        r = re.compile(r'^<A HREF="manual.html#pdf-(?!lua|LUA)([^:]+)">\1</A>')
+
+--------------------------------------------------
+>> Issue: [B310:blacklist] Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-22 (https://cwe.mitre.org/data/definitions/22.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b310-urllib-urlopen
+   Location: .\venv\Lib\site-packages\pygments\lexers\_mysql_builtins.py:1248:19
+1247	        # Pull content from lex.h.
+1248	        lex_file = urlopen(LEX_URL).read().decode('utf8', errors='ignore')
+1249	        keywords = parse_lex_keywords(lex_file)
+
+--------------------------------------------------
+>> Issue: [B310:blacklist] Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-22 (https://cwe.mitre.org/data/definitions/22.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b310-urllib-urlopen
+   Location: .\venv\Lib\site-packages\pygments\lexers\_mysql_builtins.py:1254:27
+1253	        # Parse content in item_create.cc.
+1254	        item_create_file = urlopen(ITEM_CREATE_URL).read().decode('utf8', errors='ignore')
+1255	        functions.update(parse_item_create_functions(item_create_file))
+
+--------------------------------------------------
+>> Issue: [B310:blacklist] Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-22 (https://cwe.mitre.org/data/definitions/22.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b310-urllib-urlopen
+   Location: .\venv\Lib\site-packages\pygments\lexers\_php_builtins.py:3299:19
+3298	    def get_php_references():
+3299	        download = urlretrieve(PHP_MANUAL_URL)
+3300	        with tarfile.open(download[0]) as tar:
+
+--------------------------------------------------
+>> Issue: [B202:tarfile_unsafe_members] tarfile.extractall used without any validation. Please check and discard dangerous members.
+   Severity: High   Confidence: High
+   CWE: CWE-22 (https://cwe.mitre.org/data/definitions/22.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b202_tarfile_unsafe_members.html
+   Location: .\venv\Lib\site-packages\pygments\lexers\_php_builtins.py:3301:12
+3300	        with tarfile.open(download[0]) as tar:
+3301	            tar.extractall()
+3302	        yield from glob.glob(f"{PHP_MANUAL_DIR}{PHP_REFERENCE_GLOB}")
+
+--------------------------------------------------
+>> Issue: [B310:blacklist] Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-22 (https://cwe.mitre.org/data/definitions/22.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b310-urllib-urlopen
+   Location: .\venv\Lib\site-packages\pygments\lexers\_postgres_builtins.py:642:18
+641	    def update_myself():
+642	        content = urlopen(DATATYPES_URL).read().decode('utf-8', errors='ignore')
+643	        data_file = list(content.splitlines())
+
+--------------------------------------------------
+>> Issue: [B310:blacklist] Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-22 (https://cwe.mitre.org/data/definitions/22.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b310-urllib-urlopen
+   Location: .\venv\Lib\site-packages\pygments\lexers\_postgres_builtins.py:647:18
+646	
+647	        content = urlopen(KEYWORDS_URL).read().decode('utf-8', errors='ignore')
+648	        keywords = parse_keywords(content)
+
+--------------------------------------------------
+>> Issue: [B324:hashlib] Use of weak MD5 hash for security. Consider usedforsecurity=False
+   Severity: High   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b324_hashlib.html
+   Location: .\venv\Lib\site-packages\requests\auth.py:148:23
+147	                    x = x.encode("utf-8")
+148	                return hashlib.md5(x).hexdigest()
+149	
+
+--------------------------------------------------
+>> Issue: [B324:hashlib] Use of weak SHA1 hash for security. Consider usedforsecurity=False
+   Severity: High   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b324_hashlib.html
+   Location: .\venv\Lib\site-packages\requests\auth.py:156:23
+155	                    x = x.encode("utf-8")
+156	                return hashlib.sha1(x).hexdigest()
+157	
+
+--------------------------------------------------
+>> Issue: [B324:hashlib] Use of weak SHA1 hash for security. Consider usedforsecurity=False
+   Severity: High   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b324_hashlib.html
+   Location: .\venv\Lib\site-packages\requests\auth.py:205:17
+204	
+205	        cnonce = hashlib.sha1(s).hexdigest()[:16]
+206	        if _algorithm == "MD5-SESS":
+
+--------------------------------------------------
+>> Issue: [B301:blacklist] Pickle and modules that wrap it can be unsafe when used to deserialize untrusted data, possible security issue.
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b301-pickle
+   Location: .\venv\Lib\site-packages\rich\style.py:471:66
+470	        """Get meta information (can not be changed after construction)."""
+471	        return {} if self._meta is None else cast(Dict[str, Any], loads(self._meta))
+472	
+
+--------------------------------------------------
+>> Issue: [B307:blacklist] Use of possibly insecure function - consider using safer ast.literal_eval.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b307-eval
+   Location: .\venv\Lib\site-packages\setuptools\_distutils\ccompiler.py:977:27
+976	        expected = '"static", "shared", "dylib", "xcode_stub"'
+977	        if lib_type not in eval(expected):
+978	            raise ValueError(f"'lib_type' must be {expected}")
+
+--------------------------------------------------
+>> Issue: [B605:start_process_with_a_shell] Starting a process with a shell, possible injection detected, security issue.
+   Severity: High   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b605_start_process_with_a_shell.html
+   Location: .\venv\Lib\site-packages\setuptools\_distutils\command\bdist_rpm.py:362:14
+361	
+362	        out = os.popen(q_cmd)
+363	        try:
+
+--------------------------------------------------
+>> Issue: [B310:blacklist] Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-22 (https://cwe.mitre.org/data/definitions/22.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b310-urllib-urlopen
+   Location: .\venv\Lib\site-packages\setuptools\_distutils\command\register.py:98:19
+97	        url = self.repository + '?:action=list_classifiers'
+98	        response = urllib.request.urlopen(url)
+99	        log.info(self._read_pypi_response(response))
+
+--------------------------------------------------
+>> Issue: [B310:blacklist] Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-22 (https://cwe.mitre.org/data/definitions/22.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b310-urllib-urlopen
+   Location: .\venv\Lib\site-packages\setuptools\_distutils\command\upload.py:186:21
+185	        try:
+186	            result = urlopen(request)
+187	            status = result.getcode()
+
+--------------------------------------------------
+>> Issue: [B102:exec_used] Use of exec detected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b102_exec_used.html
+   Location: .\venv\Lib\site-packages\setuptools\_distutils\core.py:267:16
+266	                code = f.read().replace(r'\r\n', r'\n')
+267	                exec(code, g)
+268	        finally:
+
+--------------------------------------------------
+>> Issue: [B306:blacklist] Use of insecure and deprecated function (mktemp).
+   Severity: Medium   Confidence: High
+   CWE: CWE-377 (https://cwe.mitre.org/data/definitions/377.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b306-mktemp-q
+   Location: .\venv\Lib\site-packages\setuptools\_distutils\util.py:422:45
+421	
+422	            (script_fd, script_name) = None, mktemp(".py")
+423	        log.info("writing byte-compilation script '%s'", script_name)
+
+--------------------------------------------------
+>> Issue: [B604:any_other_function_with_shell_equals_true] Function call with shell=True parameter identified, possible security issue.
+   Severity: Medium   Confidence: Low
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b604_any_other_function_with_shell_equals_true.html
+   Location: .\venv\Lib\site-packages\setuptools\_vendor\jaraco\context.py:31:17
+30	    if runner is None:
+31	        runner = functools.partial(subprocess.check_call, shell=True)
+32	    # In the tar command, use --strip-components=1 to strip the first path and
+
+--------------------------------------------------
+>> Issue: [B307:blacklist] Use of possibly insecure function - consider using safer ast.literal_eval.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b307-eval
+   Location: .\venv\Lib\site-packages\setuptools\_vendor\jaraco\functools.py:519:27
+518	                try:
+519	                    return eval(use)
+520	                except TypeError:
+
+--------------------------------------------------
+>> Issue: [B102:exec_used] Use of exec detected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b102_exec_used.html
+   Location: .\venv\Lib\site-packages\setuptools\build_meta.py:335:8
+334	
+335	        exec(code, locals())
+336	
+
+--------------------------------------------------
+>> Issue: [B302:blacklist] Deserialization with the marshal module is possibly dangerous.
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b302-marshal
+   Location: .\venv\Lib\site-packages\setuptools\command\bdist_egg.py:377:11
+376	    f.read(skip)
+377	    code = marshal.load(f)
+378	    f.close()
+
+--------------------------------------------------
+>> Issue: [B310:blacklist] Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-22 (https://cwe.mitre.org/data/definitions/22.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b310-urllib-urlopen
+   Location: .\venv\Lib\site-packages\setuptools\config\_validate_pyproject\formats.py:120:9
+119	    context = ssl.create_default_context()
+120	    with urlopen(url, context=context) as response:
+121	        headers = Message()
+
+--------------------------------------------------
+>> Issue: [B302:blacklist] Deserialization with the marshal module is possibly dangerous.
+   Severity: Medium   Confidence: High
+   CWE: CWE-502 (https://cwe.mitre.org/data/definitions/502.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b302-marshal
+   Location: .\venv\Lib\site-packages\setuptools\depends.py:112:19
+111	            f.read(8)  # skip magic & date
+112	            code = marshal.load(f)
+113	        elif kind == PY_FROZEN:
+
+--------------------------------------------------
+>> Issue: [B102:exec_used] Use of exec detected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b102_exec_used.html
+   Location: .\venv\Lib\site-packages\setuptools\launch.py:32:4
+31	    code = compile(norm_script, script_name, 'exec')
+32	    exec(code, namespace)
+33	
+
+--------------------------------------------------
+>> Issue: [B605:start_process_with_a_shell] Starting a process with a shell, possible injection detected, security issue.
+   Severity: High   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b605_start_process_with_a_shell.html
+   Location: .\venv\Lib\site-packages\setuptools\package_index.py:860:8
+859	        self.info("Doing subversion checkout from %s to %s", url, filename)
+860	        os.system("svn checkout%s -q %s %s" % (creds, url, filename))
+861	        return filename
+
+--------------------------------------------------
+>> Issue: [B605:start_process_with_a_shell] Starting a process with a shell, possible injection detected, security issue.
+   Severity: High   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b605_start_process_with_a_shell.html
+   Location: .\venv\Lib\site-packages\setuptools\package_index.py:886:8
+885	        self.info("Doing git clone from %s to %s", url, filename)
+886	        os.system("git clone --quiet %s %s" % (url, filename))
+887	
+
+--------------------------------------------------
+>> Issue: [B605:start_process_with_a_shell] Starting a process with a shell, possible injection detected, security issue.
+   Severity: High   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b605_start_process_with_a_shell.html
+   Location: .\venv\Lib\site-packages\setuptools\package_index.py:890:12
+889	            self.info("Checking out %s", rev)
+890	            os.system("git -C %s checkout --quiet %s" % (
+891	                filename,
+892	                rev,
+893	            ))
+894	
+
+--------------------------------------------------
+>> Issue: [B605:start_process_with_a_shell] Starting a process with a shell, possible injection detected, security issue.
+   Severity: High   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b605_start_process_with_a_shell.html
+   Location: .\venv\Lib\site-packages\setuptools\package_index.py:902:8
+901	        self.info("Doing hg clone from %s to %s", url, filename)
+902	        os.system("hg clone --quiet %s %s" % (url, filename))
+903	
+
+--------------------------------------------------
+>> Issue: [B605:start_process_with_a_shell] Starting a process with a shell, possible injection detected, security issue.
+   Severity: High   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b605_start_process_with_a_shell.html
+   Location: .\venv\Lib\site-packages\setuptools\package_index.py:906:12
+905	            self.info("Updating to %s", rev)
+906	            os.system("hg --cwd %s up -C -r %s -q" % (
+907	                filename,
+908	                rev,
+909	            ))
+910	
+
+--------------------------------------------------
+>> Issue: [B310:blacklist] Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-22 (https://cwe.mitre.org/data/definitions/22.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b310-urllib-urlopen
+   Location: .\venv\Lib\site-packages\setuptools\package_index.py:1103:15
+1102	    if os.path.isfile(filename):
+1103	        return urllib.request.urlopen(url)
+1104	    elif path.endswith('/') and os.path.isdir(filename):
+
+--------------------------------------------------
+>> Issue: [B102:exec_used] Use of exec detected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b102_exec_used.html
+   Location: .\venv\Lib\site-packages\setuptools\sandbox.py:46:4
+45	    code = compile(script, filename, 'exec')
+46	    exec(code, globals, locals)
+47	
+
+--------------------------------------------------
+>> Issue: [B102:exec_used] Use of exec detected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b102_exec_used.html
+   Location: .\venv\Lib\site-packages\six.py:740:8
+739	            _locs_ = _globs_
+740	        exec("""exec _code_ in _globs_, _locs_""")
+741	
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   CWE: CWE-377 (https://cwe.mitre.org/data/definitions/377.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b108_hardcoded_tmp_directory.html
+   Location: .\venv\Lib\site-packages\stevedore\_cache.py:153:39
+152	                os.path.isfile(os.path.join(self._dir, '.disable')),
+153	                sys.executable[0:4] == '/tmp',  # noqa: S108,
+154	            ]
+
+--------------------------------------------------
+>> Issue: [B108:hardcoded_tmp_directory] Probable insecure usage of temp file/directory.
+   Severity: Medium   Confidence: Medium
+   CWE: CWE-377 (https://cwe.mitre.org/data/definitions/377.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b108_hardcoded_tmp_directory.html
+   Location: .\venv\Lib\site-packages\stevedore\tests\test_cache.py:28:50
+27	        """
+28	        with mock.patch.object(sys, 'executable', '/tmp/fake'):
+29	            sot = _cache.Cache()
+
+--------------------------------------------------
+>> Issue: [B307:blacklist] Use of possibly insecure function - consider using safer ast.literal_eval.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b307-eval
+   Location: .\venv\Lib\site-packages\tqdm\cli.py:38:19
+37	        if re.match(r"^\\\w+$", val):
+38	            return eval(f'"{val}"').encode()
+39	        raise TqdmTypeError(f"{val} : {typ}")
+
+--------------------------------------------------
+>> Issue: [B307:blacklist] Use of possibly insecure function - consider using safer ast.literal_eval.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b307-eval
+   Location: .\venv\Lib\site-packages\typing_extensions.py:4034:53
+4033	        return_value = {key:
+4034	            value if not isinstance(value, str) else eval(value, globals, locals)
+4035	            for key, value in ann.items() }
+
+--------------------------------------------------
+>> Issue: [B307:blacklist] Use of possibly insecure function - consider using safer ast.literal_eval.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b307-eval
+   Location: .\venv\Lib\site-packages\typing_extensions.py:4116:20
+4115	            code = forward_ref.__forward_code__
+4116	            value = eval(code, globals, locals)
+4117	        forward_ref.__forward_evaluated__ = True
+
+--------------------------------------------------
+>> Issue: [B102:exec_used] Use of exec detected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b102_exec_used.html
+   Location: .\venv\Lib\site-packages\typing_inspection\typing_objects.py:101:4
+100	    globals_: dict[str, Any] = {'Any': Any, 'typing': typing, 'typing_extensions': typing_extensions}
+101	    exec(func_code, globals_, locals_)
+102	    return locals_[function_name]
+
+--------------------------------------------------
+>> Issue: [B102:exec_used] Use of exec detected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b102_exec_used.html
+   Location: .\venv\Lib\site-packages\typing_inspection\typing_objects.py:133:4
+132	    globals_: dict[str, Any] = {'Any': Any, 'typing': typing, 'typing_extensions': typing_extensions}
+133	    exec(func_code, globals_, locals_)
+134	    return locals_[function_name]
+
+--------------------------------------------------
+>> Issue: [B310:blacklist] Audit url open for permitted schemes. Allowing use of file:/ or custom schemes is often unexpected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-22 (https://cwe.mitre.org/data/definitions/22.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/blacklists/blacklist_calls.html#b310-urllib-urlopen
+   Location: .\venv\Lib\site-packages\webencodings\mklabels.py:47:35
+46	         repr(encoding['name']).lstrip('u'))
+47	        for category in json.loads(urlopen(url).read().decode('ascii'))
+48	        for encoding in category['encodings']
+
+--------------------------------------------------
+>> Issue: [B324:hashlib] Use of weak SHA1 hash for security. Consider usedforsecurity=False
+   Severity: High   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b324_hashlib.html
+   Location: .\venv\Lib\site-packages\werkzeug\debug\__init__.py:44:11
+43	def hash_pin(pin: str) -> str:
+44	    return hashlib.sha1(f"{pin} added salt".encode("utf-8", "replace")).hexdigest()[:12]
+45	
+
+--------------------------------------------------
+>> Issue: [B324:hashlib] Use of weak SHA1 hash for security. Consider usedforsecurity=False
+   Severity: High   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b324_hashlib.html
+   Location: .\venv\Lib\site-packages\werkzeug\debug\__init__.py:194:8
+193	
+194	    h = hashlib.sha1()
+195	    for bit in chain(probably_public_bits, private_bits):
+
+--------------------------------------------------
+>> Issue: [B102:exec_used] Use of exec detected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b102_exec_used.html
+   Location: .\venv\Lib\site-packages\werkzeug\debug\console.py:177:12
+176	        try:
+177	            exec(code, self.locals)
+178	        except Exception:
+
+--------------------------------------------------
+>> Issue: [B324:hashlib] Use of weak SHA1 hash for security. Consider usedforsecurity=False
+   Severity: High   Confidence: High
+   CWE: CWE-327 (https://cwe.mitre.org/data/definitions/327.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b324_hashlib.html
+   Location: .\venv\Lib\site-packages\werkzeug\http.py:956:11
+955	    """
+956	    return sha1(data).hexdigest()
+957	
+
+--------------------------------------------------
+>> Issue: [B102:exec_used] Use of exec detected.
+   Severity: Medium   Confidence: High
+   CWE: CWE-78 (https://cwe.mitre.org/data/definitions/78.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b102_exec_used.html
+   Location: .\venv\Lib\site-packages\werkzeug\routing\rules.py:727:8
+726	        locs: dict[str, t.Any] = {}
+727	        exec(code, globs, locs)
+728	        return locs[name]  # type: ignore
+
+--------------------------------------------------
+>> Issue: [B104:hardcoded_bind_all_interfaces] Possible binding to all interfaces.
+   Severity: Medium   Confidence: Medium
+   CWE: CWE-605 (https://cwe.mitre.org/data/definitions/605.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b104_hardcoded_bind_all_interfaces.html
+   Location: .\venv\Lib\site-packages\werkzeug\serving.py:839:29
+838	
+839	            if self.host in {"0.0.0.0", "::"}:
+840	                messages.append(f" * Running on all addresses ({self.host})")
+
+--------------------------------------------------
+>> Issue: [B104:hardcoded_bind_all_interfaces] Possible binding to all interfaces.
+   Severity: Medium   Confidence: Medium
+   CWE: CWE-605 (https://cwe.mitre.org/data/definitions/605.html)
+   More Info: https://bandit.readthedocs.io/en/1.7.8/plugins/b104_hardcoded_bind_all_interfaces.html
+   Location: .\venv\Lib\site-packages\werkzeug\serving.py:842:32
+841	
+842	                if self.host == "0.0.0.0":
+843	                    localhost = "127.0.0.1"
+
+--------------------------------------------------
+
+Code scanned:
+	Total lines of code: 1000452
+	Total lines skipped (#nosec): 5
+	Total potential issues skipped due to specifically being disabled (e.g., #nosec BXXX): 11
+
+Run metrics:
+	Total issues (by severity):
+		Undefined: 0
+		Low: 3596
+		Medium: 106
+		High: 41
+	Total issues (by confidence):
+		Undefined: 0
+		Low: 4
+		Medium: 94
+		High: 3645
+Files skipped (0):
+
+[main]	INFO	profile include tests: None
+[main]	INFO	profile exclude tests: None
+[main]	INFO	cli include tests: None
+[main]	INFO	cli exclude tests: None
+[main]	INFO	running on Python 3.11.3
+[manager]	WARNING	Test in comment: _lines is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: is is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: a is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: dict is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: of is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: line is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: number is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: set is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: of is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: tests is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: to is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: ignore is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: tkelsey is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: catching is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: expected is not a test name or id, ignoring
+[manager]	WARNING	Test in comment: exception is not a test name or id, ignoring
+[tester]	WARNING	nosec encountered (B108), but no failed test on line 62

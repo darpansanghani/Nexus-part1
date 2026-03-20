@@ -1,0 +1,183 @@
+models\action_plan.py:73: error: "ImmediateAction" has no attribute "items"  [attr-defined]
+venv\Scripts\fixup_firestore_v1_keywords.py:20: error: Cannot find implementation or library stub for module named "libcst"  [import-not-found]
+venv\Scripts\fixup_firestore_v1_keywords.py:36: error: Need type annotation for "results"  [var-annotated]
+venv\Scripts\fixup_firestore_v1_keywords.py:45: error: Class cannot subclass "CSTTransformer" (has type "Any")  [misc]
+venv\Scripts\fixup_firestore_v1_keywords.py:46: error: Incompatible types in assignment (expression has type "tuple[str, str, str]", variable has type "tuple[str]")  [assignment]
+venv\Scripts\fixup_firestore_v1_keywords.py:48: error: Dict entry 0 has incompatible type "str": "tuple[str, str, str, str, str, str]"; expected "str": "tuple[str]"  [dict-item]
+venv\Scripts\fixup_firestore_v1_keywords.py:49: error: Dict entry 1 has incompatible type "str": "tuple[str, str, str]"; expected "str": "tuple[str]"  [dict-item]
+venv\Scripts\fixup_firestore_v1_keywords.py:50: error: Dict entry 2 has incompatible type "str": "tuple[str, str]"; expected "str": "tuple[str]"  [dict-item]
+venv\Scripts\fixup_firestore_v1_keywords.py:51: error: Dict entry 3 has incompatible type "str": "tuple[str, str, str]"; expected "str": "tuple[str]"  [dict-item]
+venv\Scripts\fixup_firestore_v1_keywords.py:52: error: Dict entry 4 has incompatible type "str": "tuple[str, str, str, str, str]"; expected "str": "tuple[str]"  [dict-item]
+venv\Scripts\fixup_firestore_v1_keywords.py:53: error: Dict entry 5 has incompatible type "str": "tuple[str, str]"; expected "str": "tuple[str]"  [dict-item]
+venv\Scripts\fixup_firestore_v1_keywords.py:54: error: Dict entry 6 has incompatible type "str": "tuple[str, str, str, str]"; expected "str": "tuple[str]"  [dict-item]
+venv\Scripts\fixup_firestore_v1_keywords.py:55: error: Dict entry 7 has incompatible type "str": "tuple[str, str, str, str]"; expected "str": "tuple[str]"  [dict-item]
+venv\Scripts\fixup_firestore_v1_keywords.py:56: error: Dict entry 8 has incompatible type "str": "tuple[str, str, str, str, str, str, str, str, str]"; expected "str": "tuple[str]"  [dict-item]
+venv\Scripts\fixup_firestore_v1_keywords.py:57: error: Dict entry 9 has incompatible type "str": "tuple[str, str, str, str]"; expected "str": "tuple[str]"  [dict-item]
+venv\Scripts\fixup_firestore_v1_keywords.py:58: error: Dict entry 10 has incompatible type "str": "tuple[str, str, str, str, str, str]"; expected "str": "tuple[str]"  [dict-item]
+venv\Scripts\fixup_firestore_v1_keywords.py:59: error: Dict entry 11 has incompatible type "str": "tuple[str, str]"; expected "str": "tuple[str]"  [dict-item]
+venv\Scripts\fixup_firestore_v1_keywords.py:60: error: Dict entry 12 has incompatible type "str": "tuple[str, str, str, str, str, str]"; expected "str": "tuple[str]"  [dict-item]
+venv\Scripts\fixup_firestore_v1_keywords.py:61: error: Dict entry 13 has incompatible type "str": "tuple[str, str, str, str, str, str]"; expected "str": "tuple[str]"  [dict-item]
+venv\Scripts\fixup_firestore_v1_keywords.py:62: error: Dict entry 14 has incompatible type "str": "tuple[str, str, str, str]"; expected "str": "tuple[str]"  [dict-item]
+venv\Scripts\fixup_firestore_v1_keywords.py:63: error: Dict entry 15 has incompatible type "str": "tuple[str, str, str, str, str]"; expected "str": "tuple[str]"  [dict-item]
+venv\Scripts\fixup_firestore_v1_keywords.py:108: error: Function is missing a return type annotation  [no-untyped-def]
+venv\Scripts\fixup_firestore_v1_keywords.py:108: error: Function is missing a type annotation for one or more arguments  [no-untyped-def]
+venv\Scripts\fixup_firestore_admin_v1_keywords.py:20: error: Cannot find implementation or library stub for module named "libcst"  [import-not-found]
+venv\Scripts\fixup_firestore_admin_v1_keywords.py:36: error: Need type annotation for "results"  [var-annotated]
+venv\Scripts\fixup_firestore_admin_v1_keywords.py:45: error: Class cannot subclass "CSTTransformer" (has type "Any")  [misc]
+venv\Scripts\fixup_firestore_admin_v1_keywords.py:46: error: Incompatible types in assignment (expression has type "tuple[str, str, str]", variable has type "tuple[str]")  [assignment]
+venv\Scripts\fixup_firestore_admin_v1_keywords.py:48: error: Dict entry 0 has incompatible type "str": "tuple[str, str]"; expected "str": "tuple[str]"  [dict-item]
+venv\Scripts\fixup_firestore_admin_v1_keywords.py:49: error: Dict entry 1 has incompatible type "str": "tuple[str, str, str]"; expected "str": "tuple[str]"  [dict-item]
+venv\Scripts\fixup_firestore_admin_v1_keywords.py:50: error: Dict entry 2 has incompatible type "str": "tuple[str, str]"; expected "str": "tuple[str]"  [dict-item]
+venv\Scripts\fixup_firestore_admin_v1_keywords.py:53: error: Dict entry 5 has incompatible type "str": "tuple[str, str]"; expected "str": "tuple[str]"  [dict-item]
+venv\Scripts\fixup_firestore_admin_v1_keywords.py:55: error: Dict entry 7 has incompatible type "str": "tuple[str, str, str, str, str]"; expected "str": "tuple[str]"  [dict-item]
+venv\Scripts\fixup_firestore_admin_v1_keywords.py:61: error: Dict entry 13 has incompatible type "str": "tuple[str, str, str, str]"; expected "str": "tuple[str]"  [dict-item]
+venv\Scripts\fixup_firestore_admin_v1_keywords.py:65: error: Dict entry 17 has incompatible type "str": "tuple[str, str, str, str]"; expected "str": "tuple[str]"  [dict-item]
+venv\Scripts\fixup_firestore_admin_v1_keywords.py:66: error: Dict entry 18 has incompatible type "str": "tuple[str, str, str, str]"; expected "str": "tuple[str]"  [dict-item]
+venv\Scripts\fixup_firestore_admin_v1_keywords.py:67: error: Dict entry 19 has incompatible type "str": "tuple[str, str, str]"; expected "str": "tuple[str]"  [dict-item]
+venv\Scripts\fixup_firestore_admin_v1_keywords.py:68: error: Dict entry 20 has incompatible type "str": "tuple[str, str]"; expected "str": "tuple[str]"  [dict-item]
+venv\Scripts\fixup_firestore_admin_v1_keywords.py:69: error: Dict entry 21 has incompatible type "str": "tuple[str, str]"; expected "str": "tuple[str]"  [dict-item]
+venv\Scripts\fixup_firestore_admin_v1_keywords.py:70: error: Dict entry 22 has incompatible type "str": "tuple[str, str]"; expected "str": "tuple[str]"  [dict-item]
+venv\Scripts\fixup_firestore_admin_v1_keywords.py:115: error: Function is missing a return type annotation  [no-untyped-def]
+venv\Scripts\fixup_firestore_admin_v1_keywords.py:115: error: Function is missing a type annotation for one or more arguments  [no-untyped-def]
+middleware\input_validator.py:50: error: Returning Any from function declared to return "str"  [no-any-return]
+services\storage_service.py:64: error: Call to untyped function "thumbnail" in typed context  [no-untyped-call]
+middleware\rate_limiter.py:87: error: Item "None" of "Response | None" has no attribute "status_code"  [union-attr]
+middleware\rate_limiter.py:88: error: Item "None" of "Response | None" has no attribute "headers"  [union-attr]
+tests\test_validator.py:10: error: Function is missing a return type annotation  [no-untyped-def]
+tests\test_validator.py:10: note: Use "-> None" if function does not return a value
+tests\test_validator.py:14: error: Function is missing a return type annotation  [no-untyped-def]
+tests\test_validator.py:14: note: Use "-> None" if function does not return a value
+tests\test_validator.py:18: error: Function is missing a return type annotation  [no-untyped-def]
+tests\test_validator.py:18: note: Use "-> None" if function does not return a value
+tests\test_validator.py:22: error: Function is missing a return type annotation  [no-untyped-def]
+tests\test_validator.py:22: note: Use "-> None" if function does not return a value
+tests\test_validator.py:30: error: Function is missing a return type annotation  [no-untyped-def]
+tests\test_validator.py:30: note: Use "-> None" if function does not return a value
+tests\test_validator.py:34: error: Function is missing a return type annotation  [no-untyped-def]
+tests\test_validator.py:34: note: Use "-> None" if function does not return a value
+tests\test_validator.py:38: error: Function is missing a return type annotation  [no-untyped-def]
+tests\test_validator.py:38: note: Use "-> None" if function does not return a value
+tests\test_validator.py:42: error: Function is missing a type annotation  [no-untyped-def]
+tests\test_validator.py:48: error: Function is missing a return type annotation  [no-untyped-def]
+tests\test_validator.py:48: note: Use "-> None" if function does not return a value
+tests\test_validator.py:53: error: Function is missing a return type annotation  [no-untyped-def]
+tests\test_validator.py:53: note: Use "-> None" if function does not return a value
+tests\test_validator.py:60: error: Function is missing a return type annotation  [no-untyped-def]
+tests\test_validator.py:60: note: Use "-> None" if function does not return a value
+tests\test_rate_limiter.py:9: error: Function is missing a return type annotation  [no-untyped-def]
+tests\test_rate_limiter.py:9: note: Use "-> None" if function does not return a value
+tests\test_rate_limiter.py:12: error: Function is missing a return type annotation  [no-untyped-def]
+tests\test_rate_limiter.py:12: note: Use "-> None" if function does not return a value
+tests\test_rate_limiter.py:18: error: Function is missing a return type annotation  [no-untyped-def]
+tests\test_rate_limiter.py:18: note: Use "-> None" if function does not return a value
+tests\test_rate_limiter.py:26: error: Function is missing a type annotation  [no-untyped-def]
+tests\test_rate_limiter.py:36: error: Function is missing a type annotation  [no-untyped-def]
+tests\test_rate_limiter.py:52: error: Function is missing a return type annotation  [no-untyped-def]
+tests\test_rate_limiter.py:52: note: Use "-> None" if function does not return a value
+tests\test_rate_limiter.py:56: error: Function is missing a return type annotation  [no-untyped-def]
+tests\test_rate_limiter.py:56: note: Use "-> None" if function does not return a value
+tests\test_rate_limiter.py:58: error: Call to untyped function "test_request_at_limit_is_blocked_with_429" in typed context  [no-untyped-call]
+tests\test_rate_limiter.py:60: error: Function is missing a type annotation  [no-untyped-def]
+tests\test_rate_limiter.py:78: error: Function is missing a return type annotation  [no-untyped-def]
+tests\test_rate_limiter.py:78: note: Use "-> None" if function does not return a value
+tests\test_rate_limiter.py:84: error: Function is missing a return type annotation  [no-untyped-def]
+tests\test_rate_limiter.py:84: note: Use "-> None" if function does not return a value
+tests\test_rate_limiter.py:91: error: Function is missing a return type annotation  [no-untyped-def]
+tests\test_rate_limiter.py:91: note: Use "-> None" if function does not return a value
+tests\test_models.py:8: error: Function is missing a return type annotation  [no-untyped-def]
+tests\test_models.py:8: note: Use "-> None" if function does not return a value
+tests\test_models.py:18: error: Function is missing a return type annotation  [no-untyped-def]
+tests\test_models.py:18: note: Use "-> None" if function does not return a value
+tests\test_models.py:27: error: Function is missing a return type annotation  [no-untyped-def]
+tests\test_models.py:27: note: Use "-> None" if function does not return a value
+tests\test_models.py:36: error: Function is missing a return type annotation  [no-untyped-def]
+tests\test_models.py:36: note: Use "-> None" if function does not return a value
+tests\test_models.py:45: error: Function is missing a return type annotation  [no-untyped-def]
+tests\test_models.py:45: note: Use "-> None" if function does not return a value
+tests\test_models.py:53: error: Function is missing a return type annotation  [no-untyped-def]
+tests\test_models.py:53: note: Use "-> None" if function does not return a value
+tests\test_models.py:64: error: Function is missing a return type annotation  [no-untyped-def]
+tests\test_models.py:64: note: Use "-> None" if function does not return a value
+tests\test_api.py:6: error: Function is missing a type annotation  [no-untyped-def]
+tests\test_api.py:10: error: Function is missing a type annotation  [no-untyped-def]
+tests\test_api.py:19: error: Function is missing a type annotation  [no-untyped-def]
+tests\test_api.py:34: error: Function is missing a type annotation  [no-untyped-def]
+tests\test_api.py:38: error: Function is missing a type annotation  [no-untyped-def]
+tests\test_api.py:43: error: Function is missing a type annotation  [no-untyped-def]
+tests\test_api.py:47: error: Function is missing a type annotation  [no-untyped-def]
+tests\test_api.py:51: error: Function is missing a type annotation  [no-untyped-def]
+tests\test_api.py:55: error: Function is missing a type annotation  [no-untyped-def]
+tests\test_api.py:65: error: Function is missing a type annotation  [no-untyped-def]
+tests\test_api.py:69: error: Function is missing a type annotation  [no-untyped-def]
+tests\test_api.py:73: error: Function is missing a type annotation  [no-untyped-def]
+tests\test_api.py:77: error: Function is missing a type annotation  [no-untyped-def]
+tests\test_api.py:83: error: Function is missing a type annotation  [no-untyped-def]
+tests\test_api.py:90: error: Function is missing a type annotation  [no-untyped-def]
+tests\test_api.py:94: error: Function is missing a type annotation  [no-untyped-def]
+tests\test_api.py:98: error: Function is missing a type annotation  [no-untyped-def]
+tests\test_api.py:104: error: Function is missing a return type annotation  [no-untyped-def]
+tests\test_api.py:104: note: Use "-> None" if function does not return a value
+tests\test_api.py:106: error: Function is missing a return type annotation  [no-untyped-def]
+tests\test_api.py:106: note: Use "-> None" if function does not return a value
+tests\test_api.py:108: error: Function is missing a return type annotation  [no-untyped-def]
+tests\test_api.py:108: note: Use "-> None" if function does not return a value
+tests\test_api.py:110: error: Function is missing a return type annotation  [no-untyped-def]
+tests\test_api.py:110: note: Use "-> None" if function does not return a value
+tests\test_api.py:116: error: Function is missing a type annotation  [no-untyped-def]
+tests\test_api.py:120: error: Function is missing a type annotation  [no-untyped-def]
+tests\test_api.py:126: error: Function is missing a type annotation  [no-untyped-def]
+tests\test_api.py:130: error: Function is missing a type annotation  [no-untyped-def]
+tests\test_api.py:134: error: Function is missing a type annotation  [no-untyped-def]
+tests\test_api.py:138: error: Function is missing a type annotation  [no-untyped-def]
+services\gemini_service.py:8: error: Skipping analyzing "google.generativeai": module is installed, but missing library stubs or py.typed marker  [import-untyped]
+services\gemini_service.py:9: error: Skipping analyzing "google.generativeai.types": module is installed, but missing library stubs or py.typed marker  [import-untyped]
+services\gemini_service.py:9: note: See https://mypy.readthedocs.io/en/stable/running_mypy.html#missing-imports
+services\gemini_service.py:112: error: List item 0 has incompatible type "dict[str, object]"; expected "ImmediateAction"  [list-item]
+tests\test_gemini_service.py:10: error: Function is missing a return type annotation  [no-untyped-def]
+tests\test_gemini_service.py:10: note: Use "-> None" if function does not return a value
+tests\test_gemini_service.py:14: error: Function is missing a type annotation  [no-untyped-def]
+tests\test_gemini_service.py:19: error: Item "None" of "Any | None" has no attribute "generate_content"  [union-attr]
+tests\test_gemini_service.py:25: error: Function is missing a return type annotation  [no-untyped-def]
+tests\test_gemini_service.py:25: note: Use "-> None" if function does not return a value
+tests\test_gemini_service.py:30: error: Item "None" of "Any | None" has no attribute "generate_content"  [union-attr]
+tests\test_gemini_service.py:40: error: Item "None" of "Any | None" has no attribute "generate_content"  [union-attr]
+tests\test_gemini_service.py:42: error: Function is missing a return type annotation  [no-untyped-def]
+tests\test_gemini_service.py:42: note: Use "-> None" if function does not return a value
+tests\test_gemini_service.py:43: error: Item "None" of "Any | None" has no attribute "generate_content"  [union-attr]
+tests\test_gemini_service.py:51: error: Function is missing a return type annotation  [no-untyped-def]
+tests\test_gemini_service.py:55: error: Function is missing a return type annotation  [no-untyped-def]
+tests\test_gemini_service.py:59: error: Item "None" of "Any | None" has no attribute "generate_content"  [union-attr]
+tests\test_gemini_service.py:66: error: Function is missing a return type annotation  [no-untyped-def]
+tests\test_gemini_service.py:66: note: Use "-> None" if function does not return a value
+tests\test_gemini_service.py:72: error: Function is missing a return type annotation  [no-untyped-def]
+tests\test_gemini_service.py:72: note: Use "-> None" if function does not return a value
+tests\test_gemini_service.py:75: error: Item "None" of "Any | None" has no attribute "generate_content"  [union-attr]
+tests\test_gemini_service.py:81: error: Item "None" of "Any | None" has no attribute "generate_content"  [union-attr]
+tests\test_gemini_service.py:85: error: Function is missing a return type annotation  [no-untyped-def]
+tests\test_gemini_service.py:85: note: Use "-> None" if function does not return a value
+tests\test_gemini_service.py:88: error: Item "None" of "Any | None" has no attribute "generate_content"  [union-attr]
+tests\test_gemini_service.py:93: error: Function is missing a return type annotation  [no-untyped-def]
+tests\test_gemini_service.py:93: note: Use "-> None" if function does not return a value
+tests\test_gemini_service.py:97: error: Item "None" of "Any | None" has no attribute "generate_content"  [union-attr]
+routes\api.py:95: error: Missing type parameters for generic type "tuple"  [type-arg]
+routes\api.py:122: error: Missing type parameters for generic type "tuple"  [type-arg]
+routes\api.py:131: error: Missing type parameters for generic type "tuple"  [type-arg]
+routes\api.py:195: error: Missing type parameters for generic type "tuple"  [type-arg]
+routes\api.py:212: error: Missing type parameters for generic type "tuple"  [type-arg]
+app.py:51: error: Function is missing a type annotation  [no-untyped-def]
+app.py:69: error: Function is missing a type annotation  [no-untyped-def]
+app.py:84: error: Missing type parameters for generic type "tuple"  [type-arg]
+app.py:90: error: Missing type parameters for generic type "tuple"  [type-arg]
+app.py:94: error: Missing type parameters for generic type "tuple"  [type-arg]
+app.py:98: error: Missing type parameters for generic type "tuple"  [type-arg]
+app.py:102: error: Missing type parameters for generic type "tuple"  [type-arg]
+app.py:106: error: Missing type parameters for generic type "tuple"  [type-arg]
+tests\conftest.py:10: error: Function is missing a return type annotation  [no-untyped-def]
+tests\conftest.py:20: error: Function is missing a type annotation  [no-untyped-def]
+tests\conftest.py:26: error: Function is missing a return type annotation  [no-untyped-def]
+tests\conftest.py:80: error: Function is missing a return type annotation  [no-untyped-def]
+tests\conftest.py:87: error: Function is missing a type annotation  [no-untyped-def]
+tests\conftest.py:95: error: Function is missing a return type annotation  [no-untyped-def]
+tests\conftest.py:107: error: Function is missing a return type annotation  [no-untyped-def]
+Found 144 errors in 15 files (checked 27 source files)
+

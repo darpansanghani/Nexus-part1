@@ -24,3 +24,13 @@ class StorageError(NexusError):
 class RateLimitError(NexusError):
     """Raised when a client exceeds the allowed rate limit."""
     pass
+
+
+class APIError(NexusError):
+    """Raised when an external API fails."""
+    pass
+
+
+class DatabaseError(NexusError):
+    """Raised when a database operation fails."""
+    pass

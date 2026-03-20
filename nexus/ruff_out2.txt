@@ -1,0 +1,446 @@
+app.py:28:5: C901 `create_app` is too complex (15 > 10)
+app.py:31:5: D407 [*] Missing dashed underline after section ("Args")
+app.py:34:5: D413 [*] Missing blank line after last section ("Returns")
+app.py:34:5: D407 [*] Missing dashed underline after section ("Returns")
+app.py:60:9: D407 [*] Missing dashed underline after section ("Args")
+app.py:63:9: D413 [*] Missing blank line after last section ("Returns")
+app.py:63:9: D407 [*] Missing dashed underline after section ("Returns")
+app.py:85:9: D407 [*] Missing dashed underline after section ("Args")
+app.py:88:9: D413 [*] Missing blank line after last section ("Returns")
+app.py:88:9: D407 [*] Missing dashed underline after section ("Returns")
+app.py:110:9: D407 [*] Missing dashed underline after section ("Args")
+app.py:113:9: D413 [*] Missing blank line after last section ("Returns")
+app.py:113:9: D407 [*] Missing dashed underline after section ("Returns")
+app.py:116:101: E501 Line too long (118 > 100)
+app.py:123:9: D407 [*] Missing dashed underline after section ("Args")
+app.py:126:9: D413 [*] Missing blank line after last section ("Returns")
+app.py:126:9: D407 [*] Missing dashed underline after section ("Returns")
+app.py:129:101: E501 Line too long (118 > 100)
+app.py:132:101: E501 Line too long (107 > 100)
+app.py:138:9: D407 [*] Missing dashed underline after section ("Args")
+app.py:141:9: D413 [*] Missing blank line after last section ("Returns")
+app.py:141:9: D407 [*] Missing dashed underline after section ("Returns")
+app.py:149:101: E501 Line too long (115 > 100)
+app.py:155:9: D407 [*] Missing dashed underline after section ("Args")
+app.py:158:9: D413 [*] Missing blank line after last section ("Returns")
+app.py:158:9: D407 [*] Missing dashed underline after section ("Returns")
+app.py:162:101: E501 Line too long (106 > 100)
+app.py:162:107: COM812 [*] Trailing comma missing
+app.py:166:26: ARG001 Unused function argument: `e`
+app.py:169:9: D407 [*] Missing dashed underline after section ("Args")
+app.py:172:9: D413 [*] Missing blank line after last section ("Returns")
+app.py:172:9: D407 [*] Missing dashed underline after section ("Returns")
+app.py:178:34: ARG001 Unused function argument: `e`
+app.py:181:9: D407 [*] Missing dashed underline after section ("Args")
+app.py:184:9: D413 [*] Missing blank line after last section ("Returns")
+app.py:184:9: D407 [*] Missing dashed underline after section ("Returns")
+app.py:188:101: E501 Line too long (111 > 100)
+app.py:188:112: COM812 [*] Trailing comma missing
+app.py:192:34: ARG001 Unused function argument: `e`
+app.py:195:9: D407 [*] Missing dashed underline after section ("Args")
+app.py:198:9: D413 [*] Missing blank line after last section ("Returns")
+app.py:198:9: D407 [*] Missing dashed underline after section ("Returns")
+app.py:201:101: E501 Line too long (120 > 100)
+app.py:207:9: D407 [*] Missing dashed underline after section ("Args")
+app.py:210:9: D413 [*] Missing blank line after last section ("Returns")
+app.py:210:9: D407 [*] Missing dashed underline after section ("Returns")
+app.py:224:89: COM812 [*] Trailing comma missing
+config.py:41:5: PIE790 [*] Unnecessary `pass` statement
+constants.py:16:15: COM812 [*] Trailing comma missing
+exceptions.py:5:5: D204 [*] 1 blank line required after class docstring
+exceptions.py:6:5: PIE790 [*] Unnecessary `pass` statement
+exceptions.py:10:5: D204 [*] 1 blank line required after class docstring
+exceptions.py:11:5: PIE790 [*] Unnecessary `pass` statement
+exceptions.py:15:5: D204 [*] 1 blank line required after class docstring
+exceptions.py:16:5: PIE790 [*] Unnecessary `pass` statement
+exceptions.py:20:5: D204 [*] 1 blank line required after class docstring
+exceptions.py:21:5: PIE790 [*] Unnecessary `pass` statement
+exceptions.py:25:5: D204 [*] 1 blank line required after class docstring
+exceptions.py:26:5: PIE790 [*] Unnecessary `pass` statement
+exceptions.py:30:5: D204 [*] 1 blank line required after class docstring
+exceptions.py:31:5: PIE790 [*] Unnecessary `pass` statement
+exceptions.py:35:5: D204 [*] 1 blank line required after class docstring
+exceptions.py:36:5: PIE790 [*] Unnecessary `pass` statement
+logger.py:6:1: UP035 [*] Import from `collections.abc` instead: `Mapping`
+logger.py:6:25: F401 [*] `typing.Mapping` imported but unused
+logger.py:12:16: ANN101 Missing type annotation for `self` in method
+logger.py:14:1: W293 Blank line contains whitespace
+logger.py:15:9: D407 [*] Missing dashed underline after section ("Args")
+logger.py:17:1: W293 Blank line contains whitespace
+logger.py:18:9: D413 [*] Missing blank line after last section ("Returns")
+logger.py:18:9: D407 [*] Missing dashed underline after section ("Returns")
+logger.py:38:1: W293 Blank line contains whitespace
+logger.py:39:5: D407 [*] Missing dashed underline after section ("Args")
+logger.py:41:1: W293 Blank line contains whitespace
+logger.py:42:5: D413 [*] Missing blank line after last section ("Returns")
+logger.py:42:5: D407 [*] Missing dashed underline after section ("Returns")
+logger.py:53:1: W293 [*] Blank line contains whitespace
+logger.py:56:1: W293 [*] Blank line contains whitespace
+middleware\input_validator.py:5:20: F401 [*] `typing.Any` imported but unused
+middleware\input_validator.py:24:5: D407 [*] Missing dashed underline after section ("Args")
+middleware\input_validator.py:27:5: D407 [*] Missing dashed underline after section ("Returns")
+middleware\input_validator.py:30:5: D413 [*] Missing blank line after last section ("Raises")
+middleware\input_validator.py:30:5: D407 [*] Missing dashed underline after section ("Raises")
+middleware\input_validator.py:37:15: TRY003 Avoid specifying long messages outside the exception class
+middleware\input_validator.py:37:31: EM101 Exception must not use a string literal, assign to variable first
+middleware\input_validator.py:41:15: TRY003 Avoid specifying long messages outside the exception class
+middleware\input_validator.py:41:31: EM101 Exception must not use a string literal, assign to variable first
+middleware\input_validator.py:46:15: TRY003 Avoid specifying long messages outside the exception class
+middleware\input_validator.py:46:31: EM101 Exception must not use a string literal, assign to variable first
+middleware\input_validator.py:52:19: TRY003 Avoid specifying long messages outside the exception class
+middleware\input_validator.py:52:35: EM101 Exception must not use a string literal, assign to variable first
+middleware\input_validator.py:62:5: D407 [*] Missing dashed underline after section ("Args")
+middleware\input_validator.py:65:5: D407 [*] Missing dashed underline after section ("Returns")
+middleware\input_validator.py:68:5: D413 [*] Missing blank line after last section ("Raises")
+middleware\input_validator.py:68:5: D407 [*] Missing dashed underline after section ("Raises")
+middleware\input_validator.py:72:15: TRY003 Avoid specifying long messages outside the exception class
+middleware\input_validator.py:72:31: EM101 Exception must not use a string literal, assign to variable first
+middleware\input_validator.py:79:26: PLR2004 Magic value used in comparison, consider replacing `2` with a constant variable
+middleware\input_validator.py:86:15: TRY003 Avoid specifying long messages outside the exception class
+middleware\input_validator.py:86:31: EM102 Exception must not use an f-string literal, assign to variable first
+middleware\input_validator.py:92:15: TRY003 Avoid specifying long messages outside the exception class
+middleware\input_validator.py:92:31: EM101 Exception must not use a string literal, assign to variable first
+middleware\input_validator.py:96:15: TRY003 Avoid specifying long messages outside the exception class
+middleware\input_validator.py:96:31: EM101 Exception must not use a string literal, assign to variable first
+middleware\rate_limiter.py:23:1: ERA001 Found commented-out code
+middleware\rate_limiter.py:30:5: D407 [*] Missing dashed underline after section ("Args")
+middleware\rate_limiter.py:33:5: D413 [*] Missing blank line after last section ("Returns")
+middleware\rate_limiter.py:33:5: D407 [*] Missing dashed underline after section ("Returns")
+middleware\rate_limiter.py:42:5: D407 [*] Missing dashed underline after section ("Args")
+middleware\rate_limiter.py:47:5: D413 [*] Missing blank line after last section ("Returns")
+middleware\rate_limiter.py:47:5: D407 [*] Missing dashed underline after section ("Returns")
+middleware\rate_limiter.py:57:5: D407 [*] Missing dashed underline after section ("Args")
+middleware\rate_limiter.py:63:5: D413 [*] Missing blank line after last section ("Returns")
+middleware\rate_limiter.py:63:5: D407 [*] Missing dashed underline after section ("Returns")
+middleware\rate_limiter.py:97:5: D401 First line of docstring should be in imperative mood: "Decorator to enforce strict rate limiting on route handlers."
+middleware\rate_limiter.py:99:5: D407 [*] Missing dashed underline after section ("Args")
+middleware\rate_limiter.py:104:5: D413 [*] Missing blank line after last section ("Returns")
+middleware\rate_limiter.py:104:5: D407 [*] Missing dashed underline after section ("Returns")
+middleware\rate_limiter.py:110:28: ANN401 Dynamically typed expressions (typing.Any) are disallowed in `*args`
+middleware\rate_limiter.py:110:43: ANN401 Dynamically typed expressions (typing.Any) are disallowed in `**kwargs`
+middleware\rate_limiter.py:110:51: ANN401 Dynamically typed expressions (typing.Any) are disallowed in `wrapped`
+middleware\rate_limiter.py:116:95: COM812 [*] Trailing comma missing
+middleware\rate_limiter.py:120:23: TRY003 Avoid specifying long messages outside the exception class
+middleware\rate_limiter.py:120:38: EM101 Exception must not use a string literal, assign to variable first
+middleware\rate_limiter.py:132:101: E501 Line too long (113 > 100)
+middleware\rate_limiter.py:132:114: COM812 [*] Trailing comma missing
+middleware\security_headers.py:3:1: I001 [*] Import block is un-sorted or un-formatted
+middleware\security_headers.py:6:5: D202 [*] No blank lines allowed after function docstring (found 1)
+middleware\security_headers.py:7:1: W293 [*] Blank line contains whitespace
+middleware\security_headers.py:11:101: E501 Line too long (126 > 100)
+middleware\security_headers.py:24:1: W293 [*] Blank line contains whitespace
+models\action_plan.py:16:1: W293 Blank line contains whitespace
+models\action_plan.py:17:5: D413 [*] Missing blank line after last section ("Attributes")
+models\action_plan.py:17:5: D407 [*] Missing dashed underline after section ("Attributes")
+models\action_plan.py:17:5: D406 [*] Section name should end with a newline ("Attributes")
+models\action_plan.py:39:23: ANN101 Missing type annotation for `self` in method
+models\action_plan.py:41:1: W293 Blank line contains whitespace
+models\action_plan.py:42:9: D413 [*] Missing blank line after last section ("Raises")
+models\action_plan.py:42:9: D407 [*] Missing dashed underline after section ("Raises")
+models\action_plan.py:42:9: D406 [*] Section name should end with a newline ("Raises")
+models\action_plan.py:45:77: PLR2004 Magic value used in comparison, consider replacing `10` with a constant variable
+models\action_plan.py:46:19: TRY003 Avoid specifying long messages outside the exception class
+models\action_plan.py:46:35: EM102 Exception must not use an f-string literal, assign to variable first
+models\action_plan.py:46:101: E501 Line too long (103 > 100)
+models\action_plan.py:48:17: ANN101 Missing type annotation for `self` in method
+models\action_plan.py:50:1: W293 Blank line contains whitespace
+models\action_plan.py:51:9: D413 [*] Missing blank line after last section ("Returns")
+models\action_plan.py:51:9: D407 [*] Missing dashed underline after section ("Returns")
+models\action_plan.py:51:9: D406 [*] Section name should end with a newline ("Returns")
+models\action_plan.py:60:1: W293 Blank line contains whitespace
+models\action_plan.py:61:5: D413 [*] Missing blank line after last section ("Attributes")
+models\action_plan.py:61:5: D407 [*] Missing dashed underline after section ("Attributes")
+models\action_plan.py:61:5: D406 [*] Section name should end with a newline ("Attributes")
+models\action_plan.py:91:23: ANN101 Missing type annotation for `self` in method
+models\action_plan.py:93:1: W293 Blank line contains whitespace
+models\action_plan.py:94:9: D413 [*] Missing blank line after last section ("Raises")
+models\action_plan.py:94:9: D407 [*] Missing dashed underline after section ("Raises")
+models\action_plan.py:94:9: D406 [*] Section name should end with a newline ("Raises")
+models\action_plan.py:99:19: TRY003 Avoid specifying long messages outside the exception class
+models\action_plan.py:99:35: EM102 Exception must not use an f-string literal, assign to variable first
+models\action_plan.py:102:19: TRY003 Avoid specifying long messages outside the exception class
+models\action_plan.py:102:35: EM102 Exception must not use an f-string literal, assign to variable first
+models\action_plan.py:113:17: ANN101 Missing type annotation for `self` in method
+models\action_plan.py:115:1: W293 Blank line contains whitespace
+models\action_plan.py:116:9: D413 [*] Missing blank line after last section ("Returns")
+models\action_plan.py:116:9: D407 [*] Missing dashed underline after section ("Returns")
+models\action_plan.py:116:9: D406 [*] Section name should end with a newline ("Returns")
+models\action_plan.py:121:101: E501 Line too long (114 > 100)
+routes\api.py:106:5: D413 [*] Missing blank line after last section ("Returns")
+routes\api.py:106:5: D407 [*] Missing dashed underline after section ("Returns")
+routes\api.py:106:5: D406 [*] Section name should end with a newline ("Returns")
+routes\api.py:114:101: E501 Line too long (103 > 100)
+routes\api.py:118:101: E501 Line too long (101 > 100)
+routes\api.py:131:52: UP017 [*] Use `datetime.UTC` alias
+routes\api.py:132:14: COM812 [*] Trailing comma missing
+routes\api.py:142:5: D413 [*] Missing blank line after last section ("Returns")
+routes\api.py:142:5: D407 [*] Missing dashed underline after section ("Returns")
+routes\api.py:142:5: D406 [*] Section name should end with a newline ("Returns")
+routes\api.py:155:5: D413 [*] Missing blank line after last section ("Returns")
+routes\api.py:155:5: D407 [*] Missing dashed underline after section ("Returns")
+routes\api.py:155:5: D406 [*] Section name should end with a newline ("Returns")
+routes\api.py:165:15: TRY003 Avoid specifying long messages outside the exception class
+routes\api.py:165:31: EM101 Exception must not use a string literal, assign to variable first
+routes\api.py:175:101: E501 Line too long (114 > 100)
+routes\api.py:177:101: E501 Line too long (105 > 100)
+routes\api.py:184:101: E501 Line too long (113 > 100)
+routes\api.py:189:101: E501 Line too long (102 > 100)
+routes\api.py:220:5: D413 [*] Missing blank line after last section ("Returns")
+routes\api.py:220:5: D407 [*] Missing dashed underline after section ("Returns")
+routes\api.py:220:5: D406 [*] Section name should end with a newline ("Returns")
+routes\api.py:238:5: D407 [*] Missing dashed underline after section ("Args")
+routes\api.py:241:5: D413 [*] Missing blank line after last section ("Returns")
+routes\api.py:241:5: D407 [*] Missing dashed underline after section ("Returns")
+routes\api.py:247:5: RET505 Unnecessary `else` after `return` statement
+services\firestore_service.py:18:18: ANN101 Missing type annotation for `self` in method
+services\firestore_service.py:24:18: ANN101 Missing type annotation for `self` in method
+services\firestore_service.py:27:9: D413 [*] Missing blank line after last section ("Args")
+services\firestore_service.py:27:9: D407 [*] Missing dashed underline after section ("Args")
+services\firestore_service.py:43:9: PLR0913 Too many arguments in function definition (10 > 5)
+services\firestore_service.py:44:9: ANN101 Missing type annotation for `self` in method
+services\firestore_service.py:57:9: D413 [*] Missing blank line after last section ("Args")
+services\firestore_service.py:57:9: D407 [*] Missing dashed underline after section ("Args")
+services\firestore_service.py:68:37: UP017 [*] Use `datetime.UTC` alias
+services\firestore_service.py:115:30: ANN101 Missing type annotation for `self` in method
+services\firestore_service.py:118:9: D407 [*] Missing dashed underline after section ("Args")
+services\firestore_service.py:122:9: D413 [*] Missing blank line after last section ("Returns")
+services\firestore_service.py:122:9: D407 [*] Missing dashed underline after section ("Returns")
+services\firestore_service.py:142:74: W291 [*] Trailing whitespace
+services\firestore_service.py:152:25: ANN101 Missing type annotation for `self` in method
+services\firestore_service.py:155:9: D407 [*] Missing dashed underline after section ("Args")
+services\firestore_service.py:158:9: D413 [*] Missing blank line after last section ("Returns")
+services\firestore_service.py:158:9: D407 [*] Missing dashed underline after section ("Returns")
+services\firestore_service.py:176:13: TRY300 Consider moving this statement to an `else` block
+services\firestore_service.py:189:5: D413 [*] Missing blank line after last section ("Args")
+services\firestore_service.py:189:5: D407 [*] Missing dashed underline after section ("Args")
+services\gemini_service.py:3:1: I001 [*] Import block is un-sorted or un-formatted
+services\gemini_service.py:49:101: E501 Line too long (101 > 100)
+services\gemini_service.py:73:18: ANN101 Missing type annotation for `self` in method
+services\gemini_service.py:78:18: ANN101 Missing type annotation for `self` in method
+services\gemini_service.py:81:9: D413 [*] Missing blank line after last section ("Args")
+services\gemini_service.py:81:9: D407 [*] Missing dashed underline after section ("Args")
+services\gemini_service.py:113:28: ANN101 Missing type annotation for `self` in method
+services\gemini_service.py:116:9: D413 [*] Missing blank line after last section ("Returns")
+services\gemini_service.py:116:9: D407 [*] Missing dashed underline after section ("Returns")
+services\gemini_service.py:116:9: D406 [*] Section name should end with a newline ("Returns")
+services\gemini_service.py:130:101: E501 Line too long (109 > 100)
+services\gemini_service.py:136:18: COM812 [*] Trailing comma missing
+services\gemini_service.py:147:9: C901 `analyze` is too complex (13 > 10)
+services\gemini_service.py:147:9: PLR0912 Too many branches (16 > 12)
+services\gemini_service.py:148:9: ANN101 Missing type annotation for `self` in method
+services\gemini_service.py:148:100: COM812 [*] Trailing comma missing
+services\gemini_service.py:154:9: D407 [*] Missing dashed underline after section ("Args")
+services\gemini_service.py:159:9: D407 [*] Missing dashed underline after section ("Returns")
+services\gemini_service.py:162:9: D413 [*] Missing blank line after last section ("Raises")
+services\gemini_service.py:162:9: D407 [*] Missing dashed underline after section ("Raises")
+services\gemini_service.py:180:19: TRY003 Avoid specifying long messages outside the exception class
+services\gemini_service.py:180:31: EM101 Exception must not use a string literal, assign to variable first
+services\gemini_service.py:187:101: E501 Line too long (104 > 100)
+services\gemini_service.py:207:24: BLE001 Do not catch blind exception: `Exception`
+services\gemini_service.py:215:21: TRY400 Use `logging.exception` instead of `logging.error`
+services\gemini_service.py:215:34: G004 Logging statement uses f-string
+services\gemini_service.py:215:101: E501 Line too long (107 > 100)
+services\gemini_service.py:221:101: E501 Line too long (122 > 100)
+services\gemini_service.py:221:123: COM812 [*] Trailing comma missing
+services\gemini_service.py:227:28: G201 Logging `.exception(...)` should be used instead of `.error(..., exc_info=True)`
+services\gemini_service.py:239:5: D413 [*] Missing blank line after last section ("Args")
+services\gemini_service.py:239:5: D407 [*] Missing dashed underline after section ("Args")
+services\secret_service.py:17:18: ANN101 Missing type annotation for `self` in method
+services\secret_service.py:24:18: ANN101 Missing type annotation for `self` in method
+services\secret_service.py:27:9: D413 [*] Missing blank line after last section ("Args")
+services\secret_service.py:27:9: D407 [*] Missing dashed underline after section ("Args")
+services\secret_service.py:43:20: ANN101 Missing type annotation for `self` in method
+services\secret_service.py:46:9: D407 [*] Missing dashed underline after section ("Args")
+services\secret_service.py:49:9: D413 [*] Missing blank line after last section ("Returns")
+services\secret_service.py:49:9: D407 [*] Missing dashed underline after section ("Returns")
+services\secret_service.py:75:13: TRY300 Consider moving this statement to an `else` block
+services\secret_service.py:76:34: F841 [*] Local variable `e` is assigned to but never used
+services\secret_service.py:80:21: ANN101 Missing type annotation for `self` in method
+services\secret_service.py:93:5: D413 [*] Missing blank line after last section ("Args")
+services\secret_service.py:93:5: D407 [*] Missing dashed underline after section ("Args")
+services\storage_service.py:21:18: ANN101 Missing type annotation for `self` in method
+services\storage_service.py:28:18: ANN101 Missing type annotation for `self` in method
+services\storage_service.py:31:9: D413 [*] Missing blank line after last section ("Args")
+services\storage_service.py:31:9: D407 [*] Missing dashed underline after section ("Args")
+services\storage_service.py:47:34: ANN101 Missing type annotation for `self` in method
+services\storage_service.py:50:9: D407 [*] Missing dashed underline after section ("Args")
+services\storage_service.py:53:9: D407 [*] Missing dashed underline after section ("Returns")
+services\storage_service.py:56:9: D413 [*] Missing blank line after last section ("Raises")
+services\storage_service.py:56:9: D407 [*] Missing dashed underline after section ("Raises")
+services\storage_service.py:78:19: TRY003 Avoid specifying long messages outside the exception class
+services\storage_service.py:78:35: EM101 Exception must not use a string literal, assign to variable first
+services\storage_service.py:88:19: TRY003 Avoid specifying long messages outside the exception class
+services\storage_service.py:88:32: EM101 Exception must not use a string literal, assign to variable first
+services\storage_service.py:98:87: COM812 [*] Trailing comma missing
+services\storage_service.py:105:13: TRY300 Consider moving this statement to an `else` block
+services\storage_service.py:108:19: TRY003 Avoid specifying long messages outside the exception class
+services\storage_service.py:108:32: EM101 Exception must not use a string literal, assign to variable first
+services\storage_service.py:118:5: D413 [*] Missing blank line after last section ("Args")
+services\storage_service.py:118:5: D407 [*] Missing dashed underline after section ("Args")
+tests\conftest.py:4:20: F401 [*] `typing.Any` imported but unused
+tests\conftest.py:15:1: PT001 [*] Use `@pytest.fixture()` over `@pytest.fixture`
+tests\conftest.py:19:5: D413 [*] Missing blank line after last section ("Yields")
+tests\conftest.py:19:5: D407 [*] Missing dashed underline after section ("Yields")
+tests\conftest.py:19:5: D406 [*] Section name should end with a newline ("Yields")
+tests\conftest.py:26:5: PT022 [*] No teardown in fixture `app`, use `return` instead of `yield`
+tests\conftest.py:29:1: PT001 [*] Use `@pytest.fixture()` over `@pytest.fixture`
+tests\conftest.py:33:5: D407 [*] Missing dashed underline after section ("Args")
+tests\conftest.py:36:5: D413 [*] Missing blank line after last section ("Returns")
+tests\conftest.py:36:5: D407 [*] Missing dashed underline after section ("Returns")
+tests\conftest.py:42:1: PT001 [*] Use `@pytest.fixture()` over `@pytest.fixture`
+tests\conftest.py:44:5: D401 First line of docstring should be in imperative mood: "A valid fully-populated ActionPlan dataclass instance."
+tests\conftest.py:46:5: D413 [*] Missing blank line after last section ("Returns")
+tests\conftest.py:46:5: D407 [*] Missing dashed underline after section ("Returns")
+tests\conftest.py:46:5: D406 [*] Section name should end with a newline ("Returns")
+tests\conftest.py:100:1: PT001 [*] Use `@pytest.fixture()` over `@pytest.fixture`
+tests\conftest.py:102:5: D401 First line of docstring should be in imperative mood: "A tiny valid JPEG encoded as a base64 string."
+tests\conftest.py:104:5: D413 [*] Missing blank line after last section ("Returns")
+tests\conftest.py:104:5: D407 [*] Missing dashed underline after section ("Returns")
+tests\conftest.py:104:5: D406 [*] Section name should end with a newline ("Returns")
+tests\conftest.py:108:101: E501 Line too long (216 > 100)
+tests\conftest.py:111:1: PT001 [*] Use `@pytest.fixture()` over `@pytest.fixture`
+tests\conftest.py:113:5: D401 First line of docstring should be in imperative mood: "Matches gemini_service with a deterministic canned response."
+tests\conftest.py:115:5: D407 [*] Missing dashed underline after section ("Args")
+tests\conftest.py:118:5: D413 [*] Missing blank line after last section ("Yields")
+tests\conftest.py:118:5: D407 [*] Missing dashed underline after section ("Yields")
+tests\conftest.py:126:1: PT001 [*] Use `@pytest.fixture()` over `@pytest.fixture`
+tests\conftest.py:128:5: D401 First line of docstring should be in imperative mood: "Replaces Firestore client with an in-memory dict."
+tests\conftest.py:130:5: D413 [*] Missing blank line after last section ("Yields")
+tests\conftest.py:130:5: D407 [*] Missing dashed underline after section ("Yields")
+tests\conftest.py:130:5: D406 [*] Section name should end with a newline ("Yields")
+tests\conftest.py:133:5: SIM117 Use a single `with` statement with multiple contexts instead of nested `with` statements
+tests\conftest.py:134:101: E501 Line too long (102 > 100)
+tests\conftest.py:142:1: PT001 [*] Use `@pytest.fixture()` over `@pytest.fixture`
+tests\conftest.py:144:5: D401 First line of docstring should be in imperative mood: "Replaces GCS client with an in-memory dict."
+tests\conftest.py:146:5: D413 [*] Missing blank line after last section ("Yields")
+tests\conftest.py:146:5: D407 [*] Missing dashed underline after section ("Yields")
+tests\conftest.py:146:5: D406 [*] Section name should end with a newline ("Yields")
+tests\test_api.py:13:33: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:16:35: PLR2004 Magic value used in comparison, consider replacing `200` with a constant variable
+tests\test_api.py:18:50: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:29:57: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:35:43: PLR2004 Magic value used in comparison, consider replacing `503` with a constant variable
+tests\test_api.py:43:9: PT004 Fixture `auto_patch` does not return anything, add leading underscore
+tests\test_api.py:43:20: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:43:39: ANN401 Dynamically typed expressions (typing.Any) are disallowed in `mock_gemini`
+tests\test_api.py:43:60: ANN401 Dynamically typed expressions (typing.Any) are disallowed in `mock_firestore`
+tests\test_api.py:43:75: ANN401 Dynamically typed expressions (typing.Any) are disallowed in `mock_gcs`
+tests\test_api.py:45:9: PIE790 [*] Unnecessary `pass` statement
+tests\test_api.py:48:9: PT004 Fixture `reset_rate_limit` does not return anything, add leading underscore
+tests\test_api.py:48:26: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:53:45: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:56:35: PLR2004 Magic value used in comparison, consider replacing `200` with a constant variable
+tests\test_api.py:59:46: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:59:101: E501 Line too long (103 > 100)
+tests\test_api.py:62:35: PLR2004 Magic value used in comparison, consider replacing `200` with a constant variable
+tests\test_api.py:64:45: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:67:35: PLR2004 Magic value used in comparison, consider replacing `400` with a constant variable
+tests\test_api.py:69:48: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:72:35: PLR2004 Magic value used in comparison, consider replacing `400` with a constant variable
+tests\test_api.py:74:50: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:80:39: PLR2004 Magic value used in comparison, consider replacing `413` with a constant variable
+tests\test_api.py:84:53: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:87:35: PLR2004 Magic value used in comparison, consider replacing `400` with a constant variable
+tests\test_api.py:89:58: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:94:63: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:99:67: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:99:101: E501 Line too long (101 > 100)
+tests\test_api.py:104:54: PLR2004 Magic value used in comparison, consider replacing `3` with a constant variable
+tests\test_api.py:106:63: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:114:54: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:117:35: PLR2004 Magic value used in comparison, consider replacing `400` with a constant variable
+tests\test_api.py:119:51: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:122:35: PLR2004 Magic value used in comparison, consider replacing `400` with a constant variable
+tests\test_api.py:124:50: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:127:35: PLR2004 Magic value used in comparison, consider replacing `400` with a constant variable
+tests\test_api.py:133:47: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:135:9: PIE790 [*] Unnecessary `pass` statement
+tests\test_api.py:137:51: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:139:9: PIE790 [*] Unnecessary `pass` statement
+tests\test_api.py:141:55: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:143:9: PIE790 [*] Unnecessary `pass` statement
+tests\test_api.py:145:50: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:147:9: PIE790 [*] Unnecessary `pass` statement
+tests\test_api.py:154:9: PT004 Fixture `auto_patch` does not return anything, add leading underscore
+tests\test_api.py:154:20: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:154:42: ANN401 Dynamically typed expressions (typing.Any) are disallowed in `mock_firestore`
+tests\test_api.py:155:9: D401 First line of docstring should be in imperative mood: "Setup mock firestore DB structure."
+tests\test_api.py:162:44: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:165:35: PLR2004 Magic value used in comparison, consider replacing `200` with a constant variable
+tests\test_api.py:168:42: PLR2004 Magic value used in comparison, consider replacing `2` with a constant variable
+tests\test_api.py:170:45: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:170:88: ANN401 Dynamically typed expressions (typing.Any) are disallowed in `mock_firestore`
+tests\test_api.py:175:44: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:175:87: ANN401 Dynamically typed expressions (typing.Any) are disallowed in `mock_firestore`
+tests\test_api.py:180:52: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:183:35: PLR2004 Magic value used in comparison, consider replacing `204` with a constant variable
+tests\test_api.py:185:51: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:185:94: ANN401 Dynamically typed expressions (typing.Any) are disallowed in `mock_firestore`
+tests\test_api.py:185:101: E501 Line too long (106 > 100)
+tests\test_api.py:189:35: PLR2004 Magic value used in comparison, consider replacing `404` with a constant variable
+tests\test_gemini_service.py:12:22: ANN101 Missing type annotation for `self` in method
+tests\test_gemini_service.py:14:9: SLF001 Private member accessed: `_testing`
+tests\test_gemini_service.py:15:9: SLF001 Private member accessed: `_model`
+tests\test_gemini_service.py:17:58: ANN101 Missing type annotation for `self` in method
+tests\test_gemini_service.py:17:64: ARG002 Unused method argument: `sample_action_plan`
+tests\test_gemini_service.py:17:84: ANN401 Dynamically typed expressions (typing.Any) are disallowed in `sample_action_plan`
+tests\test_gemini_service.py:20:101: E501 Line too long (333 > 100)
+tests\test_gemini_service.py:23:9: SLF001 Private member accessed: `_model`
+tests\test_gemini_service.py:29:53: ANN101 Missing type annotation for `self` in method
+tests\test_gemini_service.py:34:101: E501 Line too long (334 > 100)
+tests\test_gemini_service.py:36:9: SLF001 Private member accessed: `_model`
+tests\test_gemini_service.py:36:101: E501 Line too long (128 > 100)
+tests\test_gemini_service.py:42:16: SLF001 Private member accessed: `_model`
+tests\test_gemini_service.py:42:69: PLR2004 Magic value used in comparison, consider replacing `3` with a constant variable
+tests\test_gemini_service.py:44:64: ANN101 Missing type annotation for `self` in method
+tests\test_gemini_service.py:46:9: SLF001 Private member accessed: `_model`
+tests\test_gemini_service.py:54:49: ANN101 Missing type annotation for `self` in method
+tests\test_gemini_service.py:64:9: SLF001 Private member accessed: `_model`
+tests\test_gemini_service.py:71:60: ANN101 Missing type annotation for `self` in method
+tests\test_gemini_service.py:78:59: ANN101 Missing type annotation for `self` in method
+tests\test_gemini_service.py:81:101: E501 Line too long (332 > 100)
+tests\test_gemini_service.py:82:9: SLF001 Private member accessed: `_model`
+tests\test_gemini_service.py:88:19: SLF001 Private member accessed: `_model`
+tests\test_gemini_service.py:92:55: ANN101 Missing type annotation for `self` in method
+tests\test_gemini_service.py:96:9: SLF001 Private member accessed: `_model`
+tests\test_gemini_service.py:101:66: ANN101 Missing type annotation for `self` in method
+tests\test_gemini_service.py:106:9: SLF001 Private member accessed: `_model`
+tests\test_models.py:12:53: ANN101 Missing type annotation for `self` in method
+tests\test_models.py:32:51: ANN101 Missing type annotation for `self` in method
+tests\test_models.py:51:53: ANN101 Missing type annotation for `self` in method
+tests\test_models.py:70:53: ANN101 Missing type annotation for `self` in method
+tests\test_models.py:89:57: ANN101 Missing type annotation for `self` in method
+tests\test_models.py:104:55: ANN101 Missing type annotation for `self` in method
+tests\test_models.py:125:57: ANN101 Missing type annotation for `self` in method
+tests\test_models.py:127:70: FBT003 Boolean positional value in function call
+tests\test_models.py:128:70: FBT003 Boolean positional value in function call
+tests\test_rate_limiter.py:14:22: ANN101 Missing type annotation for `self` in method
+tests\test_rate_limiter.py:18:47: ANN101 Missing type annotation for `self` in method
+tests\test_rate_limiter.py:25:51: ANN101 Missing type annotation for `self` in method
+tests\test_rate_limiter.py:34:55: ANN101 Missing type annotation for `self` in method
+tests\test_rate_limiter.py:42:39: PLR2004 Magic value used in comparison, consider replacing `429` with a constant variable
+tests\test_rate_limiter.py:45:50: ANN101 Missing type annotation for `self` in method
+tests\test_rate_limiter.py:45:69: ANN401 Dynamically typed expressions (typing.Any) are disallowed in `monkeypatch`
+tests\test_rate_limiter.py:62:57: ANN101 Missing type annotation for `self` in method
+tests\test_rate_limiter.py:66:45: ANN101 Missing type annotation for `self` in method
+tests\test_rate_limiter.py:70:49: ANN101 Missing type annotation for `self` in method
+tests\test_rate_limiter.py:70:68: ANN401 Dynamically typed expressions (typing.Any) are disallowed in `monkeypatch`
+tests\test_rate_limiter.py:89:41: ANN101 Missing type annotation for `self` in method
+tests\test_rate_limiter.py:96:54: ANN101 Missing type annotation for `self` in method
+tests\test_rate_limiter.py:104:43: ANN101 Missing type annotation for `self` in method
+tests\test_rate_limiter.py:110:28: PLR2004 Magic value used in comparison, consider replacing `60` with a constant variable
+tests\test_validator.py:12:38: ANN101 Missing type annotation for `self` in method
+tests\test_validator.py:17:49: ANN101 Missing type annotation for `self` in method
+tests\test_validator.py:21:60: ANN101 Missing type annotation for `self` in method
+tests\test_validator.py:26:59: ANN101 Missing type annotation for `self` in method
+tests\test_validator.py:35:56: ANN101 Missing type annotation for `self` in method
+tests\test_validator.py:40:55: ANN101 Missing type annotation for `self` in method
+tests\test_validator.py:45:53: ANN101 Missing type annotation for `self` in method
+tests\test_validator.py:50:39: ANN101 Missing type annotation for `self` in method
+tests\test_validator.py:55:56: ANN101 Missing type annotation for `self` in method
+tests\test_validator.py:61:53: ANN101 Missing type annotation for `self` in method
+tests\test_validator.py:69:55: ANN101 Missing type annotation for `self` in method
+wsgi.py:1:1: D100 Missing docstring in public module
+wsgi.py:1:1: I001 [*] Import block is un-sorted or un-formatted
+Found 444 errors.
+[*] 206 fixable with the `--fix` option (28 hidden fixes can be enabled with the `--unsafe-fixes` option).

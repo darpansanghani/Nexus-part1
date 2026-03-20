@@ -1,0 +1,226 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.11.3, pytest-8.2.0, pluggy-1.6.0 -- C:\Users\darpa\OneDrive\Desktop\PromptWar\Part1\nexus\venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\darpa\OneDrive\Desktop\PromptWar\Part1\nexus
+configfile: pytest.ini
+plugins: cov-5.0.0, flask-1.3.0
+collecting ... collected 36 items
+
+tests/test_api.py::TestHealthEndpoint::test_health_returns_200 PASSED    [  2%]
+tests/test_api.py::TestHealthEndpoint::test_health_response_has_required_fields PASSED [  5%]
+tests/test_api.py::TestHealthEndpoint::test_health_returns_503_when_gemini_unavailable PASSED [  8%]
+tests/test_api.py::TestAnalyzeEndpoint::test_analyze_valid_text_returns_200 PASSED [ 11%]
+tests/test_api.py::TestAnalyzeEndpoint::test_analyze_valid_image_returns_200 PASSED [ 13%]
+tests/test_api.py::TestAnalyzeEndpoint::test_analyze_empty_body_returns_400 FAILED [ 16%]
+tests/test_api.py::TestAnalyzeEndpoint::test_analyze_text_too_long_returns_400 FAILED [ 19%]
+tests/test_api.py::TestAnalyzeEndpoint::test_analyze_image_too_large_returns_413 PASSED [ 22%]
+tests/test_api.py::TestAnalyzeEndpoint::test_analyze_invalid_image_mime_returns_400 FAILED [ 25%]
+tests/test_api.py::TestAnalyzeEndpoint::test_analyze_response_contains_session_id_header PASSED [ 27%]
+tests/test_api.py::TestAnalyzeEndpoint::test_analyze_response_contains_processing_time_header PASSED [ 30%]
+tests/test_api.py::TestAnalyzeEndpoint::test_analyze_critical_severity_has_at_least_three_actions PASSED [ 33%]
+tests/test_api.py::TestAnalyzeEndpoint::test_analyze_actions_are_sorted_by_priority_ascending PASSED [ 36%]
+tests/test_api.py::TestAnalyzeEndpoint::test_analyze_sql_injection_input_returns_400 FAILED [ 38%]
+tests/test_api.py::TestAnalyzeEndpoint::test_analyze_script_tag_input_returns_400 FAILED [ 41%]
+tests/test_api.py::TestAnalyzeEndpoint::test_analyze_null_byte_input_returns_400 FAILED [ 44%]
+tests/test_api.py::TestRateLimiterEndpoint::test_requests_under_limit_are_allowed PASSED [ 47%]
+tests/test_api.py::TestRateLimiterEndpoint::test_request_at_limit_is_blocked_with_429 PASSED [ 50%]
+tests/test_api.py::TestRateLimiterEndpoint::test_429_response_includes_retry_after_header PASSED [ 52%]
+tests/test_api.py::TestRateLimiterEndpoint::test_counter_resets_after_window_expires PASSED [ 55%]
+tests/test_api.py::TestLogEndpoint::test_log_returns_list_of_incidents PASSED [ 58%]
+tests/test_api.py::TestLogEndpoint::test_log_respects_limit_query_param PASSED [ 61%]
+tests/test_api.py::TestLogEndpoint::test_log_filters_by_severity_param PASSED [ 63%]
+tests/test_api.py::TestLogEndpoint::test_delete_returns_204_for_existing_entry PASSED [ 66%]
+tests/test_api.py::TestLogEndpoint::test_delete_returns_404_for_missing_entry PASSED [ 69%]
+tests/test_validator.py::TestInputValidator::test_valid_text_input_passes PASSED [ 72%]
+tests/test_validator.py::TestInputValidator::test_empty_text_raises_validation_error PASSED [ 75%]
+tests/test_validator.py::TestInputValidator::test_text_over_10000_chars_raises_validation_error PASSED [ 77%]
+tests/test_validator.py::TestInputValidator::test_sql_injection_string_raises_validation_error PASSED [ 80%]
+tests/test_validator.py::TestInputValidator::test_script_tag_string_raises_validation_error PASSED [ 83%]
+tests/test_validator.py::TestInputValidator::test_null_byte_string_raises_validation_error PASSED [ 86%]
+tests/test_validator.py::TestInputValidator::test_javascript_uri_raises_validation_error PASSED [ 88%]
+tests/test_validator.py::TestInputValidator::test_valid_jpeg_base64_passes PASSED [ 91%]
+tests/test_validator.py::TestInputValidator::test_invalid_mime_type_raises_validation_error PASSED [ 94%]
+tests/test_validator.py::TestInputValidator::test_image_over_5mb_raises_validation_error PASSED [ 97%]
+tests/test_validator.py::TestInputValidator::test_malformed_base64_raises_validation_error FAILED [100%]
+
+================================== FAILURES ===================================
+___________ TestAnalyzeEndpoint.test_analyze_empty_body_returns_400 ___________
+
+self = <tests.test_api.TestAnalyzeEndpoint object at 0x000002CB48EC4FD0>
+client = <FlaskClient <Flask 'app'>>
+
+    def test_analyze_empty_body_returns_400(self, client: FlaskClient) -> None:
+        """Test empty payload returns 400."""
+        res = client.post("/api/analyze", json={})
+>       assert res.status_code == 400
+E       assert 500 == 400
+E        +  where 500 = <WrapperTestResponse streamed [500 INTERNAL SERVER ERROR]>.status_code
+
+tests\test_api.py:61: AssertionError
+---------------------------- Captured stdout setup ----------------------------
+{"level": "INFO", "logger": "services.secret_service", "message": "Using local environment variables for secrets.", "timestamp": "2026-03-20 15:40:21,826", "file": "secret_service.py", "line": 41}
+{"level": "INFO", "logger": "services.gemini_service", "message": "Using mock Gemini for testing.", "timestamp": "2026-03-20 15:40:21,826", "file": "gemini_service.py", "line": 111}
+{"level": "INFO", "logger": "services.firestore_service", "message": "Using mock Firestore for testing.", "timestamp": "2026-03-20 15:40:21,826", "file": "firestore_service.py", "line": 41}
+{"level": "INFO", "logger": "services.storage_service", "message": "Using mock Storage for testing.", "timestamp": "2026-03-20 15:40:21,826", "file": "storage_service.py", "line": 45}
+---------------------------- Captured stdout call -----------------------------
+{"level": "ERROR", "logger": "app", "message": "NexusError", "timestamp": "2026-03-20 15:40:21,834", "file": "app.py", "line": 116, "exception": "Traceback (most recent call last):\n  File \"C:\\Users\\darpa\\OneDrive\\Desktop\\PromptWar\\Part1\\nexus\\venv\\Lib\\site-packages\\flask\\app.py\", line 880, in full_dispatch_request\n    rv = self.dispatch_request()\n         ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\darpa\\OneDrive\\Desktop\\PromptWar\\Part1\\nexus\\venv\\Lib\\site-packages\\flask\\app.py\", line 865, in dispatch_request\n    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\darpa\\OneDrive\\Desktop\\PromptWar\\Part1\\nexus\\middleware\\rate_limiter.py\", line 138, in wrapped\n    return f(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\darpa\\OneDrive\\Desktop\\PromptWar\\Part1\\nexus\\routes\\api.py\", line 165, in analyze\n    raise ValidationError(\"Must provide either text or image input.\")\nexceptions.ValidationError: Must provide either text or image input."}
+{"level": "INFO", "logger": "app", "message": "Request completed", "timestamp": "2026-03-20 15:40:21,837", "file": "app.py", "line": 93}
+_________ TestAnalyzeEndpoint.test_analyze_text_too_long_returns_400 __________
+
+self = <tests.test_api.TestAnalyzeEndpoint object at 0x000002CB48EC5690>
+client = <FlaskClient <Flask 'app'>>
+
+    def test_analyze_text_too_long_returns_400(self, client: FlaskClient) -> None:
+        """Test excessively long text returns 400."""
+        res = client.post("/api/analyze", json={"text": "A" * 10001})
+>       assert res.status_code == 400
+E       assert 500 == 400
+E        +  where 500 = <WrapperTestResponse streamed [500 INTERNAL SERVER ERROR]>.status_code
+
+tests\test_api.py:66: AssertionError
+---------------------------- Captured stdout setup ----------------------------
+{"level": "INFO", "logger": "services.secret_service", "message": "Using local environment variables for secrets.", "timestamp": "2026-03-20 15:40:22,151", "file": "secret_service.py", "line": 41}
+{"level": "INFO", "logger": "services.gemini_service", "message": "Using mock Gemini for testing.", "timestamp": "2026-03-20 15:40:22,152", "file": "gemini_service.py", "line": 111}
+{"level": "INFO", "logger": "services.firestore_service", "message": "Using mock Firestore for testing.", "timestamp": "2026-03-20 15:40:22,152", "file": "firestore_service.py", "line": 41}
+{"level": "INFO", "logger": "services.storage_service", "message": "Using mock Storage for testing.", "timestamp": "2026-03-20 15:40:22,152", "file": "storage_service.py", "line": 45}
+---------------------------- Captured stdout call -----------------------------
+{"level": "ERROR", "logger": "app", "message": "NexusError", "timestamp": "2026-03-20 15:40:22,161", "file": "app.py", "line": 116, "exception": "Traceback (most recent call last):\n  File \"C:\\Users\\darpa\\OneDrive\\Desktop\\PromptWar\\Part1\\nexus\\venv\\Lib\\site-packages\\flask\\app.py\", line 880, in full_dispatch_request\n    rv = self.dispatch_request()\n         ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\darpa\\OneDrive\\Desktop\\PromptWar\\Part1\\nexus\\venv\\Lib\\site-packages\\flask\\app.py\", line 865, in dispatch_request\n    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\darpa\\OneDrive\\Desktop\\PromptWar\\Part1\\nexus\\middleware\\rate_limiter.py\", line 138, in wrapped\n    return f(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\darpa\\OneDrive\\Desktop\\PromptWar\\Part1\\nexus\\routes\\api.py\", line 168, in analyze\n    safe_text: str | None = sanitize_text(raw_text) if raw_text else None\n                            ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\darpa\\OneDrive\\Desktop\\PromptWar\\Part1\\nexus\\middleware\\input_validator.py\", line 37, in sanitize_text\n    raise ValidationError(\"Text input exceeds maximum allowed length.\")\nexceptions.ValidationError: Text input exceeds maximum allowed length."}
+{"level": "INFO", "logger": "app", "message": "Request completed", "timestamp": "2026-03-20 15:40:22,163", "file": "app.py", "line": 93}
+_______ TestAnalyzeEndpoint.test_analyze_invalid_image_mime_returns_400 _______
+
+self = <tests.test_api.TestAnalyzeEndpoint object at 0x000002CB48EC6490>
+client = <FlaskClient <Flask 'app'>>
+
+    def test_analyze_invalid_image_mime_returns_400(self, client: FlaskClient) -> None:
+        """Test invalid base64 MIME header."""
+        res = client.post("/api/analyze", json={"image": "data:image/gif;base64,123"})
+>       assert res.status_code == 400
+E       assert 500 == 400
+E        +  where 500 = <WrapperTestResponse streamed [500 INTERNAL SERVER ERROR]>.status_code
+
+tests\test_api.py:81: AssertionError
+---------------------------- Captured stdout setup ----------------------------
+{"level": "INFO", "logger": "services.secret_service", "message": "Using local environment variables for secrets.", "timestamp": "2026-03-20 15:40:22,211", "file": "secret_service.py", "line": 41}
+{"level": "INFO", "logger": "services.gemini_service", "message": "Using mock Gemini for testing.", "timestamp": "2026-03-20 15:40:22,211", "file": "gemini_service.py", "line": 111}
+{"level": "INFO", "logger": "services.firestore_service", "message": "Using mock Firestore for testing.", "timestamp": "2026-03-20 15:40:22,211", "file": "firestore_service.py", "line": 41}
+{"level": "INFO", "logger": "services.storage_service", "message": "Using mock Storage for testing.", "timestamp": "2026-03-20 15:40:22,211", "file": "storage_service.py", "line": 45}
+---------------------------- Captured stdout call -----------------------------
+{"level": "ERROR", "logger": "app", "message": "NexusError", "timestamp": "2026-03-20 15:40:22,221", "file": "app.py", "line": 116, "exception": "Traceback (most recent call last):\n  File \"C:\\Users\\darpa\\OneDrive\\Desktop\\PromptWar\\Part1\\nexus\\venv\\Lib\\site-packages\\flask\\app.py\", line 880, in full_dispatch_request\n    rv = self.dispatch_request()\n         ^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\darpa\\OneDrive\\Desktop\\PromptWar\\Part1\\nexus\\venv\\Lib\\site-packages\\flask\\app.py\", line 865, in dispatch_request\n    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\darpa\\OneDrive\\Desktop\\PromptWar\\Part1\\nexus\\middleware\\rate_limiter.py\", line 138, in wrapped\n    return f(*args, **kwargs)\n           ^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\darpa\\OneDrive\\Desktop\\PromptWar\\Part1\\nexus\\routes\\api.py\", line 174, in analyze\n    image_bytes: bytes = validate_image(raw_image)\n                         ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\darpa\\OneDrive\\Desktop\\PromptWar\\Part1\\nexus\\middleware\\input_validator.py\", line 86, in validate_image\n    raise ValidationError(f\"Invalid image format '{mime_type}'.\")\nexceptions.ValidationError: Invalid image format 'image/gif'."}
+{"level": "INFO", "logger": "app", "message": "Request completed", "timestamp": "2026-03-20 15:40:22,223", "file": "app.py", "line": 93}
+______ TestAnalyzeEndpoint.test_analyze_sql_injection_input_returns_400 _______
+
+self = <tests.test_api.TestAnalyzeEndpoint object at 0x000002CB48EC8910>
+client = <FlaskClient <Flask 'app'>>
+
+    def test_analyze_sql_injection_input_returns_400(self, client: FlaskClient) -> None:
+        """SQL injection blocks at middleware."""
+        res = client.post("/api/analyze", json={"text": "UNION SELECT * FROM users"})
+>       assert res.status_code == 400
+E       assert 429 == 400
+E        +  where 429 = <WrapperTestResponse streamed [429 TOO MANY REQUESTS]>.status_code
+
+tests\test_api.py:111: AssertionError
+---------------------------- Captured stdout setup ----------------------------
+{"level": "INFO", "logger": "services.secret_service", "message": "Using local environment variables for secrets.", "timestamp": "2026-03-20 15:40:22,288", "file": "secret_service.py", "line": 41}
+{"level": "INFO", "logger": "services.gemini_service", "message": "Using mock Gemini for testing.", "timestamp": "2026-03-20 15:40:22,289", "file": "gemini_service.py", "line": 111}
+{"level": "INFO", "logger": "services.firestore_service", "message": "Using mock Firestore for testing.", "timestamp": "2026-03-20 15:40:22,289", "file": "firestore_service.py", "line": 41}
+{"level": "INFO", "logger": "services.storage_service", "message": "Using mock Storage for testing.", "timestamp": "2026-03-20 15:40:22,289", "file": "storage_service.py", "line": 45}
+---------------------------- Captured stdout call -----------------------------
+{"level": "WARNING", "logger": "middleware.rate_limiter", "message": "Endpoint rate limit exceeded", "timestamp": "2026-03-20 15:40:22,296", "file": "rate_limiter.py", "line": 128}
+{"level": "INFO", "logger": "app", "message": "Request completed", "timestamp": "2026-03-20 15:40:22,296", "file": "app.py", "line": 93}
+________ TestAnalyzeEndpoint.test_analyze_script_tag_input_returns_400 ________
+
+self = <tests.test_api.TestAnalyzeEndpoint object at 0x000002CB48EC51D0>
+client = <FlaskClient <Flask 'app'>>
+
+    def test_analyze_script_tag_input_returns_400(self, client: FlaskClient) -> None:
+        """XSS drops payload."""
+        res = client.post("/api/analyze", json={"text": "<script>alert(1)</script>"})
+>       assert res.status_code == 400
+E       assert 429 == 400
+E        +  where 429 = <WrapperTestResponse streamed [429 TOO MANY REQUESTS]>.status_code
+
+tests\test_api.py:116: AssertionError
+---------------------------- Captured stdout setup ----------------------------
+{"level": "INFO", "logger": "services.secret_service", "message": "Using local environment variables for secrets.", "timestamp": "2026-03-20 15:40:22,309", "file": "secret_service.py", "line": 41}
+{"level": "INFO", "logger": "services.gemini_service", "message": "Using mock Gemini for testing.", "timestamp": "2026-03-20 15:40:22,309", "file": "gemini_service.py", "line": 111}
+{"level": "INFO", "logger": "services.firestore_service", "message": "Using mock Firestore for testing.", "timestamp": "2026-03-20 15:40:22,309", "file": "firestore_service.py", "line": 41}
+{"level": "INFO", "logger": "services.storage_service", "message": "Using mock Storage for testing.", "timestamp": "2026-03-20 15:40:22,309", "file": "storage_service.py", "line": 45}
+---------------------------- Captured stdout call -----------------------------
+{"level": "WARNING", "logger": "middleware.rate_limiter", "message": "Endpoint rate limit exceeded", "timestamp": "2026-03-20 15:40:22,317", "file": "rate_limiter.py", "line": 128}
+{"level": "INFO", "logger": "app", "message": "Request completed", "timestamp": "2026-03-20 15:40:22,317", "file": "app.py", "line": 93}
+________ TestAnalyzeEndpoint.test_analyze_null_byte_input_returns_400 _________
+
+self = <tests.test_api.TestAnalyzeEndpoint object at 0x000002CB48EC8BD0>
+client = <FlaskClient <Flask 'app'>>
+
+    def test_analyze_null_byte_input_returns_400(self, client: FlaskClient) -> None:
+        """Null bytes immediately rejected."""
+        res = client.post("/api/analyze", json={"text": "Test \x00 Byte"})
+>       assert res.status_code == 400
+E       assert 429 == 400
+E        +  where 429 = <WrapperTestResponse streamed [429 TOO MANY REQUESTS]>.status_code
+
+tests\test_api.py:121: AssertionError
+---------------------------- Captured stdout setup ----------------------------
+{"level": "INFO", "logger": "services.secret_service", "message": "Using local environment variables for secrets.", "timestamp": "2026-03-20 15:40:22,332", "file": "secret_service.py", "line": 41}
+{"level": "INFO", "logger": "services.gemini_service", "message": "Using mock Gemini for testing.", "timestamp": "2026-03-20 15:40:22,332", "file": "gemini_service.py", "line": 111}
+{"level": "INFO", "logger": "services.firestore_service", "message": "Using mock Firestore for testing.", "timestamp": "2026-03-20 15:40:22,332", "file": "firestore_service.py", "line": 41}
+{"level": "INFO", "logger": "services.storage_service", "message": "Using mock Storage for testing.", "timestamp": "2026-03-20 15:40:22,332", "file": "storage_service.py", "line": 45}
+---------------------------- Captured stdout call -----------------------------
+{"level": "WARNING", "logger": "middleware.rate_limiter", "message": "Endpoint rate limit exceeded", "timestamp": "2026-03-20 15:40:22,340", "file": "rate_limiter.py", "line": 128}
+{"level": "INFO", "logger": "app", "message": "Request completed", "timestamp": "2026-03-20 15:40:22,341", "file": "app.py", "line": 93}
+______ TestInputValidator.test_malformed_base64_raises_validation_error _______
+
+self = <tests.test_validator.TestInputValidator object at 0x000002CB48EDBC10>
+
+    def test_malformed_base64_raises_validation_error(self) -> None:
+        """Bad base64 raises correct error."""
+>       with pytest.raises(ValidationError, match="Could not decode"):
+E       Failed: DID NOT RAISE <class 'exceptions.ValidationError'>
+
+tests\test_validator.py:71: Failed
+
+---------- coverage: platform win32, python 3.11.3-final-0 -----------
+Name                             Stmts   Miss  Cover   Missing
+--------------------------------------------------------------
+app.py                              74     15    80%   69-71, 133, 147, 185-195, 203-207
+config.py                           23      0   100%
+constants.py                        20      0   100%
+exceptions.py                       14      0   100%
+logger.py                           19      0   100%
+middleware\__init__.py               0      0   100%
+middleware\input_validator.py       46      4    91%   72, 90-92
+middleware\rate_limiter.py          58      4    93%   67, 88, 119-120
+middleware\security_headers.py      10      0   100%
+models\__init__.py                   0      0   100%
+models\action_plan.py               48      4    92%   46, 99, 102, 108
+routes\__init__.py                   0      0   100%
+routes\api.py                       76      6    92%   145-147, 179, 225-226
+routes\views.py                      5      1    80%   10
+services\__init__.py                 0      0   100%
+services\firestore_service.py       80     58    28%   33-39, 68-113, 125-150, 161-179
+services\gemini_service.py          76     51    33%   87-109, 119, 165-229
+services\secret_service.py          48     19    60%   34-39, 54, 66, 70-78, 82-83
+services\storage_service.py         62     37    40%   38-43, 61-108
+tests\__init__.py                    0      0   100%
+tests\conftest.py                   42      0   100%
+tests\test_api.py                  110      0   100%
+tests\test_gemini_service.py        64     64     0%   3-109
+tests\test_models.py                31     31     0%   3-146
+tests\test_rate_limiter.py          64     64     0%   3-110
+tests\test_validator.py             42      0   100%
+wsgi.py                              4      4     0%   1-6
+--------------------------------------------------------------
+TOTAL                             1016    362    64%
+
+FAIL Required test coverage of 85% not reached. Total coverage: 64.37%
+=========================== short test summary info ===========================
+FAILED tests/test_api.py::TestAnalyzeEndpoint::test_analyze_empty_body_returns_400
+FAILED tests/test_api.py::TestAnalyzeEndpoint::test_analyze_text_too_long_returns_400
+FAILED tests/test_api.py::TestAnalyzeEndpoint::test_analyze_invalid_image_mime_returns_400
+FAILED tests/test_api.py::TestAnalyzeEndpoint::test_analyze_sql_injection_input_returns_400
+FAILED tests/test_api.py::TestAnalyzeEndpoint::test_analyze_script_tag_input_returns_400
+FAILED tests/test_api.py::TestAnalyzeEndpoint::test_analyze_null_byte_input_returns_400
+FAILED tests/test_validator.py::TestInputValidator::test_malformed_base64_raises_validation_error
+======================== 7 failed, 29 passed in 1.04s =========================

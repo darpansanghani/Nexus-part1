@@ -1,0 +1,686 @@
+app.py:3:1: I001 [*] Import block is un-sorted or un-formatted
+app.py:21:5: C901 `create_app` is too complex (13 > 10)
+app.py:30:101: E501 Line too long (112 > 100)
+app.py:30:113: COM812 [*] Trailing comma missing
+app.py:48:1: W293 [*] Blank line contains whitespace
+app.py:51:9: ANN202 Missing return type annotation for private function `apply_cors_headers`
+app.py:51:28: ANN001 Missing type annotation for function argument `response`
+app.py:69:9: ANN202 Missing return type annotation for private function `log_request_end`
+app.py:69:25: ANN001 Missing type annotation for function argument `response`
+app.py:71:23: Q000 [*] Single quotes found but double quotes preferred
+app.py:78:66: COM812 [*] Trailing comma missing
+app.py:86:22: G004 Logging statement uses f-string
+app.py:86:37: RUF010 [*] Use explicit conversion flag
+app.py:86:101: E501 Line too long (119 > 100)
+app.py:91:101: E501 Line too long (106 > 100)
+app.py:94:26: ARG001 Unused function argument: `e`
+app.py:98:34: ARG001 Unused function argument: `e`
+app.py:99:101: E501 Line too long (105 > 100)
+app.py:102:34: ARG001 Unused function argument: `e`
+app.py:109:1: W293 [*] Blank line contains whitespace
+app.py:110:22: G004 Logging statement uses f-string
+app.py:110:46: RUF010 [*] Use explicit conversion flag
+app.py:110:101: E501 Line too long (128 > 100)
+app.py:120:27: S104 Possible binding to all interfaces
+config.py:4:1: UP035 `typing.Dict` is deprecated, use `dict` instead
+config.py:4:1: UP035 `typing.Type` is deprecated, use `type` instead
+config.py:8:5: D204 [*] 1 blank line required after class docstring
+config.py:20:5: D204 [*] 1 blank line required after class docstring
+config.py:25:5: D204 [*] 1 blank line required after class docstring
+config.py:37:5: D204 [*] 1 blank line required after class docstring
+config.py:38:5: PIE790 [*] Unnecessary `pass` statement
+config.py:41:9: UP006 [*] Use `dict` instead of `Dict` for type annotation
+config.py:41:19: UP006 [*] Use `type` instead of `Type` for type annotation
+config.py:45:33: COM812 [*] Trailing comma missing
+exceptions.py:5:5: D204 [*] 1 blank line required after class docstring
+exceptions.py:6:5: PIE790 [*] Unnecessary `pass` statement
+exceptions.py:10:5: D204 [*] 1 blank line required after class docstring
+exceptions.py:11:5: PIE790 [*] Unnecessary `pass` statement
+exceptions.py:15:5: D204 [*] 1 blank line required after class docstring
+exceptions.py:16:5: PIE790 [*] Unnecessary `pass` statement
+exceptions.py:20:5: D204 [*] 1 blank line required after class docstring
+exceptions.py:21:5: PIE790 [*] Unnecessary `pass` statement
+exceptions.py:25:5: D204 [*] 1 blank line required after class docstring
+exceptions.py:26:5: PIE790 [*] Unnecessary `pass` statement
+middleware\input_validator.py:3:1: I001 [*] Import block is un-sorted or un-formatted
+middleware\input_validator.py:11:1: W293 Blank line contains whitespace
+middleware\input_validator.py:12:5: D407 [*] Missing dashed underline after section ("Args")
+middleware\input_validator.py:14:1: W293 Blank line contains whitespace
+middleware\input_validator.py:15:5: D407 [*] Missing dashed underline after section ("Returns")
+middleware\input_validator.py:17:1: W293 Blank line contains whitespace
+middleware\input_validator.py:18:5: D413 [*] Missing blank line after last section ("Raises")
+middleware\input_validator.py:18:5: D407 [*] Missing dashed underline after section ("Raises")
+middleware\input_validator.py:23:1: W293 [*] Blank line contains whitespace
+middleware\input_validator.py:24:20: PLR2004 Magic value used in comparison, consider replacing `10000` with a constant variable
+middleware\input_validator.py:25:15: TRY003 Avoid specifying long messages outside the exception class
+middleware\input_validator.py:25:31: EM101 Exception must not use a string literal, assign to variable first
+middleware\input_validator.py:29:15: TRY003 Avoid specifying long messages outside the exception class
+middleware\input_validator.py:29:31: EM101 Exception must not use a string literal, assign to variable first
+middleware\input_validator.py:34:15: TRY003 Avoid specifying long messages outside the exception class
+middleware\input_validator.py:34:31: EM101 Exception must not use a string literal, assign to variable first
+middleware\input_validator.py:42:19: COM812 [*] Trailing comma missing
+middleware\input_validator.py:46:19: TRY003 Avoid specifying long messages outside the exception class
+middleware\input_validator.py:46:35: EM101 Exception must not use a string literal, assign to variable first
+middleware\input_validator.py:50:12: RET504 Unnecessary assignment to `cleaned` before `return` statement
+middleware\input_validator.py:55:1: W293 Blank line contains whitespace
+middleware\input_validator.py:56:5: D407 [*] Missing dashed underline after section ("Args")
+middleware\input_validator.py:58:1: W293 Blank line contains whitespace
+middleware\input_validator.py:59:5: D407 [*] Missing dashed underline after section ("Returns")
+middleware\input_validator.py:61:1: W293 Blank line contains whitespace
+middleware\input_validator.py:62:5: D413 [*] Missing blank line after last section ("Raises")
+middleware\input_validator.py:62:5: D407 [*] Missing dashed underline after section ("Raises")
+middleware\input_validator.py:66:15: TRY003 Avoid specifying long messages outside the exception class
+middleware\input_validator.py:66:31: EM101 Exception must not use a string literal, assign to variable first
+middleware\input_validator.py:70:1: W293 [*] Blank line contains whitespace
+middleware\input_validator.py:73:26: PLR2004 Magic value used in comparison, consider replacing `2` with a constant variable
+middleware\input_validator.py:81:15: TRY003 Avoid specifying long messages outside the exception class
+middleware\input_validator.py:81:31: EM102 Exception must not use an f-string literal, assign to variable first
+middleware\input_validator.py:85:12: BLE001 Do not catch blind exception: `Exception`
+middleware\input_validator.py:86:9: B904 Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling
+middleware\input_validator.py:86:15: TRY003 Avoid specifying long messages outside the exception class
+middleware\input_validator.py:86:31: EM101 Exception must not use a string literal, assign to variable first
+middleware\input_validator.py:90:15: TRY003 Avoid specifying long messages outside the exception class
+middleware\input_validator.py:90:31: EM101 Exception must not use a string literal, assign to variable first
+middleware\rate_limiter.py:3:1: I001 [*] Import block is un-sorted or un-formatted
+middleware\rate_limiter.py:6:1: UP035 [*] Import from `collections.abc` instead: `Callable`
+middleware\rate_limiter.py:10:1: ERA001 Found commented-out code
+middleware\rate_limiter.py:15:45: Q000 [*] Single quotes found but double quotes preferred
+middleware\rate_limiter.py:24:1: W293 Blank line contains whitespace
+middleware\rate_limiter.py:25:5: D413 [*] Missing blank line after last section ("Returns")
+middleware\rate_limiter.py:25:5: D407 [*] Missing dashed underline after section ("Returns")
+middleware\rate_limiter.py:25:5: D406 [*] Section name should end with a newline ("Returns")
+middleware\rate_limiter.py:36:1: W293 [*] Blank line contains whitespace
+middleware\rate_limiter.py:58:5: D401 First line of docstring should be in imperative mood: "Decorator to enforce strict rate limiting on route handlers."
+middleware\rate_limiter.py:61:28: ANN401 Dynamically typed expressions (typing.Any) are disallowed in `*args`
+middleware\rate_limiter.py:61:43: ANN401 Dynamically typed expressions (typing.Any) are disallowed in `**kwargs`
+middleware\rate_limiter.py:61:51: ANN401 Dynamically typed expressions (typing.Any) are disallowed in `wrapped`
+middleware\rate_limiter.py:62:87: S104 Possible binding to all interfaces
+middleware\rate_limiter.py:63:1: W293 [*] Blank line contains whitespace
+middleware\rate_limiter.py:67:23: TRY003 Avoid specifying long messages outside the exception class
+middleware\rate_limiter.py:67:38: EM101 Exception must not use a string literal, assign to variable first
+middleware\rate_limiter.py:68:1: W293 [*] Blank line contains whitespace
+middleware\rate_limiter.py:71:1: W293 [*] Blank line contains whitespace
+middleware\rate_limiter.py:74:17: F841 Local variable `err` is assigned to but never used
+middleware\rate_limiter.py:75:83: W291 [*] Trailing whitespace
+middleware\rate_limiter.py:76:101: E501 Line too long (108 > 100)
+middleware\rate_limiter.py:80:17: PIE790 [*] Unnecessary `pass` statement
+middleware\rate_limiter.py:81:1: W293 [*] Blank line contains whitespace
+middleware\rate_limiter.py:86:101: E501 Line too long (128 > 100)
+middleware\security_headers.py:3:1: I001 [*] Import block is un-sorted or un-formatted
+middleware\security_headers.py:6:5: D202 [*] No blank lines allowed after function docstring (found 1)
+middleware\security_headers.py:7:1: W293 [*] Blank line contains whitespace
+middleware\security_headers.py:11:101: E501 Line too long (126 > 100)
+middleware\security_headers.py:24:1: W293 [*] Blank line contains whitespace
+models\action_plan.py:7:1: I001 [*] Import block is un-sorted or un-formatted
+models\action_plan.py:7:36: F401 [*] `dataclasses.field` imported but unused
+models\action_plan.py:8:1: UP035 `typing.List` is deprecated, use `list` instead
+models\action_plan.py:8:1: UP035 `typing.Dict` is deprecated, use `dict` instead
+models\action_plan.py:13:5: D204 [*] 1 blank line required after class docstring
+models\action_plan.py:21:19: UP007 [*] Use `X | Y` for type annotations
+models\action_plan.py:24:23: ANN101 Missing type annotation for `self` in method
+models\action_plan.py:26:77: PLR2004 Magic value used in comparison, consider replacing `10` with a constant variable
+models\action_plan.py:27:19: TRY003 Avoid specifying long messages outside the exception class
+models\action_plan.py:27:30: EM102 Exception must not use an f-string literal, assign to variable first
+models\action_plan.py:29:17: ANN101 Missing type annotation for `self` in method
+models\action_plan.py:29:26: UP006 [*] Use `dict` instead of `Dict` for type annotation
+models\action_plan.py:36:5: D204 [*] 1 blank line required after class docstring
+models\action_plan.py:42:24: UP006 [*] Use `list` instead of `List` for type annotation
+models\action_plan.py:43:22: UP007 [*] Use `X | Y` for type annotations
+models\action_plan.py:44:19: UP006 [*] Use `list` instead of `List` for type annotation
+models\action_plan.py:45:23: UP006 [*] Use `list` instead of `List` for type annotation
+models\action_plan.py:46:23: UP006 [*] Use `list` instead of `List` for type annotation
+models\action_plan.py:47:23: UP007 [*] Use `X | Y` for type annotations
+models\action_plan.py:51:23: ANN101 Missing type annotation for `self` in method
+models\action_plan.py:55:19: TRY003 Avoid specifying long messages outside the exception class
+models\action_plan.py:55:30: EM102 Exception must not use an f-string literal, assign to variable first
+models\action_plan.py:56:1: W293 [*] Blank line contains whitespace
+models\action_plan.py:58:19: TRY003 Avoid specifying long messages outside the exception class
+models\action_plan.py:58:30: EM102 Exception must not use an f-string literal, assign to variable first
+models\action_plan.py:64:1: W293 [*] Blank line contains whitespace
+models\action_plan.py:68:17: ANN101 Missing type annotation for `self` in method
+models\action_plan.py:68:26: UP006 [*] Use `dict` instead of `Dict` for type annotation
+models\action_plan.py:72:49: Q000 [*] Single quotes found but double quotes preferred
+models\action_plan.py:72:64: W291 [*] Trailing whitespace
+routes\api.py:3:1: I001 [*] Import block is un-sorted or un-formatted
+routes\api.py:31:94: COM812 [*] Trailing comma missing
+routes\api.py:46:93: COM812 [*] Trailing comma missing
+routes\api.py:62:80: COM812 [*] Trailing comma missing
+routes\api.py:75:87: COM812 [*] Trailing comma missing
+routes\api.py:89:90: COM812 [*] Trailing comma missing
+routes\api.py:90:6: COM812 [*] Trailing comma missing
+routes\api.py:100:1: W293 [*] Blank line contains whitespace
+routes\api.py:102:101: E501 Line too long (103 > 100)
+routes\api.py:106:101: E501 Line too long (101 > 100)
+routes\api.py:117:44: UP017 [*] Use `datetime.UTC` alias
+routes\api.py:117:78: COM812 [*] Trailing comma missing
+routes\api.py:134:1: W293 [*] Blank line contains whitespace
+routes\api.py:140:15: TRY003 Avoid specifying long messages outside the exception class
+routes\api.py:140:31: EM101 Exception must not use a string literal, assign to variable first
+routes\api.py:145:1: W293 [*] Blank line contains whitespace
+routes\api.py:150:101: E501 Line too long (114 > 100)
+routes\api.py:152:101: E501 Line too long (105 > 100)
+routes\api.py:160:24: W291 [*] Trailing whitespace
+routes\api.py:161:43: W291 [*] Trailing whitespace
+routes\api.py:162:29: COM812 [*] Trailing comma missing
+routes\api.py:167:79: S104 Possible binding to all interfaces
+routes\api.py:169:1: W293 [*] Blank line contains whitespace
+routes\api.py:171:1: W293 [*] Blank line contains whitespace
+routes\api.py:181:24: COM812 [*] Trailing comma missing
+routes\api.py:201:1: W293 [*] Blank line contains whitespace
+routes\api.py:203:1: W293 [*] Blank line contains whitespace
+routes\api.py:207:32: COM812 [*] Trailing comma missing
+routes\api.py:217:5: RET505 Unnecessary `else` after `return` statement
+services\firestore_service.py:3:1: I001 [*] Import block is un-sorted or un-formatted
+services\firestore_service.py:5:1: UP035 `typing.Dict` is deprecated, use `dict` instead
+services\firestore_service.py:5:1: UP035 `typing.List` is deprecated, use `list` instead
+services\firestore_service.py:5:37: F401 [*] `typing.Optional` imported but unused
+services\firestore_service.py:15:9: D107 Missing docstring in `__init__`
+services\firestore_service.py:15:18: ANN101 Missing type annotation for `self` in method
+services\firestore_service.py:18:24: UP006 [*] Use `dict` instead of `Dict` for type annotation
+services\firestore_service.py:18:34: UP006 [*] Use `dict` instead of `Dict` for type annotation
+services\firestore_service.py:20:18: ANN101 Missing type annotation for `self` in method
+services\firestore_service.py:23:1: W293 [*] Blank line contains whitespace
+services\firestore_service.py:31:24: G201 Logging `.exception(...)` should be used instead of `.error(..., exc_info=True)`
+services\firestore_service.py:31:30: G004 Logging statement uses f-string
+services\firestore_service.py:35:9: PLR0913 Too many arguments in function definition (10 > 5)
+services\firestore_service.py:35:22: ANN101 Missing type annotation for `self` in method
+services\firestore_service.py:39:37: UP017 [*] Use `datetime.UTC` alias
+services\firestore_service.py:41:1: W293 [*] Blank line contains whitespace
+services\firestore_service.py:52:31: COM812 [*] Trailing comma missing
+services\firestore_service.py:72:1: W293 [*] Blank line contains whitespace
+services\firestore_service.py:77:36: COM812 [*] Trailing comma missing
+services\firestore_service.py:79:1: W293 [*] Blank line contains whitespace
+services\firestore_service.py:81:20: G201 Logging `.exception(...)` should be used instead of `.error(..., exc_info=True)`
+services\firestore_service.py:81:26: G004 Logging statement uses f-string
+services\firestore_service.py:83:30: ANN101 Missing type annotation for `self` in method
+services\firestore_service.py:83:76: UP006 [*] Use `list` instead of `List` for type annotation
+services\firestore_service.py:83:81: UP006 [*] Use `dict` instead of `Dict` for type annotation
+services\firestore_service.py:86:1: W293 [*] Blank line contains whitespace
+services\firestore_service.py:99:1: W293 [*] Blank line contains whitespace
+services\firestore_service.py:102:1: W293 [*] Blank line contains whitespace
+services\firestore_service.py:103:74: W291 [*] Trailing whitespace
+services\firestore_service.py:106:1: W293 [*] Blank line contains whitespace
+services\firestore_service.py:110:20: G201 Logging `.exception(...)` should be used instead of `.error(..., exc_info=True)`
+services\firestore_service.py:110:26: G004 Logging statement uses f-string
+services\firestore_service.py:113:25: ANN101 Missing type annotation for `self` in method
+services\firestore_service.py:130:13: TRY300 Consider moving this statement to an `else` block
+services\firestore_service.py:132:20: G201 Logging `.exception(...)` should be used instead of `.error(..., exc_info=True)`
+services\firestore_service.py:132:26: S608 Possible SQL injection vector through string-based query construction
+services\firestore_service.py:132:26: G004 Logging statement uses f-string
+services\firestore_service.py:138:5: D103 Missing docstring in public function
+services\gemini_service.py:3:1: I001 [*] Import block is un-sorted or un-formatted
+services\gemini_service.py:6:1: UP035 `typing.Dict` is deprecated, use `dict` instead
+services\gemini_service.py:6:20: F401 [*] `typing.Dict` imported but unused
+services\gemini_service.py:9:39: F401 [*] `google.generativeai.types.content_types` imported but unused
+services\gemini_service.py:46:101: E501 Line too long (101 > 100)
+services\gemini_service.py:69:9: D107 Missing docstring in `__init__`
+services\gemini_service.py:69:18: ANN101 Missing type annotation for `self` in method
+services\gemini_service.py:73:18: ANN101 Missing type annotation for `self` in method
+services\gemini_service.py:76:1: W293 [*] Blank line contains whitespace
+services\gemini_service.py:83:1: W293 [*] Blank line contains whitespace
+services\gemini_service.py:85:1: W293 [*] Blank line contains whitespace
+services\gemini_service.py:88:32: Q000 [*] Single quotes found but double quotes preferred
+services\gemini_service.py:96:27: Q000 [*] Single quotes found but double quotes preferred
+services\gemini_service.py:96:52: COM812 [*] Trailing comma missing
+services\gemini_service.py:100:24: G201 Logging `.exception(...)` should be used instead of `.error(..., exc_info=True)`
+services\gemini_service.py:100:30: G004 Logging statement uses f-string
+services\gemini_service.py:104:28: ANN101 Missing type annotation for `self` in method
+services\gemini_service.py:116:101: E501 Line too long (133 > 100)
+services\gemini_service.py:121:33: COM812 [*] Trailing comma missing
+services\gemini_service.py:129:31: COM812 [*] Trailing comma missing
+services\gemini_service.py:132:9: C901 `analyze` is too complex (13 > 10)
+services\gemini_service.py:132:9: PLR0912 Too many branches (16 > 12)
+services\gemini_service.py:132:17: ANN101 Missing type annotation for `self` in method
+services\gemini_service.py:132:29: UP007 [*] Use `X | Y` for type annotations
+services\gemini_service.py:132:64: UP007 [*] Use `X | Y` for type annotations
+services\gemini_service.py:132:87: W291 [*] Trailing whitespace
+services\gemini_service.py:133:26: UP007 [*] Use `X | Y` for type annotations
+services\gemini_service.py:135:1: W293 Blank line contains whitespace
+services\gemini_service.py:154:65: COM812 [*] Trailing comma missing
+services\gemini_service.py:158:19: TRY003 Avoid specifying long messages outside the exception class
+services\gemini_service.py:158:31: EM101 Exception must not use a string literal, assign to variable first
+services\gemini_service.py:163:1: W293 [*] Blank line contains whitespace
+services\gemini_service.py:167:30: G004 Logging statement uses f-string
+services\gemini_service.py:174:1: W293 [*] Blank line contains whitespace
+services\gemini_service.py:182:49: COM812 [*] Trailing comma missing
+services\gemini_service.py:184:24: BLE001 Do not catch blind exception: `Exception`
+services\gemini_service.py:185:33: G004 Logging statement uses f-string
+services\gemini_service.py:192:21: TRY400 Use `logging.exception` instead of `logging.error`
+services\gemini_service.py:192:34: G004 Logging statement uses f-string
+services\gemini_service.py:192:101: E501 Line too long (107 > 100)
+services\gemini_service.py:194:101: E501 Line too long (120 > 100)
+services\gemini_service.py:197:20: BLE001 Do not catch blind exception: `Exception`
+services\gemini_service.py:199:17: TRY400 Use `logging.exception` instead of `logging.error`
+services\gemini_service.py:199:30: G004 Logging statement uses f-string
+services\gemini_service.py:204:21: TRY400 Use `logging.exception` instead of `logging.error`
+services\gemini_service.py:212:5: D103 Missing docstring in public function
+services\secret_service.py:3:1: I001 [*] Import block is un-sorted or un-formatted
+services\secret_service.py:14:9: D107 Missing docstring in `__init__`
+services\secret_service.py:14:18: ANN101 Missing type annotation for `self` in method
+services\secret_service.py:20:18: ANN101 Missing type annotation for `self` in method
+services\secret_service.py:24:1: W293 [*] Blank line contains whitespace
+services\secret_service.py:30:24: G201 Logging `.exception(...)` should be used instead of `.error(..., exc_info=True)`
+services\secret_service.py:30:30: G004 Logging statement uses f-string
+services\secret_service.py:35:20: ANN101 Missing type annotation for `self` in method
+services\secret_service.py:37:1: W293 Blank line contains whitespace
+services\secret_service.py:38:9: D407 [*] Missing dashed underline after section ("Args")
+services\secret_service.py:40:1: W293 Blank line contains whitespace
+services\secret_service.py:41:9: D413 [*] Missing blank line after last section ("Returns")
+services\secret_service.py:41:9: D407 [*] Missing dashed underline after section ("Returns")
+services\secret_service.py:53:53: COM812 [*] Trailing comma missing
+services\secret_service.py:67:13: TRY300 Consider moving this statement to an `else` block
+services\secret_service.py:69:20: G201 Logging `.exception(...)` should be used instead of `.error(..., exc_info=True)`
+services\secret_service.py:69:26: G004 Logging statement uses f-string
+services\secret_service.py:72:21: ANN101 Missing type annotation for `self` in method
+services\secret_service.py:80:5: D103 Missing docstring in public function
+services\storage_service.py:3:1: I001 [*] Import block is un-sorted or un-formatted
+services\storage_service.py:7:1: UP035 `typing.Tuple` is deprecated, use `tuple` instead
+services\storage_service.py:7:20: F401 [*] `typing.Optional` imported but unused
+services\storage_service.py:20:9: D107 Missing docstring in `__init__`
+services\storage_service.py:20:18: ANN101 Missing type annotation for `self` in method
+services\storage_service.py:26:18: ANN101 Missing type annotation for `self` in method
+services\storage_service.py:30:1: W293 [*] Blank line contains whitespace
+services\storage_service.py:37:24: G201 Logging `.exception(...)` should be used instead of `.error(..., exc_info=True)`
+services\storage_service.py:37:30: G004 Logging statement uses f-string
+services\storage_service.py:41:34: ANN101 Missing type annotation for `self` in method
+services\storage_service.py:41:62: UP006 [*] Use `tuple` instead of `Tuple` for type annotation
+services\storage_service.py:43:1: W293 Blank line contains whitespace
+services\storage_service.py:44:9: D407 [*] Missing dashed underline after section ("Args")
+services\storage_service.py:46:1: W293 Blank line contains whitespace
+services\storage_service.py:47:9: D407 [*] Missing dashed underline after section ("Returns")
+services\storage_service.py:49:1: W293 Blank line contains whitespace
+services\storage_service.py:50:9: D413 [*] Missing blank line after last section ("Raises")
+services\storage_service.py:50:9: D407 [*] Missing dashed underline after section ("Raises")
+services\storage_service.py:57:1: W293 [*] Blank line contains whitespace
+services\storage_service.py:65:1: W293 [*] Blank line contains whitespace
+services\storage_service.py:70:16: BLE001 Do not catch blind exception: `Exception`
+services\storage_service.py:71:13: TRY400 Use `logging.exception` instead of `logging.error`
+services\storage_service.py:71:26: G004 Logging statement uses f-string
+services\storage_service.py:72:13: B904 Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling
+services\storage_service.py:72:19: TRY003 Avoid specifying long messages outside the exception class
+services\storage_service.py:72:35: EM102 Exception must not use an f-string literal, assign to variable first
+services\storage_service.py:72:58: RUF010 [*] Use explicit conversion flag
+services\storage_service.py:76:1: W293 [*] Blank line contains whitespace
+services\storage_service.py:82:19: TRY003 Avoid specifying long messages outside the exception class
+services\storage_service.py:82:32: EM101 Exception must not use a string literal, assign to variable first
+services\storage_service.py:88:1: W293 [*] Blank line contains whitespace
+services\storage_service.py:95:33: COM812 [*] Trailing comma missing
+services\storage_service.py:97:20: BLE001 Do not catch blind exception: `Exception`
+services\storage_service.py:99:32: G004 Logging statement uses f-string
+services\storage_service.py:101:1: W293 [*] Blank line contains whitespace
+services\storage_service.py:102:13: TRY300 Consider moving this statement to an `else` block
+services\storage_service.py:104:20: G201 Logging `.exception(...)` should be used instead of `.error(..., exc_info=True)`
+services\storage_service.py:104:26: G004 Logging statement uses f-string
+services\storage_service.py:105:13: B904 Within an `except` clause, raise exceptions with `raise ... from err` or `raise ... from None` to distinguish them from errors in exception handling
+services\storage_service.py:105:19: TRY003 Avoid specifying long messages outside the exception class
+services\storage_service.py:105:32: EM102 Exception must not use an f-string literal, assign to variable first
+services\storage_service.py:105:50: RUF010 [*] Use explicit conversion flag
+services\storage_service.py:110:5: D103 Missing docstring in public function
+tests\conftest.py:3:1: I001 [*] Import block is un-sorted or un-formatted
+tests\conftest.py:4:34: F401 [*] `unittest.mock.MagicMock` imported but unused
+tests\conftest.py:9:1: PT001 [*] Use `@pytest.fixture()` over `@pytest.fixture`
+tests\conftest.py:10:5: ANN201 Missing return type annotation for public function `app`
+tests\conftest.py:16:5: PT022 [*] No teardown in fixture `app`, use `return` instead of `yield`
+tests\conftest.py:19:1: PT001 [*] Use `@pytest.fixture()` over `@pytest.fixture`
+tests\conftest.py:20:5: ANN201 Missing return type annotation for public function `client`
+tests\conftest.py:20:12: ANN001 Missing type annotation for function argument `app`
+tests\conftest.py:25:1: PT001 [*] Use `@pytest.fixture()` over `@pytest.fixture`
+tests\conftest.py:26:5: ANN201 Missing return type annotation for public function `sample_action_plan`
+tests\conftest.py:27:5: D401 First line of docstring should be in imperative mood: "A valid fully-populated ActionPlan dataclass instance."
+tests\conftest.py:44:30: COM812 [*] Trailing comma missing
+tests\conftest.py:55:30: COM812 [*] Trailing comma missing
+tests\conftest.py:66:31: COM812 [*] Trailing comma missing
+tests\conftest.py:67:14: COM812 [*] Trailing comma missing
+tests\conftest.py:75:28: COM812 [*] Trailing comma missing
+tests\conftest.py:79:1: PT001 [*] Use `@pytest.fixture()` over `@pytest.fixture`
+tests\conftest.py:80:5: ANN201 Missing return type annotation for public function `sample_image_b64`
+tests\conftest.py:81:5: D401 First line of docstring should be in imperative mood: "A tiny valid JPEG encoded as a base64 string."
+tests\conftest.py:83:101: E501 Line too long (216 > 100)
+tests\conftest.py:86:1: PT001 [*] Use `@pytest.fixture()` over `@pytest.fixture`
+tests\conftest.py:87:5: ANN201 Missing return type annotation for public function `mock_gemini`
+tests\conftest.py:87:17: ANN001 Missing type annotation for function argument `sample_action_plan`
+tests\conftest.py:88:5: D401 First line of docstring should be in imperative mood: "Matches gemini_service with a deterministic canned response."
+tests\conftest.py:94:1: PT001 [*] Use `@pytest.fixture()` over `@pytest.fixture`
+tests\conftest.py:95:5: ANN201 Missing return type annotation for public function `mock_firestore`
+tests\conftest.py:96:5: D401 First line of docstring should be in imperative mood: "Replaces Firestore client with an in-memory dict."
+tests\conftest.py:97:5: SIM117 Use a single `with` statement with multiple contexts instead of nested `with` statements
+tests\conftest.py:98:101: E501 Line too long (101 > 100)
+tests\conftest.py:106:1: PT001 [*] Use `@pytest.fixture()` over `@pytest.fixture`
+tests\conftest.py:107:5: ANN201 Missing return type annotation for public function `mock_gcs`
+tests\conftest.py:108:5: D401 First line of docstring should be in imperative mood: "Replaces GCS client with an in-memory dict."
+tests\test_api.py:3:1: I001 [*] Import block is un-sorted or un-formatted
+tests\test_api.py:5:7: D101 Missing docstring in public class
+tests\test_api.py:6:9: ANN201 Missing return type annotation for public function `test_health_returns_200`
+tests\test_api.py:6:9: D102 Missing docstring in public method
+tests\test_api.py:6:33: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:6:39: ANN001 Missing type annotation for function argument `client`
+tests\test_api.py:8:35: PLR2004 Magic value used in comparison, consider replacing `200` with a constant variable
+tests\test_api.py:10:9: ANN201 Missing return type annotation for public function `test_health_response_has_required_fields`
+tests\test_api.py:10:9: D102 Missing docstring in public method
+tests\test_api.py:10:50: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:10:56: ANN001 Missing type annotation for function argument `client`
+tests\test_api.py:19:9: ANN201 Missing return type annotation for public function `test_health_returns_503_when_gemini_unavailable`
+tests\test_api.py:19:9: D102 Missing docstring in public method
+tests\test_api.py:19:57: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:19:63: ANN001 Missing type annotation for function argument `app`
+tests\test_api.py:28:43: PLR2004 Magic value used in comparison, consider replacing `503` with a constant variable
+tests\test_api.py:32:7: D101 Missing docstring in public class
+tests\test_api.py:34:9: PT004 Fixture `auto_patch` does not return anything, add leading underscore
+tests\test_api.py:34:9: ANN201 Missing return type annotation for public function `auto_patch`
+tests\test_api.py:34:20: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:34:26: ANN001 Missing type annotation for function argument `mock_gemini`
+tests\test_api.py:34:39: ANN001 Missing type annotation for function argument `mock_firestore`
+tests\test_api.py:34:55: ANN001 Missing type annotation for function argument `mock_gcs`
+tests\test_api.py:36:9: PIE790 [*] Unnecessary `pass` statement
+tests\test_api.py:38:9: ANN201 Missing return type annotation for public function `test_analyze_valid_text_returns_200`
+tests\test_api.py:38:9: D102 Missing docstring in public method
+tests\test_api.py:38:45: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:38:51: ANN001 Missing type annotation for function argument `client`
+tests\test_api.py:40:35: PLR2004 Magic value used in comparison, consider replacing `200` with a constant variable
+tests\test_api.py:43:9: ANN201 Missing return type annotation for public function `test_analyze_valid_image_returns_200`
+tests\test_api.py:43:9: D102 Missing docstring in public method
+tests\test_api.py:43:46: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:43:52: ANN001 Missing type annotation for function argument `client`
+tests\test_api.py:43:60: ANN001 Missing type annotation for function argument `sample_image_b64`
+tests\test_api.py:45:35: PLR2004 Magic value used in comparison, consider replacing `200` with a constant variable
+tests\test_api.py:47:9: ANN201 Missing return type annotation for public function `test_analyze_empty_body_returns_400`
+tests\test_api.py:47:9: D102 Missing docstring in public method
+tests\test_api.py:47:45: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:47:51: ANN001 Missing type annotation for function argument `client`
+tests\test_api.py:49:35: PLR2004 Magic value used in comparison, consider replacing `400` with a constant variable
+tests\test_api.py:51:9: ANN201 Missing return type annotation for public function `test_analyze_text_too_long_returns_400`
+tests\test_api.py:51:9: D102 Missing docstring in public method
+tests\test_api.py:51:48: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:51:54: ANN001 Missing type annotation for function argument `client`
+tests\test_api.py:53:35: PLR2004 Magic value used in comparison, consider replacing `400` with a constant variable
+tests\test_api.py:55:9: ANN201 Missing return type annotation for public function `test_analyze_image_too_large_returns_413`
+tests\test_api.py:55:9: D102 Missing docstring in public method
+tests\test_api.py:55:50: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:55:56: ANN001 Missing type annotation for function argument `client`
+tests\test_api.py:56:9: F841 Local variable `res` is assigned to but never used
+tests\test_api.py:61:81: W291 [*] Trailing whitespace
+tests\test_api.py:62:101: E501 Line too long (122 > 100)
+tests\test_api.py:63:9: PIE790 [*] Unnecessary `pass` statement
+tests\test_api.py:65:9: ANN201 Missing return type annotation for public function `test_analyze_invalid_image_mime_returns_400`
+tests\test_api.py:65:9: D102 Missing docstring in public method
+tests\test_api.py:65:53: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:65:59: ANN001 Missing type annotation for function argument `client`
+tests\test_api.py:67:35: PLR2004 Magic value used in comparison, consider replacing `400` with a constant variable
+tests\test_api.py:69:9: ANN201 Missing return type annotation for public function `test_analyze_response_contains_session_id_header`
+tests\test_api.py:69:9: D102 Missing docstring in public method
+tests\test_api.py:69:58: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:69:64: ANN001 Missing type annotation for function argument `client`
+tests\test_api.py:73:9: ANN201 Missing return type annotation for public function `test_analyze_response_contains_processing_time_header`
+tests\test_api.py:73:9: D102 Missing docstring in public method
+tests\test_api.py:73:63: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:73:69: ANN001 Missing type annotation for function argument `client`
+tests\test_api.py:77:9: ANN201 Missing return type annotation for public function `test_analyze_critical_severity_has_at_least_three_actions`
+tests\test_api.py:77:9: D102 Missing docstring in public method
+tests\test_api.py:77:67: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:77:73: ANN001 Missing type annotation for function argument `client`
+tests\test_api.py:81:54: PLR2004 Magic value used in comparison, consider replacing `3` with a constant variable
+tests\test_api.py:83:9: ANN201 Missing return type annotation for public function `test_analyze_actions_are_sorted_by_priority_ascending`
+tests\test_api.py:83:9: D102 Missing docstring in public method
+tests\test_api.py:83:63: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:83:69: ANN001 Missing type annotation for function argument `client`
+tests\test_api.py:90:9: ANN201 Missing return type annotation for public function `test_analyze_sql_injection_input_returns_400`
+tests\test_api.py:90:9: D102 Missing docstring in public method
+tests\test_api.py:90:54: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:90:60: ANN001 Missing type annotation for function argument `client`
+tests\test_api.py:92:35: PLR2004 Magic value used in comparison, consider replacing `400` with a constant variable
+tests\test_api.py:94:9: ANN201 Missing return type annotation for public function `test_analyze_script_tag_input_returns_400`
+tests\test_api.py:94:9: D102 Missing docstring in public method
+tests\test_api.py:94:51: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:94:57: ANN001 Missing type annotation for function argument `client`
+tests\test_api.py:96:35: PLR2004 Magic value used in comparison, consider replacing `400` with a constant variable
+tests\test_api.py:98:9: ANN201 Missing return type annotation for public function `test_analyze_null_byte_input_returns_400`
+tests\test_api.py:98:9: D102 Missing docstring in public method
+tests\test_api.py:98:50: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:98:56: ANN001 Missing type annotation for function argument `client`
+tests\test_api.py:100:35: PLR2004 Magic value used in comparison, consider replacing `400` with a constant variable
+tests\test_api.py:103:7: D101 Missing docstring in public class
+tests\test_api.py:104:9: ANN201 Missing return type annotation for public function `test_requests_under_limit_are_allowed`
+tests\test_api.py:104:9: D102 Missing docstring in public method
+tests\test_api.py:104:47: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:106:9: ANN201 Missing return type annotation for public function `test_request_at_limit_is_blocked_with_429`
+tests\test_api.py:106:9: D102 Missing docstring in public method
+tests\test_api.py:106:51: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:108:9: ANN201 Missing return type annotation for public function `test_429_response_includes_retry_after_header`
+tests\test_api.py:108:9: D102 Missing docstring in public method
+tests\test_api.py:108:55: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:110:9: ANN201 Missing return type annotation for public function `test_counter_resets_after_window_expires`
+tests\test_api.py:110:9: D102 Missing docstring in public method
+tests\test_api.py:110:50: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:114:7: D101 Missing docstring in public class
+tests\test_api.py:116:9: PT004 Fixture `auto_patch` does not return anything, add leading underscore
+tests\test_api.py:116:9: ANN201 Missing return type annotation for public function `auto_patch`
+tests\test_api.py:116:9: D102 Missing docstring in public method
+tests\test_api.py:116:20: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:116:26: ANN001 Missing type annotation for function argument `mock_firestore`
+tests\test_api.py:117:101: E501 Line too long (128 > 100)
+tests\test_api.py:120:9: ANN201 Missing return type annotation for public function `test_log_returns_list_of_incidents`
+tests\test_api.py:120:9: D102 Missing docstring in public method
+tests\test_api.py:120:44: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:120:50: ANN001 Missing type annotation for function argument `client`
+tests\test_api.py:122:35: PLR2004 Magic value used in comparison, consider replacing `200` with a constant variable
+tests\test_api.py:124:52: PLR2004 Magic value used in comparison, consider replacing `2` with a constant variable
+tests\test_api.py:126:9: ANN201 Missing return type annotation for public function `test_log_respects_limit_query_param`
+tests\test_api.py:126:9: D102 Missing docstring in public method
+tests\test_api.py:126:45: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:126:51: ANN001 Missing type annotation for function argument `client`
+tests\test_api.py:126:59: ANN001 Missing type annotation for function argument `mock_firestore`
+tests\test_api.py:130:9: ANN201 Missing return type annotation for public function `test_log_filters_by_severity_param`
+tests\test_api.py:130:9: D102 Missing docstring in public method
+tests\test_api.py:130:44: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:130:50: ANN001 Missing type annotation for function argument `client`
+tests\test_api.py:130:58: ANN001 Missing type annotation for function argument `mock_firestore`
+tests\test_api.py:134:9: ANN201 Missing return type annotation for public function `test_delete_returns_204_for_existing_entry`
+tests\test_api.py:134:9: D102 Missing docstring in public method
+tests\test_api.py:134:52: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:134:58: ANN001 Missing type annotation for function argument `client`
+tests\test_api.py:136:35: PLR2004 Magic value used in comparison, consider replacing `204` with a constant variable
+tests\test_api.py:138:9: ANN201 Missing return type annotation for public function `test_delete_returns_404_for_missing_entry`
+tests\test_api.py:138:9: D102 Missing docstring in public method
+tests\test_api.py:138:51: ANN101 Missing type annotation for `self` in method
+tests\test_api.py:138:57: ANN001 Missing type annotation for function argument `client`
+tests\test_api.py:138:65: ANN001 Missing type annotation for function argument `mock_firestore`
+tests\test_api.py:141:35: PLR2004 Magic value used in comparison, consider replacing `404` with a constant variable
+tests\test_gemini_service.py:3:1: I001 [*] Import block is un-sorted or un-formatted
+tests\test_gemini_service.py:3:8: F401 [*] `pytest` imported but unused
+tests\test_gemini_service.py:5:24: F401 [*] `exceptions.GeminiError` imported but unused
+tests\test_gemini_service.py:9:7: D101 Missing docstring in public class
+tests\test_gemini_service.py:10:9: ANN201 Missing return type annotation for public function `setup_method`
+tests\test_gemini_service.py:10:9: D102 Missing docstring in public method
+tests\test_gemini_service.py:10:22: ANN101 Missing type annotation for `self` in method
+tests\test_gemini_service.py:11:9: SLF001 Private member accessed: `_testing`
+tests\test_gemini_service.py:12:9: SLF001 Private member accessed: `_model`
+tests\test_gemini_service.py:14:9: ANN201 Missing return type annotation for public function `test_analyze_returns_valid_action_plan_dataclass`
+tests\test_gemini_service.py:14:9: D102 Missing docstring in public method
+tests\test_gemini_service.py:14:58: ANN101 Missing type annotation for `self` in method
+tests\test_gemini_service.py:14:64: ANN001 Missing type annotation for function argument `sample_action_plan`
+tests\test_gemini_service.py:14:64: ARG002 Unused method argument: `sample_action_plan`
+tests\test_gemini_service.py:16:101: E501 Line too long (333 > 100)
+tests\test_gemini_service.py:19:9: SLF001 Private member accessed: `_model`
+tests\test_gemini_service.py:20:1: W293 [*] Blank line contains whitespace
+tests\test_gemini_service.py:25:9: ANN201 Missing return type annotation for public function `test_analyze_retries_on_transient_api_error`
+tests\test_gemini_service.py:25:9: D102 Missing docstring in public method
+tests\test_gemini_service.py:25:53: ANN101 Missing type annotation for `self` in method
+tests\test_gemini_service.py:28:101: E501 Line too long (279 > 100)
+tests\test_gemini_service.py:29:1: W293 [*] Blank line contains whitespace
+tests\test_gemini_service.py:30:9: SLF001 Private member accessed: `_model`
+tests\test_gemini_service.py:33:26: COM812 [*] Trailing comma missing
+tests\test_gemini_service.py:35:1: W293 [*] Blank line contains whitespace
+tests\test_gemini_service.py:38:1: W293 [*] Blank line contains whitespace
+tests\test_gemini_service.py:40:16: SLF001 Private member accessed: `_model`
+tests\test_gemini_service.py:40:69: PLR2004 Magic value used in comparison, consider replacing `3` with a constant variable
+tests\test_gemini_service.py:42:9: ANN201 Missing return type annotation for public function `test_analyze_returns_fallback_after_exhausting_retries`
+tests\test_gemini_service.py:42:9: D102 Missing docstring in public method
+tests\test_gemini_service.py:42:64: ANN101 Missing type annotation for `self` in method
+tests\test_gemini_service.py:43:9: SLF001 Private member accessed: `_model`
+tests\test_gemini_service.py:44:1: W293 [*] Blank line contains whitespace
+tests\test_gemini_service.py:47:1: W293 [*] Blank line contains whitespace
+tests\test_gemini_service.py:51:9: ANN201 Missing return type annotation for public function `test_analyze_times_out_after_30_seconds`
+tests\test_gemini_service.py:51:9: D102 Missing docstring in public method
+tests\test_gemini_service.py:51:49: ANN101 Missing type annotation for `self` in method
+tests\test_gemini_service.py:54:1: W293 [*] Blank line contains whitespace
+tests\test_gemini_service.py:55:13: ANN202 Missing return type annotation for private function `fake_time`
+tests\test_gemini_service.py:56:21: E701 Multiple statements on one line (colon)
+tests\test_gemini_service.py:58:1: W293 [*] Blank line contains whitespace
+tests\test_gemini_service.py:59:9: SLF001 Private member accessed: `_model`
+tests\test_gemini_service.py:60:1: W293 [*] Blank line contains whitespace
+tests\test_gemini_service.py:63:1: W293 [*] Blank line contains whitespace
+tests\test_gemini_service.py:66:9: ANN201 Missing return type annotation for public function `test_system_prompt_is_present_in_every_gemini_call`
+tests\test_gemini_service.py:66:9: D102 Missing docstring in public method
+tests\test_gemini_service.py:66:60: ANN101 Missing type annotation for `self` in method
+tests\test_gemini_service.py:72:9: ANN201 Missing return type annotation for public function `test_image_bytes_are_included_when_image_provided`
+tests\test_gemini_service.py:72:9: D102 Missing docstring in public method
+tests\test_gemini_service.py:72:59: ANN101 Missing type annotation for `self` in method
+tests\test_gemini_service.py:74:101: E501 Line too long (277 > 100)
+tests\test_gemini_service.py:75:9: SLF001 Private member accessed: `_model`
+tests\test_gemini_service.py:76:1: W293 [*] Blank line contains whitespace
+tests\test_gemini_service.py:79:1: W293 [*] Blank line contains whitespace
+tests\test_gemini_service.py:81:19: SLF001 Private member accessed: `_model`
+tests\test_gemini_service.py:83:50: Q000 [*] Single quotes found but double quotes preferred
+tests\test_gemini_service.py:85:9: ANN201 Missing return type annotation for public function `test_malformed_json_response_returns_fallback`
+tests\test_gemini_service.py:85:9: D102 Missing docstring in public method
+tests\test_gemini_service.py:85:55: ANN101 Missing type annotation for `self` in method
+tests\test_gemini_service.py:87:30: Q000 [*] Single quotes found but double quotes preferred
+tests\test_gemini_service.py:88:9: SLF001 Private member accessed: `_model`
+tests\test_gemini_service.py:89:1: W293 [*] Blank line contains whitespace
+tests\test_gemini_service.py:93:9: ANN201 Missing return type annotation for public function `test_missing_required_field_in_response_returns_fallback`
+tests\test_gemini_service.py:93:9: D102 Missing docstring in public method
+tests\test_gemini_service.py:93:66: ANN101 Missing type annotation for `self` in method
+tests\test_gemini_service.py:97:9: SLF001 Private member accessed: `_model`
+tests\test_gemini_service.py:98:1: W293 [*] Blank line contains whitespace
+tests\test_models.py:3:1: I001 [*] Import block is un-sorted or un-formatted
+tests\test_models.py:7:7: D101 Missing docstring in public class
+tests\test_models.py:8:9: ANN201 Missing return type annotation for public function `test_action_plan_constructs_with_valid_data`
+tests\test_models.py:8:9: D102 Missing docstring in public method
+tests\test_models.py:8:53: ANN101 Missing type annotation for `self` in method
+tests\test_models.py:13:79: COM812 [*] Trailing comma missing
+tests\test_models.py:18:9: ANN201 Missing return type annotation for public function `test_action_plan_rejects_invalid_severity`
+tests\test_models.py:18:9: D102 Missing docstring in public method
+tests\test_models.py:18:51: ANN101 Missing type annotation for `self` in method
+tests\test_models.py:19:28: PT011 `pytest.raises(ValueError)` is too broad, set the `match` parameter or use a more specific exception
+tests\test_models.py:24:83: COM812 [*] Trailing comma missing
+tests\test_models.py:27:9: ANN201 Missing return type annotation for public function `test_action_plan_rejects_confidence_above_1`
+tests\test_models.py:27:9: D102 Missing docstring in public method
+tests\test_models.py:27:53: ANN101 Missing type annotation for `self` in method
+tests\test_models.py:28:28: PT011 `pytest.raises(ValueError)` is too broad, set the `match` parameter or use a more specific exception
+tests\test_models.py:33:83: COM812 [*] Trailing comma missing
+tests\test_models.py:36:9: ANN201 Missing return type annotation for public function `test_action_plan_rejects_confidence_below_0`
+tests\test_models.py:36:9: D102 Missing docstring in public method
+tests\test_models.py:36:53: ANN101 Missing type annotation for `self` in method
+tests\test_models.py:37:28: PT011 `pytest.raises(ValueError)` is too broad, set the `match` parameter or use a more specific exception
+tests\test_models.py:42:83: COM812 [*] Trailing comma missing
+tests\test_models.py:45:9: ANN201 Missing return type annotation for public function `test_immediate_action_rejects_priority_above_10`
+tests\test_models.py:45:9: D102 Missing docstring in public method
+tests\test_models.py:45:57: ANN101 Missing type annotation for `self` in method
+tests\test_models.py:46:28: PT011 `pytest.raises(ValueError)` is too broad, set the `match` parameter or use a more specific exception
+tests\test_models.py:50:50: COM812 [*] Trailing comma missing
+tests\test_models.py:53:9: ANN201 Missing return type annotation for public function `test_action_plan_to_dict_excludes_null_fields`
+tests\test_models.py:53:9: D102 Missing docstring in public method
+tests\test_models.py:53:55: ANN101 Missing type annotation for `self` in method
+tests\test_models.py:58:79: COM812 [*] Trailing comma missing
+tests\test_models.py:64:9: ANN201 Missing return type annotation for public function `test_actions_sorted_by_priority_on_construction`
+tests\test_models.py:64:9: D102 Missing docstring in public method
+tests\test_models.py:64:57: ANN101 Missing type annotation for `self` in method
+tests\test_models.py:65:70: FBT003 Boolean positional value in function call
+tests\test_models.py:66:70: FBT003 Boolean positional value in function call
+tests\test_models.py:67:1: W293 [*] Blank line contains whitespace
+tests\test_models.py:72:79: COM812 [*] Trailing comma missing
+tests\test_rate_limiter.py:3:1: I001 [*] Import block is un-sorted or un-formatted
+tests\test_rate_limiter.py:3:8: F401 [*] `pytest` imported but unused
+tests\test_rate_limiter.py:8:7: D101 Missing docstring in public class
+tests\test_rate_limiter.py:9:9: ANN201 Missing return type annotation for public function `setup_method`
+tests\test_rate_limiter.py:9:9: D102 Missing docstring in public method
+tests\test_rate_limiter.py:9:22: ANN101 Missing type annotation for `self` in method
+tests\test_rate_limiter.py:12:9: ANN201 Missing return type annotation for public function `test_requests_under_limit_are_allowed`
+tests\test_rate_limiter.py:12:9: D102 Missing docstring in public method
+tests\test_rate_limiter.py:12:47: ANN101 Missing type annotation for `self` in method
+tests\test_rate_limiter.py:18:9: ANN201 Missing return type annotation for public function `test_request_at_limit_is_blocked_with_429`
+tests\test_rate_limiter.py:18:9: D102 Missing docstring in public method
+tests\test_rate_limiter.py:18:51: ANN101 Missing type annotation for `self` in method
+tests\test_rate_limiter.py:21:1: W293 [*] Blank line contains whitespace
+tests\test_rate_limiter.py:26:9: ANN201 Missing return type annotation for public function `test_429_response_includes_retry_after_header`
+tests\test_rate_limiter.py:26:9: D102 Missing docstring in public method
+tests\test_rate_limiter.py:26:55: ANN101 Missing type annotation for `self` in method
+tests\test_rate_limiter.py:26:61: ANN001 Missing type annotation for function argument `app`
+tests\test_rate_limiter.py:31:1: W293 [*] Blank line contains whitespace
+tests\test_rate_limiter.py:33:39: PLR2004 Magic value used in comparison, consider replacing `429` with a constant variable
+tests\test_rate_limiter.py:36:9: ANN201 Missing return type annotation for public function `test_counter_resets_after_window_expires`
+tests\test_rate_limiter.py:36:9: D102 Missing docstring in public method
+tests\test_rate_limiter.py:36:50: ANN101 Missing type annotation for `self` in method
+tests\test_rate_limiter.py:36:56: ANN001 Missing type annotation for function argument `monkeypatch`
+tests\test_rate_limiter.py:40:1: W293 [*] Blank line contains whitespace
+tests\test_rate_limiter.py:43:1: W293 [*] Blank line contains whitespace
+tests\test_rate_limiter.py:49:1: W293 [*] Blank line contains whitespace
+tests\test_rate_limiter.py:52:9: ANN201 Missing return type annotation for public function `test_sliding_window_allows_requests_under_limit`
+tests\test_rate_limiter.py:52:9: D102 Missing docstring in public method
+tests\test_rate_limiter.py:52:57: ANN101 Missing type annotation for `self` in method
+tests\test_rate_limiter.py:56:9: ANN201 Missing return type annotation for public function `test_sliding_window_blocks_at_limit`
+tests\test_rate_limiter.py:56:9: D102 Missing docstring in public method
+tests\test_rate_limiter.py:56:45: ANN101 Missing type annotation for `self` in method
+tests\test_rate_limiter.py:60:9: ANN201 Missing return type annotation for public function `test_sliding_window_is_not_fixed_window`
+tests\test_rate_limiter.py:60:9: D102 Missing docstring in public method
+tests\test_rate_limiter.py:60:49: ANN101 Missing type annotation for `self` in method
+tests\test_rate_limiter.py:60:55: ANN001 Missing type annotation for function argument `monkeypatch`
+tests\test_rate_limiter.py:65:1: W293 [*] Blank line contains whitespace
+tests\test_rate_limiter.py:69:1: W293 [*] Blank line contains whitespace
+tests\test_rate_limiter.py:72:1: W293 [*] Blank line contains whitespace
+tests\test_rate_limiter.py:78:9: ANN201 Missing return type annotation for public function `test_ip_hash_is_used_not_raw_ip`
+tests\test_rate_limiter.py:78:9: D102 Missing docstring in public method
+tests\test_rate_limiter.py:78:41: ANN101 Missing type annotation for `self` in method
+tests\test_rate_limiter.py:84:9: ANN201 Missing return type annotation for public function `test_different_ips_have_independent_counters`
+tests\test_rate_limiter.py:84:9: D102 Missing docstring in public method
+tests\test_rate_limiter.py:84:54: ANN101 Missing type annotation for `self` in method
+tests\test_rate_limiter.py:87:1: W293 [*] Blank line contains whitespace
+tests\test_rate_limiter.py:91:9: ANN201 Missing return type annotation for public function `test_retry_after_value_is_correct`
+tests\test_rate_limiter.py:91:9: D102 Missing docstring in public method
+tests\test_rate_limiter.py:91:43: ANN101 Missing type annotation for `self` in method
+tests\test_rate_limiter.py:94:1: W293 [*] Blank line contains whitespace
+tests\test_rate_limiter.py:96:28: PLR2004 Magic value used in comparison, consider replacing `60` with a constant variable
+tests\test_validator.py:3:1: I001 [*] Import block is un-sorted or un-formatted
+tests\test_validator.py:4:8: F401 [*] `base64` imported but unused
+tests\test_validator.py:9:7: D101 Missing docstring in public class
+tests\test_validator.py:10:9: ANN201 Missing return type annotation for public function `test_valid_text_input_passes`
+tests\test_validator.py:10:9: D102 Missing docstring in public method
+tests\test_validator.py:10:38: ANN101 Missing type annotation for `self` in method
+tests\test_validator.py:14:9: ANN201 Missing return type annotation for public function `test_empty_text_raises_validation_error`
+tests\test_validator.py:14:9: D102 Missing docstring in public method
+tests\test_validator.py:14:49: ANN101 Missing type annotation for `self` in method
+tests\test_validator.py:18:9: ANN201 Missing return type annotation for public function `test_text_over_10000_chars_raises_validation_error`
+tests\test_validator.py:18:9: D102 Missing docstring in public method
+tests\test_validator.py:18:60: ANN101 Missing type annotation for `self` in method
+tests\test_validator.py:22:9: ANN201 Missing return type annotation for public function `test_sql_injection_string_raises_validation_error`
+tests\test_validator.py:22:9: D102 Missing docstring in public method
+tests\test_validator.py:22:59: ANN101 Missing type annotation for `self` in method
+tests\test_validator.py:30:9: ANN201 Missing return type annotation for public function `test_script_tag_string_raises_validation_error`
+tests\test_validator.py:30:9: D102 Missing docstring in public method
+tests\test_validator.py:30:56: ANN101 Missing type annotation for `self` in method
+tests\test_validator.py:34:9: ANN201 Missing return type annotation for public function `test_null_byte_string_raises_validation_error`
+tests\test_validator.py:34:9: D102 Missing docstring in public method
+tests\test_validator.py:34:55: ANN101 Missing type annotation for `self` in method
+tests\test_validator.py:38:9: ANN201 Missing return type annotation for public function `test_javascript_uri_raises_validation_error`
+tests\test_validator.py:38:9: D102 Missing docstring in public method
+tests\test_validator.py:38:53: ANN101 Missing type annotation for `self` in method
+tests\test_validator.py:42:9: ANN201 Missing return type annotation for public function `test_valid_jpeg_base64_passes`
+tests\test_validator.py:42:9: D102 Missing docstring in public method
+tests\test_validator.py:42:39: ANN101 Missing type annotation for `self` in method
+tests\test_validator.py:42:45: ANN001 Missing type annotation for function argument `sample_image_b64`
+tests\test_validator.py:48:9: ANN201 Missing return type annotation for public function `test_invalid_mime_type_raises_validation_error`
+tests\test_validator.py:48:9: D102 Missing docstring in public method
+tests\test_validator.py:48:56: ANN101 Missing type annotation for `self` in method
+tests\test_validator.py:53:9: ANN201 Missing return type annotation for public function `test_image_over_5mb_raises_validation_error`
+tests\test_validator.py:53:9: D102 Missing docstring in public method
+tests\test_validator.py:53:53: ANN101 Missing type annotation for `self` in method
+tests\test_validator.py:60:9: ANN201 Missing return type annotation for public function `test_malformed_base64_raises_validation_error`
+tests\test_validator.py:60:9: D102 Missing docstring in public method
+tests\test_validator.py:60:55: ANN101 Missing type annotation for `self` in method
+wsgi.py:1:1: D100 Missing docstring in public module
+wsgi.py:1:1: I001 [*] Import block is un-sorted or un-formatted
+Found 681 errors.
+[*] 215 fixable with the `--fix` option (103 hidden fixes can be enabled with the `--unsafe-fixes` option).
+
+warning: `one-blank-line-before-class` (D203) and `no-blank-line-before-class` (D211) are incompatible. Ignoring `one-blank-line-before-class`.
+warning: `multi-line-summary-first-line` (D212) and `multi-line-summary-second-line` (D213) are incompatible. Ignoring `multi-line-summary-second-line`.
