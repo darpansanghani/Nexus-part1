@@ -69,13 +69,27 @@ class SecretService:
         # Fetch from Secret Manager
         try:
             name = f"projects/{self._project_id}/secrets/{secret_id}/versions/latest"
+            logger.info("Fetching secret from Secret Manager", extra={"secret_id": secret_id, "project": self._project_id})
             response = self._client.access_secret_version(request={"name": name})
             payload: str = response.payload.data.decode("UTF-8")
             self._cache[secret_id] = payload
+            logger.info("Secret fetched successfully", extra={"secret_id": secret_id})
             return payload
-        except GoogleAPIError as e:
-            logger.exception("Failed to fetch secret", extra={"secret_id": secret_id})
-            return ""
+        except GoogleAPIError:
+            logger.exception("Failed to fetch secret from Secret Manager — falling back to env var", extra={"secret_id": secret_id})
+            # Fallback: try env var even in SM mode
+            env_map = {
+                "nexus-gemini-api-key": "GEMINI_API_KEY",
+                "nexus-maps-api-key": "MAPS_API_KEY",
+            }
+            env_var = env_map.get(secret_id, secret_id.upper().replace("-", "_"))
+            val = os.environ.get(env_var, "")
+            if val:
+                logger.info("Secret found in environment variable fallback", extra={"env_var": env_var})
+                self._cache[secret_id] = val
+            else:
+                logger.error("Secret not found in Secret Manager OR environment variables", extra={"secret_id": secret_id, "env_var": env_var})
+            return val
 
     def clear_cache(self) -> None:
         """Clear the secret cache (e.g., on authentication error)."""

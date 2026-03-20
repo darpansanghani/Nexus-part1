@@ -1,6 +1,7 @@
 """Gemini API interaction service for NEXUS."""
 
 import json
+import os
 import time
 from typing import Any
 
@@ -85,10 +86,22 @@ class GeminiService:
 
         if not self._testing:
             try:
+                # Tier 1: Try Secret Manager (or env var via secret_service)
                 api_key = secret_service.get_secret("nexus-gemini-api-key")
+                logger.info("Secret service returned key", extra={"has_key": bool(api_key)})
+
+                # Tier 2: Direct env var fallback (catches any Secret Manager failures)
                 if not api_key:
-                    logger.warning("No Gemini API key found.")
-                    return
+                    api_key = os.environ.get("GEMINI_API_KEY", "")
+                    if api_key:
+                        logger.info("Gemini API key resolved from GEMINI_API_KEY env var directly.")
+                    else:
+                        logger.error(
+                            "Gemini API key not found in Secret Manager OR GEMINI_API_KEY env var. "
+                            "Set GEMINI_API_KEY in Cloud Run environment variables or create the "
+                            "'nexus-gemini-api-key' secret in Secret Manager."
+                        )
+                        return
 
                 genai.configure(api_key=api_key)
 
@@ -109,6 +122,7 @@ class GeminiService:
                 logger.exception("Failed to initialize Gemini")
         else:
             logger.info("Using mock Gemini for testing.")
+
 
     def _get_fallback_plan(self) -> ActionPlan:
         """Return a safe fallback plan when the AI is completely unavailable.

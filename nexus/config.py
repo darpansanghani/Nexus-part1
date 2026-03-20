@@ -38,7 +38,8 @@ class TestingConfig(Config):
 class ProductionConfig(Config):
     """Production configuration."""
 
-    pass
+    # In production (Cloud Run), always use Secret Manager
+    USE_SECRET_MANAGER: bool = True
 
 
 config: dict[str, type[Config]] = {
